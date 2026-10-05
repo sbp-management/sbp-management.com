@@ -1,0 +1,14 @@
+node_modules
+.next/
+out/
+*.tsbuildinfo
+.DS_Store
+
+# Secrets (API keys) never go into git; .env.example documents what is needed.
+.env*
+!.env.example
+
+# Cloudflare build output and local Worker secrets
+.open-next/
+.wrangler/
+.dev.vars*
