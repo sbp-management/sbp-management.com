@@ -1,0 +1,592 @@
+@import "tailwindcss";
+
+/*
+ * Relaunch design tokens.
+ * Institutional path = ink + the logo's blue mosaic; candidate path = teal, set slightly apart.
+ */
+@theme {
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-serif), ui-serif, Georgia, serif;
+
+  --color-ink: #0b1033; /* headings, dark surfaces */
+  --color-ink-2: #1a2055;
+  --color-text: #3b4163; /* paragraphs */
+  --color-muted: #686d8c;
+  --color-line: #e3e2da;
+  --color-line-dark: #2a3068;
+  --color-paper: #f6f5f0; /* warm section wash */
+  --color-paper-2: #eceae2;
+  --color-hero: #c3c5d3; /* hero background */
+
+  --color-brand: #3a47f5; /* logo blue */
+  --color-brand-deep: #2531c9;
+  --color-brand-soft: #e9ebff;
+  --color-lilac: #a9b0ff;
+  --color-purple: #8b3dff; /* card hover glow */
+
+  --color-teal: #0e7c74; /* candidate path */
+  --color-teal-deep: #0a5f59;
+  --color-teal-soft: #dff2ef;
+
+  --color-amber: #8a5a00;
+  --color-amber-soft: #fbefd6;
+  --color-green: #17714a;
+  --color-green-soft: #dcf2e5;
+
+  --shadow-lift: 0 1px 2px #0b10330d, 0 12px 32px -12px #0b103326;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background: #fff;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--color-ink);
+    text-wrap: balance;
+  }
+
+  /* German, Russian and Serbian have long compound words that don't fit narrow cards:
+     hyphenate them at syllable boundaries (uses the page's lang), and as a last resort break
+     any word that still doesn't fit, so text never spills out of its box. */
+  html:not([lang="en"]) body {
+    hyphens: auto;
+    /* only long words (10+ letters, at least 4 on each side), so short words stay whole */
+    hyphenate-limit-chars: 10 4 4;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  li,
+  dd,
+  dt {
+    overflow-wrap: break-word;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-brand);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+  }
+}
+
+/* Dotted grid used behind the region map and dark panels. */
+@utility bg-dots {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    currentColor 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+}
+
+/* ───────────────────────── Motion ─────────────────────────
+ * Everything below is decorative. Scroll-triggered effects key off [data-reveal][data-in]
+ * (set by components/reveal.tsx); load effects run straight away. All of it is switched
+ * off for prefers-reduced-motion at the end of the file.
+ */
+
+:root {
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-inout: cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+/* Scroll reveal. data-reveal="up" (default) | "left" | "right" | "scale" | "none" */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s var(--ease-out),
+    transform 0.8s var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal="left"] {
+  transform: translateX(-40px);
+}
+[data-reveal="right"] {
+  transform: translateX(40px);
+}
+[data-reveal="scale"] {
+  transform: scale(0.94);
+}
+[data-reveal="none"] {
+  opacity: 1;
+  transform: none;
+}
+[data-reveal][data-in] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Children that cascade in one after another once their Reveal is in view (set --i on each). */
+[data-reveal] .stagger > * {
+  opacity: 0;
+  translate: 0 16px;
+  transition:
+    opacity 0.6s var(--ease-out),
+    translate 0.6s var(--ease-out);
+  transition-delay: calc(var(--reveal-delay, 0ms) + 200ms + var(--i, 0) * 90ms);
+}
+[data-reveal][data-in] .stagger > * {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* Animations inside a Reveal wait until it is in view. */
+[data-reveal]:not([data-in]) .wait-in,
+[data-reveal]:not([data-in]) .wait-in * {
+  animation-play-state: paused !important;
+}
+
+/* Replay: once a Reveal has left the screen completely it gets data-out, which removes the
+ * keyframe animations inside it; when it scrolls back in they are re-applied and play again. */
+[data-reveal][data-out]
+  :is(.hero-word, .hero-in, .map-fade, .map-node, .route-draw) {
+  animation: none;
+}
+
+/* Hero load sequence: words rise in one by one. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    translate: 0 0.5em;
+    filter: blur(6px);
+  }
+}
+.hero-word {
+  display: inline-block;
+  animation: rise 0.9s var(--ease-out) both;
+  animation-delay: calc(120ms + var(--i) * 70ms);
+}
+.hero-in {
+  animation: rise 0.9s var(--ease-out) both;
+  animation-delay: var(--d, 0ms);
+}
+
+/* Mosaic tiles: assemble when their Reveal enters, then shimmer. */
+.tile {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    scale 0.7s var(--ease-spring),
+    translate 0.5s var(--ease-out);
+  transition-delay: var(--td, 0ms);
+  animation: twinkle 5s ease-in-out infinite;
+  animation-delay: var(--tw, 0ms);
+}
+[data-reveal]:not([data-in]) .tile {
+  scale: 0;
+}
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+/* Card hover: tiles shuffle. */
+.group:hover .tile:nth-child(3n) {
+  translate: 0 -7px;
+  transition-delay: 0ms;
+}
+.group:hover .tile:nth-child(3n + 1) {
+  translate: 5px 0;
+  transition-delay: 40ms;
+}
+
+/* Card hover: a 2px blue → purple light makes one lap of the border, then fades.
+ * A rotating conic gradient, masked down to a 2px ring. Re-hovering plays it again. */
+@property --glow-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px; /* sit on top of the 1px card border */
+  z-index: 10;
+  padding: 2px;
+  pointer-events: none;
+  background: conic-gradient(
+    from var(--glow-angle),
+    transparent 0deg 200deg,
+    color-mix(in srgb, var(--color-purple) 40%, transparent) 250deg,
+    var(--color-purple) 300deg,
+    var(--color-brand) 345deg,
+    var(--color-lilac) 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+  opacity: 0;
+}
+.glow-border:hover::before,
+.glow-border:focus-within::before {
+  animation: glow-lap 5s ease-in-out both;
+}
+@keyframes glow-lap {
+  0% {
+    --glow-angle: 0deg;
+    opacity: 0;
+  }
+  12%,
+  82% {
+    opacity: 1;
+  }
+  100% {
+    --glow-angle: 360deg;
+    opacity: 0;
+  }
+}
+
+/* Candidate section background (around the teal panel): drifts slowly through light
+ * tints of the theme colours (logo sky, blue, purple, paper, white), one round every 30s.
+ * Teal is left out so the panel always stands apart from it. */
+.theme-cycle {
+  animation: theme-cycle 30s ease-in-out infinite;
+}
+@keyframes theme-cycle {
+  0%,
+  100% {
+    background-color: #ffffff;
+  }
+  20% {
+    background-color: #d6ebf3;
+  }
+  40% {
+    background-color: #e9ebff;
+  }
+  60% {
+    background-color: #eee4ff;
+  }
+  80% {
+    background-color: #f6f5f0;
+  }
+}
+
+/* Flag on the cards: sits on the right of a white band and fades in from the text area. */
+.flag-fade {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 55%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 55%);
+}
+
+/* Region map */
+.route-line {
+  stroke-dasharray: 6 7;
+  animation: route-flow 30s linear infinite;
+}
+@keyframes route-flow {
+  to {
+    stroke-dashoffset: -400;
+  }
+}
+.route-draw {
+  stroke-dasharray: 1;
+  animation: route-draw 1.2s var(--ease-inout) both;
+  animation-delay: var(--d);
+}
+@keyframes route-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.map-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: node-pop 0.7s var(--ease-spring) both;
+  animation-delay: var(--d);
+}
+@keyframes node-pop {
+  from {
+    scale: 0;
+    rotate: -90deg;
+  }
+}
+.map-fade {
+  animation: rise 0.8s var(--ease-out) both;
+  animation-delay: var(--d);
+}
+.node-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: node-pulse 2.8s ease-out infinite;
+}
+@keyframes node-pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  to {
+    transform: scale(3.4);
+    opacity: 0;
+  }
+}
+
+/* Ticker band */
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 45s linear infinite;
+}
+.ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+@keyframes ticker {
+  to {
+    translate: -50% 0;
+  }
+}
+
+/* "Analyze. Develop. Connect. Implement." light up in turn. */
+.cycle-step {
+  animation: cycle-step 8s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 2s);
+}
+.cycle-step > span {
+  animation: cycle-dot 8s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 2s);
+}
+@keyframes cycle-step {
+  0%,
+  22% {
+    color: var(--color-lilac);
+  }
+  30%,
+  100% {
+    color: #fff;
+  }
+}
+@keyframes cycle-dot {
+  0%,
+  22% {
+    scale: 1.8;
+    background: var(--color-lilac);
+  }
+  30%,
+  100% {
+    scale: 1;
+  }
+}
+
+/* Image wipe + slow zoom when it scrolls in. */
+.img-wipe {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 1.2s var(--ease-inout);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.img-wipe img {
+  scale: 1.12;
+  transition: scale 1.8s var(--ease-out);
+}
+[data-reveal]:not([data-in]) .img-wipe {
+  clip-path: inset(0 100% 0 0);
+}
+[data-reveal]:not([data-in]) .img-wipe img {
+  scale: 1.3;
+}
+
+/* Photo fades in while sliding in from the left (homepage Germany section). */
+.slide-fade {
+  transition:
+    opacity 2.4s ease-in-out,
+    translate 1.6s var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal]:not([data-in]) .slide-fade {
+  opacity: 0;
+  translate: -80px 0;
+}
+
+/* Closing contact band: heading, text and buttons slide in from the left, one after another.
+ * Slide only, no fade, so the text is never faint while scrolling. */
+.slide-in {
+  transition: translate 0.7s var(--ease-out);
+  transition-delay: calc(var(--reveal-delay, 0ms) + var(--d, 0ms));
+}
+[data-reveal]:not([data-in]) .slide-in {
+  translate: -40px 0;
+}
+
+/* Photo slideshows (components/v2/photo-slideshow.tsx): the homepage hero background and the
+ * section slideshows. Each photo stays 12s; the incoming photo slides in from the right,
+ * decelerating until it settles at 96% of the 5s transition, while the outgoing one fades out.
+ * --slide-o is the resting opacity (0.6 behind the homepage hero, 1 elsewhere). */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.hero-slide.is-first {
+  opacity: var(--slide-o, 1);
+}
+.hero-slide.is-in {
+  z-index: 1;
+  animation: hero-slide-in 5s both;
+}
+.hero-slide.is-out {
+  animation: hero-slide-out 5s ease-in-out both;
+}
+@keyframes hero-slide-in {
+  0% {
+    opacity: 0;
+    translate: 8% 0;
+    animation-timing-function: cubic-bezier(0.16, 0.84, 0.3, 1);
+  }
+  96% {
+    opacity: var(--slide-o, 1);
+    translate: 0 0;
+  }
+  100% {
+    opacity: var(--slide-o, 1);
+    translate: 0 0;
+  }
+}
+@keyframes hero-slide-out {
+  from {
+    opacity: var(--slide-o, 1);
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Cut-out photo rises from the bottom edge. */
+.rise-img {
+  transition:
+    translate 1.2s var(--ease-out) 0.25s,
+    opacity 1.2s var(--ease-out) 0.25s;
+}
+[data-reveal]:not([data-in]) .rise-img {
+  translate: 0 14%;
+  opacity: 0;
+}
+
+/* Floating squares in the contact band. */
+.drift {
+  animation: drift 9s ease-in-out infinite alternate;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes drift {
+  to {
+    translate: var(--dx, 0) var(--dy, -24px);
+    rotate: var(--dr, 8deg);
+  }
+}
+
+/* Progressive enhancement where scroll-driven animations exist. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    /* Gentle parallax on photos. */
+    .parallax img {
+      animation: parallax linear both;
+      animation-timeline: view();
+    }
+    @keyframes parallax {
+      from {
+        translate: 0 -5%;
+      }
+      to {
+        translate: 0 5%;
+      }
+    }
+  }
+  @supports (animation-timeline: scroll()) {
+    .scroll-progress {
+      display: block;
+      transform-origin: 0 50%;
+      animation: grow-progress linear both;
+      animation-timeline: scroll(root);
+    }
+    @keyframes grow-progress {
+      from {
+        transform: scaleX(0);
+      }
+      to {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal],
+  [data-reveal] .stagger > *,
+  .img-wipe,
+  .img-wipe img,
+  .slide-fade,
+  .slide-in,
+  .rise-img,
+  .tile {
+    opacity: 1 !important;
+    transform: none !important;
+    translate: none !important;
+    scale: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+
+  .hero-word,
+  .hero-in,
+  .tile,
+  .route-line,
+  .route-draw,
+  .map-node,
+  .map-fade,
+  .node-pulse,
+  .ticker-track,
+  .theme-cycle,
+  .cycle-step,
+  .cycle-step > span,
+  .drift,
+  .hero-slide {
+    animation: none !important;
+  }
+
+  .map-traveler {
+    display: none;
+  }
+
+  /* No travelling light: show the border still while hovering. */
+  .glow-border:hover::before,
+  .glow-border:focus-within::before {
+    animation: none !important;
+    opacity: 1;
+  }
+}

@@ -15,7 +15,7 @@ export type ContactState =
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /** Fields copied into the email, in this order. */
-const FIELDS = ["Stelle", "Vorname", "Nachname", "Email", "Telefonnummer", "Qualifikation", "Nachricht"];
+const FIELDS = ["Anliegen", "Stelle", "Vorname", "Nachname", "Email", "Telefonnummer", "Organisation", "Qualifikation", "Nachricht"];
 
 const text = (data: FormData, key: string) => String(data.get(key) ?? "").trim();
 
@@ -43,8 +43,8 @@ export async function submitContact(_prev: ContactState, data: FormData): Promis
   if (fields.length) return { status: "error", fields, values };
 
   const h = await headers();
-  // cf-connecting-ip on Cloudflare; x-forwarded-for elsewhere.
-  const ip = h.get("cf-connecting-ip") ?? h.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
+  // Netlify passes the visitor's IP in x-nf-client-connection-ip; x-forwarded-for elsewhere.
+  const ip = h.get("x-nf-client-connection-ip") ?? h.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
   if (isRateLimited(ip)) return { status: "failed", values };
 
   return (await deliver(values)) ? { status: "success" } : { status: "failed", values };

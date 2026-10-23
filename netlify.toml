@@ -1,0 +1,15 @@
+# Netlify detects Next.js and runs it with its Next.js runtime (pages, server actions, image CDN).
+# Set RESEND_API_KEY and CONTACT_FROM under Site configuration → Environment variables (see .env.example).
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+# Built scripts and styles have content hashes in their names, so browsers may keep them for a year.
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

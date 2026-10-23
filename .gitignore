@@ -8,7 +8,7 @@ out/
 .env*
 !.env.example
 
-# Cloudflare build output and local Worker secrets
-.open-next/
-.wrangler/
+# Netlify CLI local state
+.netlify/
+# Old Cloudflare local secrets file (no longer used)
 .dev.vars*
