@@ -10,23 +10,10 @@ import {
   SectionTitle,
   SplitText,
 } from "@/components/v2/page-parts";
-import { type Photo, PhotoGrid } from "@/components/v2/page-parts";
-import { PHOTO_FILES, type PhotoKey } from "@/content/photos";
 import { ButtonLink, Eyebrow, Heading } from "@/components/v2/ui";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
-
-/** Client photos with their translated alt texts. */
-function photos(
-  alt: Record<string, string>,
-  keys: readonly PhotoKey[],
-  plain = false,
-): Photo[] {
-  return keys.map((k) => ({
-    ...PHOTO_FILES[k],
-    alt: alt[k],
-    tall: plain ? false : "tall" in PHOTO_FILES[k],
-  }));
-}
+import { SlideshowPanels } from "@/components/v2/photo-panels";
+import { photoSet } from "@/content/photo-sets";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { masok } = await getDictionary();
@@ -75,17 +62,12 @@ export default async function MasokPage() {
           title={dict.photos.masok.title}
         />
         <>
-          <PhotoGrid
-            photos={photos(dict.photos.alt, [
-              "masokLeskovacCity",
-              "masokMeeting",
-              "masokTrainingHall",
-              "masokWorkshop",
-              "masokWorkshop2",
-              "masokMechatronicsLab",
-              "masokComputerLab",
-              "masokSchoolVisit",
-            ])}
+          <SlideshowPanels
+            panels={[
+              photoSet("masokCampus", dict.photos.alt),
+              photoSet("masokAgreements", dict.photos.alt),
+              photoSet("masokMeetings", dict.photos.alt),
+            ]}
           />
         </>
       </Band>

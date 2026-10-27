@@ -9,7 +9,7 @@ export const jobDetails: JobDetail[] = [
     category: "2024.05",
     date: "October 3, 2024",
     author: "Nikola Banda | Gesundheitsökonom",
-    authorImage: "/images/64f096d4d2578cea844cc0ba-Nikola-Banda-Bild-Kopie.png",
+    authorImage: null,
     banner: null,
     article: [
       {
@@ -255,9 +255,8 @@ export const jobDetails: JobDetail[] = [
     category: "2023.27",
     date: "October 3, 2024",
     author: "Nikola Banda | Gesundheitsökonom",
-    authorImage: "/images/64f096d4d2578cea844cc0ba-Nikola-Banda-Bild-Kopie.png",
-    banner:
-      "/images/63cfd48826c4c84f2fd9d939-FFM-Stellenanzeige-2023-5-2023-6.jpg",
+    authorImage: null,
+    banner: null,
     article: [
       {
         type: "h4",
@@ -470,7 +469,7 @@ export const jobDetails: JobDetail[] = [
     category: "2024.02",
     date: "January 22, 2025",
     author: "Sabina Banda | CEO Geschäftsführung",
-    authorImage: "/images/63d4e6ed026df843fd093250-Sabina-Banda-Bild.png",
+    authorImage: null,
     banner: null,
     article: [
       {
@@ -612,8 +611,7 @@ export const jobDetails: JobDetail[] = [
     category: "2023.28",
     date: "August 31, 2023",
     author: "Sabina Banda Geschäftsführung",
-    authorImage:
-      "/images/63b6ca5b150d753f9b8e2cce-S-Banda-roundprofile-e-mail-picture.png",
+    authorImage: null,
     banner: null,
     article: [
       {
@@ -817,7 +815,7 @@ export const jobDetails: JobDetail[] = [
     category: "2024.03",
     date: "January 22, 2025",
     author: "Sabina Banda | CEO Geschäftsführung",
-    authorImage: "/images/63d4e6ed026df843fd093250-Sabina-Banda-Bild.png",
+    authorImage: null,
     banner: null,
     article: [
       {
@@ -964,10 +962,8 @@ export const jobDetails: JobDetail[] = [
     category: "2023.24",
     date: "September 29, 2024",
     author: "Sabina Banda CEO Geschäftsführung",
-    authorImage:
-      "/images/63b6ca5b150d753f9b8e2cce-S-Banda-roundprofile-e-mail-picture.png",
-    banner:
-      "/images/63cfd48826c4c84f2fd9d939-FFM-Stellenanzeige-2023-5-2023-6.jpg",
+    authorImage: null,
+    banner: null,
     article: [
       {
         type: "h4",
@@ -1189,9 +1185,8 @@ export const jobDetails: JobDetail[] = [
     category: "2024.05",
     date: "October 3, 2024",
     author: "Nikola Banda Gesundheitsökonom",
-    authorImage: "/images/64f096d4d2578cea844cc0ba-Nikola-Banda-Bild-Kopie.png",
-    banner:
-      "/images/63c027107093623387dad718-Baden-Wurttemberg-2023-1-Stellenanzeige.jpg",
+    authorImage: null,
+    banner: null,
     article: [
       {
         type: "h5",
@@ -1403,9 +1398,8 @@ export const jobDetails: JobDetail[] = [
     category: "2023.25",
     date: "May 5, 2025",
     author: "Nikola Banda | Gesundheitsökonom",
-    authorImage: "/images/64f096d4d2578cea844cc0ba-Nikola-Banda-Bild-Kopie.png",
-    banner:
-      "/images/63cfd48826c4c84f2fd9d939-FFM-Stellenanzeige-2023-5-2023-6.jpg",
+    authorImage: null,
+    banner: null,
     article: [
       {
         type: "h4",
@@ -1687,9 +1681,8 @@ export const jobDetails: JobDetail[] = [
     category: "2023.26",
     date: "October 3, 2024",
     author: "Nikola Banda | Gesundheitsökonom",
-    authorImage: "/images/64f096d4d2578cea844cc0ba-Nikola-Banda-Bild-Kopie.png",
-    banner:
-      "/images/63cfd48826c4c84f2fd9d939-FFM-Stellenanzeige-2023-5-2023-6.jpg",
+    authorImage: null,
+    banner: null,
     article: [
       {
         type: "h4",

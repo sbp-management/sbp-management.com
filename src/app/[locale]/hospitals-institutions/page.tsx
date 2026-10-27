@@ -8,27 +8,14 @@ import {
   PageHero,
   SectionTitle,
   SquareList,
-  type Photo,
-  PhotoGrid,
 } from "@/components/v2/page-parts";
 import { ButtonLink } from "@/components/v2/ui";
 import { href } from "@/i18n/config";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
-import { Review } from "@/components/v2/review";
-import { PHOTO_FILES, type PhotoKey } from "@/content/photos";
+import { SlideshowPanels } from "@/components/v2/photo-panels";
+import { photoSet } from "@/content/photo-sets";
 
-/** Client photos with their translated alt texts. */
-function photos(
-  alt: Record<string, string>,
-  keys: readonly PhotoKey[],
-  plain = false,
-): Photo[] {
-  return keys.map((k) => ({
-    ...PHOTO_FILES[k],
-    alt: alt[k],
-    tall: plain ? false : "tall" in PHOTO_FILES[k],
-  }));
-}
+import { Review } from "@/components/v2/review";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { hospitals } = await getDictionary();
@@ -80,12 +67,7 @@ export default async function HospitalsPage() {
           kind="approve"
           note="Shows the Bürgerhospital Frankfurt by name – confirm approval to show it as a reference"
         >
-          <>
-            <PhotoGrid
-              columns={2}
-              photos={photos(dict.photos.alt, ["hospitalsBuergerhospital"])}
-            />
-          </>
+          <SlideshowPanels panels={[photoSet("hospitals", dict.photos.alt)]} />
         </Review>
       </Band>
 

@@ -5,26 +5,12 @@ import {
   Band,
   ClosingCta,
   PageHero,
-  type Photo,
-  PhotoGrid,
   SectionTitle,
 } from "@/components/v2/page-parts";
-import { PHOTO_FILES, type PhotoKey } from "@/content/photos";
 import { ProjectCard } from "@/components/v2/project-card";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
-
-/** Client photos with their translated alt texts. */
-function photos(
-  alt: Record<string, string>,
-  keys: readonly PhotoKey[],
-  plain = false,
-): Photo[] {
-  return keys.map((k) => ({
-    ...PHOTO_FILES[k],
-    alt: alt[k],
-    tall: plain ? false : "tall" in PHOTO_FILES[k],
-  }));
-}
+import { SlideshowPanels } from "@/components/v2/photo-panels";
+import { photoSet } from "@/content/photo-sets";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { projectsPage } = await getDictionary();
@@ -65,15 +51,13 @@ export default async function ProjectsPage() {
           eyebrow={dict.photos.projects.eyebrow}
           title={dict.photos.projects.title}
         />
-        <>
-          <PhotoGrid
-            photos={photos(dict.photos.alt, [
-              "projectsSigning",
-              "masokLeskovacCity",
-              "masokWorkshop",
-            ])}
-          />
-        </>
+        <SlideshowPanels
+          panels={[
+            photoSet("projectsAgreements", dict.photos.alt),
+            photoSet("projectsPlaces", dict.photos.alt),
+            photoSet("projectsPractice", dict.photos.alt),
+          ]}
+        />
       </Band>
 
       <ClosingCta locale={locale} dict={dict} cta={germanyPage.cta} />

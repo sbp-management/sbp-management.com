@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export type Slide = { src: string; alt: string };
+/** `focus`: CSS object-position for the crop, e.g. "center 30%" (defaults to the image classes). */
+export type Slide = { src: string; alt: string; focus?: string };
 
 const HOLD_MS = 12000; // time each photo stays before the next one slides in
 
@@ -87,6 +88,7 @@ export function PhotoSlideshow({
               sizes={sizes}
               priority={priority && i === 0}
               className={className}
+              style={slide.focus ? { objectPosition: slide.focus } : undefined}
             />
           </div>
         );

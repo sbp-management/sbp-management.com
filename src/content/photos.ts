@@ -4,17 +4,6 @@
  * Alt texts live in the dictionaries (photos.*) so they can be translated.
  */
 export const PHOTO_FILES = {
-  aboutMinistryGroup: {
-    src: "/images/photos/about-ministry-group.jpg",
-    width: 1600,
-    height: 1200,
-  },
-  aboutMinistryMeeting: {
-    src: "/images/photos/about-ministry-meeting.jpg",
-    width: 1500,
-    height: 2000,
-    tall: true,
-  },
   hospitalsBuergerhospital: {
     src: "/images/photos/hospitals-buergerhospital.jpg",
     width: 2000,
@@ -50,17 +39,6 @@ export const PHOTO_FILES = {
     width: 2000,
     height: 1500,
   },
-  masokComputerLab: {
-    src: "/images/photos/masok-computer-lab.jpg",
-    width: 2000,
-    height: 1125,
-  },
-  masokTrainingHall: {
-    src: "/images/photos/masok-training-hall.jpg",
-    width: 1125,
-    height: 2000,
-    tall: true,
-  },
   servicesSterileSupply: {
     src: "/images/photos/services-sterile-supply.jpg",
     width: 900,
@@ -70,11 +48,6 @@ export const PHOTO_FILES = {
   masokSchoolVisit: {
     src: "/images/photos/masok-school-visit.jpg",
     width: 2000,
-    height: 1500,
-  },
-  germanyHandshake: {
-    src: "/images/63c7fe843c05b1e4ec511b96-pexels-photo-5668842.jpeg",
-    width: 2250,
     height: 1500,
   },
   // Uploaded 2026-10-22 (sbp-working-files/images/uploads-2026-10-22): general healthcare photos, source to be confirmed.
@@ -268,6 +241,171 @@ export const PHOTO_FILES = {
     width: 1126,
     height: 2000,
     tall: true,
+  },
+  // From the album "Working foto album for sbp_masok" (2026-10-27), placed by file name.
+  masokMfaBuergerhospitalMeeting: {
+    src: "/images/photos/masok-mfa-buergerhospital-meeting.jpg",
+    width: 2000,
+    height: 1500,
+  },
+  masokPartnerMeeting: {
+    src: "/images/photos/masok-partner-meeting.jpg",
+    width: 1500,
+    height: 2000,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 45%",
+  },
+  instrumentsTrainingSet: {
+    src: "/images/photos/instruments-training-set.jpg",
+    width: 2000,
+    height: 1334,
+  },
+  sbpMinistryMeeting: {
+    src: "/images/photos/sbp-ministry-meeting.jpg",
+    width: 1440,
+    height: 1918,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 40%",
+  },
+  sbpLeskovacCityMeeting: {
+    src: "/images/photos/sbp-leskovac-city-meeting.jpg",
+    width: 2000,
+    height: 1500,
+  },
+  educationSterileSupplyVisit: {
+    src: "/images/photos/education-sterile-supply-visit.jpg",
+    width: 2000,
+    height: 1500,
+  },
+  masokAgreementDocuments: {
+    src: "/images/photos/masok-agreement-documents.jpg",
+    width: 1125,
+    height: 2000,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 50%",
+  },
+  sbpPartnerDinner: {
+    src: "/images/photos/sbp-partner-dinner.jpg",
+    width: 1500,
+    height: 2000,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 45%",
+  },
+  masokPartnerGroup: {
+    src: "/images/photos/masok-partner-group.jpg",
+    width: 1440,
+    height: 1440,
+  },
+  masokSigning: {
+    src: "/images/photos/masok-signing.jpg",
+    width: 872,
+    height: 1550,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 75%",
+  },
+  masokHandshake: {
+    src: "/images/photos/masok-handshake.jpg",
+    width: 1125,
+    height: 2000,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 55%",
+  },
+  masokMeetingOffice: {
+    src: "/images/photos/masok-meeting-office.jpg",
+    width: 1440,
+    height: 1440,
+  },
+  masokMeetingTeam: {
+    src: "/images/photos/masok-meeting-team.jpg",
+    width: 1500,
+    height: 2000,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 50%",
+  },
+  sbpMinistryEconomy: {
+    src: "/images/photos/sbp-ministry-economy.jpg",
+    width: 1500,
+    height: 2000,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 28%",
+  },
+  masokCampusVisit: {
+    src: "/images/photos/masok-campus-visit.jpg",
+    width: 2000,
+    height: 1500,
+  },
+  sbpLeskovacCityTalks: {
+    src: "/images/photos/sbp-leskovac-city-talks.jpg",
+    width: 1500,
+    height: 2000,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 50%",
+  },
+  masokCampusGroup: {
+    src: "/images/photos/masok-campus-group.jpg",
+    width: 2000,
+    height: 1500,
+  },
+  projectWorkshopHall: {
+    src: "/images/photos/project-workshop-hall.jpg",
+    width: 2000,
+    height: 1500,
+  },
+  masokPartnersSelfie: {
+    src: "/images/photos/masok-partners-selfie.jpg",
+    width: 1915,
+    height: 1436,
+  },
+  sbpMinistryVisit: {
+    src: "/images/photos/sbp-ministry-visit.jpg",
+    width: 1440,
+    height: 1920,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 28%",
+  },
+  sbpMinistryTeam: {
+    src: "/images/photos/sbp-ministry-team.jpg",
+    width: 1500,
+    height: 2000,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 45%",
+  },
+  sbpMinistryDelegation: {
+    src: "/images/photos/sbp-ministry-delegation.jpg",
+    width: 1500,
+    height: 2000,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 52%",
+  },
+  masokSterileSupplyVisit: {
+    src: "/images/photos/masok-sterile-supply-visit.jpg",
+    width: 2000,
+    height: 1500,
+  },
+  projectSterileSupplyVisit: {
+    src: "/images/photos/project-sterile-supply-visit.jpg",
+    width: 2000,
+    height: 1500,
+  },
+  sbpAsanusVisit: {
+    src: "/images/photos/sbp-asanus-visit.jpg",
+    width: 1500,
+    height: 2000,
+    tall: true,
+    /** Vertical focus of the crop: keeps the people in frame. */
+    focus: "center 22%",
   },
 } as const;
 

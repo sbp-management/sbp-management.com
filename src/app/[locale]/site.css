@@ -483,6 +483,40 @@
   }
 }
 
+/* Team portraits (components/v2/team.tsx): a short blue line runs once around the circle in about
+ * 5 s, fades out, and starts again after a 3 s pause (8 s cycle); each portrait starts at its own
+ * delay (--d). The ring is a conic gradient masked down to a 2px band just outside the photo. */
+.team-orbit {
+  position: absolute;
+  inset: -7px;
+  border-radius: 9999px;
+  background: conic-gradient(from 0deg, transparent 0 82%, var(--color-brand) 100%);
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2.5px), #000 calc(100% - 2px));
+  opacity: 0;
+  animation: team-orbit 8s linear infinite;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes team-orbit {
+  0% {
+    rotate: 0deg;
+    opacity: 0;
+  }
+  4% {
+    opacity: 1;
+  }
+  56% {
+    opacity: 1;
+  }
+  63% {
+    rotate: 360deg;
+    opacity: 0;
+  }
+  100% {
+    rotate: 360deg;
+    opacity: 0;
+  }
+}
+
 /* Cut-out photo rises from the bottom edge. */
 .rise-img {
   transition:
@@ -575,6 +609,7 @@
   .cycle-step,
   .cycle-step > span,
   .drift,
+  .team-orbit,
   .hero-slide {
     animation: none !important;
   }

@@ -1,40 +1,19 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { pageMetadata } from "@/i18n/metadata";
 import { Reveal } from "@/components/v2/reveal";
 import {
   Band,
   ClosingCta,
   PageHero,
-  SectionTitle,
   SplitText,
-  type Photo,
-  PhotoGrid,
 } from "@/components/v2/page-parts";
 import { Eyebrow, Heading } from "@/components/v2/ui";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
-import { PHOTO_FILES, type PhotoKey } from "@/content/photos";
+import { SlideshowPanels } from "@/components/v2/photo-panels";
+import { TeamSection } from "@/components/v2/team";
+import { photoSet } from "@/content/photo-sets";
+
 import { Review } from "@/components/v2/review";
-
-/** Client photos with their translated alt texts. */
-function photos(
-  alt: Record<string, string>,
-  keys: readonly PhotoKey[],
-  plain = false,
-): Photo[] {
-  return keys.map((k) => ({
-    ...PHOTO_FILES[k],
-    alt: alt[k],
-    tall: plain ? false : "tall" in PHOTO_FILES[k],
-  }));
-}
-
-/** Team portraits, in the order of about.team.members (metadata removed, max 1000 px). */
-const TEAM_PHOTOS = [
-  "/images/team/sabina.jpg",
-  "/images/team/nikola.jpg",
-  "/images/team/nemanja.jpg",
-];
 
 export async function generateMetadata(): Promise<Metadata> {
   const { about } = await getDictionary();
@@ -75,18 +54,18 @@ export default async function AboutPage() {
           title={about.international.title}
           body={about.international.body}
         />
-        <div className="mt-14">
-          <>
-            <PhotoGrid
-              columns={2}
-              photos={photos(
-                dict.photos.alt,
-                ["aboutMinistryGroup", "aboutMinistryMeeting"],
-                true,
-              )}
-            />
-          </>
-        </div>
+        <Review
+          kind="approve"
+          note="Includes the welcome sign of a partner company (ASANUS) with names – confirm they agree to be shown"
+          className="mt-14"
+        >
+          <SlideshowPanels
+            panels={[
+              photoSet("aboutMinistries", dict.photos.alt),
+              photoSet("aboutPartners", dict.photos.alt),
+            ]}
+          />
+        </Review>
       </Band>
 
       {/* How we work: four steps */}
@@ -121,36 +100,9 @@ export default async function AboutPage() {
         </ol>
       </Band>
 
-      {/* Team (from the old About page) */}
+      {/* Meet the Team */}
       <Band>
-        <SectionTitle
-          eyebrow={about.team.eyebrow}
-          title={about.team.title}
-          body={about.team.body}
-        />
-        <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {about.team.members.map((m, i) => (
-            <Reveal as="li" key={m.name} delay={i * 110} variant="scale">
-              <figure className="group">
-                <div className="relative aspect-[4/5] overflow-hidden bg-paper">
-                  <Image
-                    src={TEAM_PHOTOS[i]}
-                    alt={`${about.team.photoAlt} ${m.name}`}
-                    fill
-                    sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <figcaption className="mt-5">
-                  <p className="font-display text-[1.5rem] leading-tight font-medium text-ink">
-                    {m.name}
-                  </p>
-                  <p className="mt-1 text-[0.9375rem] text-muted">{m.role}</p>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </ul>
+        <TeamSection team={about.team} />
       </Band>
 
       {/* Partners and network (names only once approved) */}

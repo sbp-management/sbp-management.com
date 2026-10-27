@@ -238,7 +238,6 @@ function LanguageSwitch({
   a11y: Dictionary["a11y"];
   className?: string;
 }) {
-
   return (
     <ul
       aria-label={a11y.language}
