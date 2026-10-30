@@ -63,6 +63,20 @@ export function SiteFooter({
                 {company.email}
               </a>
             </address>
+            <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[0.9375rem]">
+              {company.social.map((s) => (
+                <li key={s.label}>
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-white/30 underline-offset-4 transition-colors hover:text-white hover:decoration-white"
+                  >
+                    {s.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="grid gap-10 sm:grid-cols-3">
