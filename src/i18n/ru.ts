@@ -3,6 +3,7 @@
  * Same shape as the German master text de.ts (see dictionaries.ts). `link` values are page keys from config.ts, not URLs.
  */
 import type { Dictionary } from "./dictionaries";
+import { ruCareers } from "./ru-careers";
 import { ruLegal } from "./ru-legal";
 import { ruPages } from "./ru-pages";
 import { ruServices } from "./ru-services";
@@ -327,4 +328,5 @@ export const ru: Dictionary = {
   ...ruPages,
   ...ruServices,
   ...ruLegal,
+  ...ruCareers,
 };

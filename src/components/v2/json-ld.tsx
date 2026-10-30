@@ -1,0 +1,11 @@
+/** Structured data for search engines, as a JSON-LD script (`<` escaped so text can't close the tag). */
+export function JsonLd({ data }: { data: object }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
+    />
+  );
+}

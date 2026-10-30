@@ -3,6 +3,7 @@ import { pageMetadata } from "@/i18n/metadata";
 import Link from "next/link";
 import { Reveal } from "@/components/v2/reveal";
 import { CandidatesPanel } from "@/components/v2/candidates-panel";
+import { CareerCards } from "@/components/v2/career-page";
 import { photoSet } from "@/content/photo-sets";
 import { Band, SquareList } from "@/components/v2/page-parts";
 import {
@@ -101,8 +102,11 @@ export default async function GermanyJobsPage() {
         </div>
       </section>
 
+      {/* One page per profession: recognition, language and visa for each. */}
+      <CareerCards />
+
       {/* Personal support (brief section 13) */}
-      <Band>
+      <Band tone="paper">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
           <Reveal>
             <Eyebrow tone="teal">{support.eyebrow}</Eyebrow>

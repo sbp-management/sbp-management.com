@@ -3,6 +3,7 @@
  * (sbp-working-files). EN / RU / SR must keep exactly this shape (see dictionaries.ts).
  * `link` values are page keys from config.ts, not URLs.
  */
+import { deCareers } from "./de-careers";
 import { deLegal } from "./de-legal";
 import { dePages } from "./de-pages";
 import { deServices } from "./de-services";
@@ -330,4 +331,5 @@ export const de = {
   ...dePages,
   ...deServices,
   ...deLegal,
+  ...deCareers,
 } as const;

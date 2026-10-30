@@ -3,6 +3,7 @@
  * master text: it keeps exactly the shape of de.ts (checked by the Dictionary type).
  * `link` values are page keys from config.ts, not URLs.
  */
+import { enCareers } from "./en-careers";
 import { enLegal } from "./en-legal";
 import { enPages } from "./en-pages";
 import { enServices } from "./en-services";
@@ -331,4 +332,5 @@ export const en: Dictionary = {
   ...enPages,
   ...enServices,
   ...enLegal,
+  ...enCareers,
 };

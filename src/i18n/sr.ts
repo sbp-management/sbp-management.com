@@ -4,6 +4,7 @@
  * `link` values are page keys from config.ts, not URLs.
  */
 import type { Dictionary } from "./dictionaries";
+import { srCareers } from "./sr-careers";
 import { srLegal } from "./sr-legal";
 import { srPages } from "./sr-pages";
 import { srServices } from "./sr-services";
@@ -331,4 +332,5 @@ export const sr: Dictionary = {
   ...srPages,
   ...srServices,
   ...srLegal,
+  ...srCareers,
 };

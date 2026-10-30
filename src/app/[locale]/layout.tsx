@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Manrope, Source_Serif_4 } from "next/font/google";
+import { JsonLd } from "@/components/v2/json-ld";
 import { SHOW_REVIEW } from "@/components/v2/review";
 import { ReviewPanel } from "@/components/v2/review-panel";
 import { SiteFooter } from "@/components/v2/site-footer";
 import { SiteHeader } from "@/components/v2/site-header";
-import { locales } from "@/i18n/config";
+import { href, locales } from "@/i18n/config";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
+import { company } from "@/content/site";
 import { SITE_URL } from "@/i18n/metadata";
 import "./site.css";
 
@@ -47,6 +49,30 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${manrope.variable} ${serif.variable}`}>
       <body className="min-h-screen">
+        {/* Who runs the site, for search engines: name, logo, contact, address, social profiles. */}
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": ["Organization", "EmploymentAgency"],
+            "@id": `${SITE_URL}/#organization`,
+            name: company.name,
+            url: `${SITE_URL}${href(locale, "home")}`,
+            logo: `${SITE_URL}/images/sbp-logo.png`,
+            image: `${SITE_URL}/images/og-image-${locale}.png`,
+            description: dict.meta.description,
+            email: company.email,
+            telephone: company.phoneHref.replace("tel:", ""),
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: company.address[0],
+              postalCode: "13507",
+              addressLocality: "Berlin",
+              addressCountry: "DE",
+            },
+            areaServed: ["DE", "RS", "KZ"],
+            sameAs: company.social.map((s) => s.href),
+          }}
+        />
         <noscript>
           <style>{`[data-reveal],[data-reveal] .stagger>*,.rise-img,.slide-fade,.slide-in{opacity:1!important;transform:none!important;translate:none!important}[data-reveal] *{animation-play-state:running!important}.tile{scale:1!important}.img-wipe{clip-path:none!important}`}</style>
         </noscript>
