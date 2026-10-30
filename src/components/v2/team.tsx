@@ -15,14 +15,13 @@ const PHOTOS: (string | null)[] = [
   "/images/team/ana-zakarashvili-2026-10-27.jpg",
   "/images/team/josephine-heinrich-2026-10-27.jpg",
   "/images/team/milica-golubovic-2026-10-27.jpg",
-  null, // Real Estate – photo to come
-  "/images/team/yaw-addo-2026-10-27.jpg",
+  "/images/team/esra-simsek-2026-10-30.jpg",
   "/images/team/adriel-mangiring-2026-10-27.jpg",
   "/images/team/stephen-ntah-2026-10-27.jpg",
 ];
 
-/** People per row: CEO and Junior Consultant; Team Management/HR ×2, International Project Manager and Real Estate; Marketing, Accounting and IT. */
-const ROWS = [2, 4, 3];
+/** People per row: CEO and Junior Consultant; Team Management/HR ×2 and International Project Manager; Real Estate, Accounting and IT. */
+const ROWS = [2, 3, 3];
 
 /**
  * "Meet the Team": round portraits in three rows. On each available photo a short blue line runs

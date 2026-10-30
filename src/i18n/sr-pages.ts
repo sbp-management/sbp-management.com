@@ -36,15 +36,14 @@ export const srPages = {
       photoAlt: "Portret:",
       /** Shown in the circle while a team member's photo is still missing. */
       photoSoon: "Fotografija uskoro",
-      /** In order: row 1 CEO, Junior Consultant; row 2 Team Management/HR ×2, International Project Manager, Real Estate (photo to come); row 3 Marketing, Accounting, IT. Empty name = not known yet. */
+      /** In order: row 1 CEO, Junior Consultant; row 2 Team Management/HR ×2, International Project Manager; row 3 Real Estate, Accounting, IT. Empty name = not known yet. */
       members: [
         { name: "Sabina Banda", role: "Direktorka" },
         { name: "Nikola Banda", role: "Mlađi konsultant" },
         { name: "Ana Zakarashvili", role: "Upravljanje timom / HR" },
         { name: "Josephine Heinrich", role: "Upravljanje timom / HR" },
         { name: "Milica Golubović", role: "Menadžerka međunarodnih projekata" },
-        { name: "", role: "Nekretnine" },
-        { name: "Yaw Addo", role: "Marketing" },
+        { name: "Esra Simsek", role: "Nekretnine" },
         { name: "Adriel Mangiring", role: "Računovodstvo" },
         { name: "Stephen Ntah", role: "IT administracija" },
       ],

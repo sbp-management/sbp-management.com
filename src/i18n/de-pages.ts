@@ -36,15 +36,14 @@ export const dePages = {
       photoAlt: "Porträt von",
       /** Shown in the circle while a team member's photo is still missing. */
       photoSoon: "Foto folgt",
-      /** In order: row 1 CEO, Junior Consultant; row 2 Team Management/HR ×2, International Project Manager, Real Estate (photo to come); row 3 Marketing, Accounting, IT. Empty name = not known yet. */
+      /** In order: row 1 CEO, Junior Consultant; row 2 Team Management/HR ×2, International Project Manager; row 3 Real Estate, Accounting, IT. Empty name = not known yet. */
       members: [
         { name: "Sabina Banda", role: "CEO" },
         { name: "Nikola Banda", role: "Junior Consultant" },
         { name: "Ana Zakarashvili", role: "Teammanagement / HR" },
         { name: "Josephine Heinrich", role: "Teammanagement / HR" },
         { name: "Milica Golubović", role: "Internationale Projektmanagerin" },
-        { name: "", role: "Immobilien" },
-        { name: "Yaw Addo", role: "Marketing" },
+        { name: "Esra Simsek", role: "Immobilien" },
         { name: "Adriel Mangiring", role: "Buchhaltung" },
         { name: "Stephen Ntah", role: "IT-Administration" },
       ],

@@ -36,15 +36,14 @@ export const ruPages = {
       photoAlt: "Портрет:",
       /** Shown in the circle while a team member's photo is still missing. */
       photoSoon: "Фото скоро появится",
-      /** In order: row 1 CEO, Junior Consultant; row 2 Team Management/HR ×2, International Project Manager, Real Estate (photo to come); row 3 Marketing, Accounting, IT. Empty name = not known yet. */
+      /** In order: row 1 CEO, Junior Consultant; row 2 Team Management/HR ×2, International Project Manager; row 3 Real Estate, Accounting, IT. Empty name = not known yet. */
       members: [
         { name: "Sabina Banda", role: "Генеральный директор" },
         { name: "Nikola Banda", role: "Младший консультант" },
         { name: "Ana Zakarashvili", role: "Управление командой / HR" },
         { name: "Josephine Heinrich", role: "Управление командой / HR" },
         { name: "Milica Golubović", role: "Менеджер международных проектов" },
-        { name: "", role: "Недвижимость" },
-        { name: "Yaw Addo", role: "Маркетинг" },
+        { name: "Esra Simsek", role: "Недвижимость" },
         { name: "Adriel Mangiring", role: "Бухгалтерия" },
         { name: "Stephen Ntah", role: "IT-администрирование" },
       ],
