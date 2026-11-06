@@ -40,7 +40,7 @@ export const enPages = {
       members: [
         { name: "Sabina Banda", role: "CEO" },
         { name: "Nikola Banda", role: "Junior Consultant" },
-        { name: "Anna Zakarashvili", role: "Team Management / HR" },
+        { name: "Ana Zakarashvili", role: "Team Management / HR" },
         { name: "Josephine Heinrich", role: "Team Management / HR" },
         { name: "Milica Golubović", role: "International Project Manager" },
         { name: "Esra Simsek", role: "Real Estate" },

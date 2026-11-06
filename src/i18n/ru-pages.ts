@@ -40,7 +40,7 @@ export const ruPages = {
       members: [
         { name: "Sabina Banda", role: "Генеральный директор" },
         { name: "Nikola Banda", role: "Младший консультант" },
-        { name: "Anna Zakarashvili", role: "Управление командой / HR" },
+        { name: "Ana Zakarashvili", role: "Управление командой / HR" },
         { name: "Josephine Heinrich", role: "Управление командой / HR" },
         { name: "Milica Golubović", role: "Менеджер международных проектов" },
         { name: "Esra Simsek", role: "Недвижимость" },

@@ -40,7 +40,7 @@ export const srPages = {
       members: [
         { name: "Sabina Banda", role: "Direktorka" },
         { name: "Nikola Banda", role: "Mlađi konsultant" },
-        { name: "Anna Zakarashvili", role: "Upravljanje timom / HR" },
+        { name: "Ana Zakarashvili", role: "Upravljanje timom / HR" },
         { name: "Josephine Heinrich", role: "Upravljanje timom / HR" },
         { name: "Milica Golubović", role: "Menadžerka međunarodnih projekata" },
         { name: "Esra Simsek", role: "Nekretnine" },

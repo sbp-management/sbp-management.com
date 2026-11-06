@@ -1,5 +1,5 @@
-# Netlify detects Next.js and runs it with its Next.js runtime (pages, server actions, image CDN).
-# Set RESEND_API_KEY and CONTACT_FROM under Site configuration → Environment variables (see .env.example).
+# Netlify detects Next.js and runs it with its Next.js runtime (pages, image CDN).
+# The contact and application forms use Netlify Forms (definitions in public/__forms.html); no environment variables are needed.
 
 [build]
   command = "npm run build"

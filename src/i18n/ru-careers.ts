@@ -426,4 +426,28 @@ export const ruCareers = {
       },
     ],
   },
+
+  /** Filter above the job listings on the Jobs in Germany page; departments match JobDepartment in content/types.ts. */
+  jobFilter: {
+    department: "Отделение",
+    location: "Город",
+    all: "Все",
+    /** {n} = number of listings shown. */
+    count: "Вакансий: {n}",
+    departments: {
+      anesthesia: "Анестезиология и интенсивная терапия",
+      emergency: "Центральное приемное отделение",
+      generalMedicine: "Общая медицина",
+      geriatrics: "Гериатрия",
+      gynecology: "Гинекология и акушерство",
+      intensive: "Интенсивная терапия",
+      internal: "Терапия (внутренние болезни)",
+      neurology: "Неврология",
+      palliative: "Паллиативная медицина",
+      pediatrics: "Педиатрия",
+      pulmonology: "Пульмонология",
+      radiology: "Радиология",
+      trauma: "Травматология и ортопедия",
+    },
+  },
 } as const;

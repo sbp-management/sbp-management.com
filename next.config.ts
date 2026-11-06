@@ -1,5 +1,6 @@
 import path from "node:path";
 import type { NextConfig } from "next";
+import { retiredJobs } from "./src/content/jobs-retired";
 import { dePaths, paths, type PageKey } from "./src/i18n/config";
 
 /** Pages with an address of their own (anchors and duplicate addresses left out). */
@@ -7,9 +8,12 @@ const PAGE_KEYS = (Object.keys(paths) as PageKey[]).filter(
   (key) => !paths[key].includes("#") && !["candidates", "jobBoards"].includes(key),
 );
 
-/** Paths that are not German pages: the language folders, Next.js / Netlify internals and static files. */
+/**
+ * Paths that are not German pages: the language folders, Next.js / Netlify internals and static files
+ * (__forms.html holds the Netlify Forms definitions and receives the form submissions).
+ */
 const NOT_RESERVED =
-  "(?!(?:de|en|ru|sr)(?:/|$)|_next/|\\.netlify/|\\.well-known/|images/|favicon\\.ico|icon\\.png|apple-icon\\.png|robots\\.txt|sitemap\\.xml)";
+  "(?!(?:de|en|ru|sr)(?:/|$)|_next/|\\.netlify/|\\.well-known/|images/|favicon\\.ico|icon\\.png|apple-icon\\.png|robots\\.txt|sitemap\\.xml|__forms\\.html)";
 
 /**
  * Security headers for every response. The Content-Security-Policy only allows this site's own
@@ -75,6 +79,15 @@ const nextConfig: NextConfig = {
         permanent: true,
       })),
       { source: "/de/jobs/germany/:slug", destination: "/jobs/deutschland/:slug", permanent: true },
+      // Listings that are no longer open: their addresses forward to the job overview.
+      ...retiredJobs.flatMap((slug) => [
+        { source: `/jobs/deutschland/${slug}`, destination: "/jobs/deutschland", permanent: true },
+        {
+          source: `/:lang(en|ru|sr)/jobs/germany/${slug}`,
+          destination: "/:lang/jobs/germany",
+          permanent: true,
+        },
+      ]),
       { source: "/de/:path*", destination: "/:path*", permanent: true },
       // Addresses of the old German site that changed (/ueber-uns, /kontakt, /datenschutz and
       // /impressum are the same as before).

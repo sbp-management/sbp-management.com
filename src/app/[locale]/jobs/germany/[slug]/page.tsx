@@ -2,13 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ContactFormV2 } from "@/components/v2/contact-form";
+import { JsonLd } from "@/components/v2/json-ld";
 import { JobArticle } from "@/components/v2/job-article";
 import { Reveal } from "@/components/v2/reveal";
 import { Container, Eyebrow, TextLink } from "@/components/v2/ui";
 import { jobDetails } from "@/content/jobs-data";
+import { company } from "@/content/site";
+import type { Block, JobDetail, Seg } from "@/content/types";
 import { href, type Locale } from "@/i18n/config";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
-import { pathMetadata } from "@/i18n/metadata";
+import { pathMetadata, SITE_URL } from "@/i18n/metadata";
 
 /** Path of one listing in a given language (the listing text itself is German everywhere). */
 const jobPath = (locale: Locale, slug: string) =>
@@ -27,8 +30,66 @@ export async function generateMetadata({
   const { jobListing } = await getDictionary();
   return pathMetadata((l) => jobPath(l, slug), {
     title: job.title,
-    description: `${jobListing.eyebrow}: ${job.title}`,
+    description: `${jobListing.eyebrow}: ${job.title}, ${job.location.region}. ${jobListing.applyBody}`,
   });
+}
+
+/** Listing text as simple HTML, for the job description search engines show. */
+const esc = (t: string) =>
+  t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const segs = (text: Seg[]) =>
+  text.map((s) => (s.br ? "<br>" : esc(s.t ?? ""))).join("");
+function blocksToHtml(blocks: Block[]) {
+  return blocks
+    .map((b) => {
+      if ("items" in b)
+        return `<${b.type}>${b.items.map((i) => `<li>${segs(i)}</li>`).join("")}</${b.type}>`;
+      const tag = b.type === "quote" ? "p" : b.type;
+      return `<${tag}>${segs(b.text)}</${tag}>`;
+    })
+    .join("");
+}
+
+/** Date in the listing as YYYY-MM-DD. */
+function isoDate(date: string) {
+  const d = new Date(date);
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+}
+
+/** Google for Jobs data (schema.org JobPosting) for one listing; SBP Management is the contact. */
+function jobPosting(job: JobDetail, url: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description: blocksToHtml(job.article),
+    datePosted: isoDate(job.date),
+    validThrough: `${job.validThrough}T23:59:59+01:00`,
+    identifier: {
+      "@type": "PropertyValue",
+      name: company.name,
+      value: job.category,
+    },
+    hiringOrganization: {
+      "@type": "Organization",
+      name: company.name,
+      sameAs: SITE_URL,
+      logo: `${SITE_URL}/images/sbp-logo.png`,
+    },
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: job.location.city,
+        postalCode: job.location.postalCode,
+        addressRegion: job.location.region,
+        addressCountry: "DE",
+      },
+    },
+    directApply: true,
+    url,
+  };
 }
 
 /** One job listing in the design of the relaunch: header, listing text, contact person, application form. */
@@ -53,6 +114,7 @@ export default async function JobListingPage({
 
   return (
     <>
+      <JsonLd data={jobPosting(job, `${SITE_URL}${jobPath(locale, slug)}`)} />
       <section className="bg-paper pt-14 pb-14 lg:pt-20 lg:pb-20">
         <Container>
           <TextLink

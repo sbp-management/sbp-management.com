@@ -417,4 +417,28 @@ export const enCareers = {
       },
     ],
   },
+
+  /** Filter above the job listings on the Jobs in Germany page; departments match JobDepartment in content/types.ts. */
+  jobFilter: {
+    department: "Department",
+    location: "Location",
+    all: "All",
+    /** {n} = number of listings shown. */
+    count: "{n} positions",
+    departments: {
+      anesthesia: "Anaesthesia and intensive care",
+      emergency: "Emergency department",
+      generalMedicine: "General medicine",
+      geriatrics: "Geriatrics",
+      gynecology: "Gynaecology and obstetrics",
+      intensive: "Intensive care",
+      internal: "Internal medicine",
+      neurology: "Neurology",
+      palliative: "Palliative medicine",
+      pediatrics: "Paediatrics",
+      pulmonology: "Pulmonology",
+      radiology: "Radiology",
+      trauma: "Trauma surgery and orthopaedics",
+    },
+  },
 } as const;

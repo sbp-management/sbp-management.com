@@ -45,7 +45,7 @@ const CAREERS: {
     key: "careerDoctorsPage",
     page: "careerDoctors",
     photos: "careers",
-    jobs: ["assistenzarzt", "facharzt", "oberarzt"],
+    jobs: ["assistenzarzt", "facharzt", "oberarzt", "leitender-oberarzt"],
   },
   {
     key: "careerMidwivesPage",

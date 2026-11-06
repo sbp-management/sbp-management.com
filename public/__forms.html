@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Formulare</title>
+  </head>
+  <body>
+    <!--
+      Netlify Forms: Netlify reads these two forms when the site is deployed and from then on accepts
+      submissions with their field names (src/components/v2/contact-form.tsx sends to this file).
+      Visitors never see this page. Change the fields here whenever the form's fields change.
+    -->
+    <form name="kontakt" data-netlify="true" netlify-honeypot="website" hidden>
+      <input type="hidden" name="form-name" value="kontakt" />
+      <input name="Anliegen" />
+      <input name="Vorname" />
+      <input name="Nachname" />
+      <input name="Email" type="email" />
+      <input name="Telefonnummer" />
+      <input name="Organisation" />
+      <textarea name="Nachricht"></textarea>
+      <input name="website" />
+    </form>
+
+    <form name="bewerbung" data-netlify="true" netlify-honeypot="website" hidden>
+      <input type="hidden" name="form-name" value="bewerbung" />
+      <input name="Stelle" />
+      <input name="Vorname" />
+      <input name="Nachname" />
+      <input name="Email" type="email" />
+      <input name="Telefonnummer" />
+      <textarea name="Nachricht"></textarea>
+      <input name="website" />
+    </form>
+  </body>
+</html>

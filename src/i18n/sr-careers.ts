@@ -421,4 +421,28 @@ export const srCareers = {
       },
     ],
   },
+
+  /** Filter above the job listings on the Jobs in Germany page; departments match JobDepartment in content/types.ts. */
+  jobFilter: {
+    department: "Oblast",
+    location: "Mesto",
+    all: "Sve",
+    /** {n} = number of listings shown. */
+    count: "Broj oglasa: {n}",
+    departments: {
+      anesthesia: "Anesteziologija i intenzivna nega",
+      emergency: "Urgentni centar",
+      generalMedicine: "Opšta medicina",
+      geriatrics: "Gerijatrija",
+      gynecology: "Ginekologija i akušerstvo",
+      intensive: "Intenzivna nega",
+      internal: "Interna medicina",
+      neurology: "Neurologija",
+      palliative: "Palijativna medicina",
+      pediatrics: "Pedijatrija",
+      pulmonology: "Pulmologija",
+      radiology: "Radiologija",
+      trauma: "Traumatologija i ortopedija",
+    },
+  },
 } as const;

@@ -11,6 +11,22 @@ export type Block =
   | { type: "h4" | "h5" | "h6" | "p" | "quote"; text: Seg[] }
   | { type: "ul" | "ol"; items: Seg[][] };
 
+/** Departments of the open positions (labels in each dictionary under jobDepartments). */
+export type JobDepartment =
+  | "anesthesia"
+  | "emergency"
+  | "generalMedicine"
+  | "geriatrics"
+  | "gynecology"
+  | "intensive"
+  | "internal"
+  | "neurology"
+  | "palliative"
+  | "pediatrics"
+  | "pulmonology"
+  | "radiology"
+  | "trauma";
+
 export type JobDetail = {
   slug: string;
   title: string;
@@ -21,6 +37,12 @@ export type JobDetail = {
   authorImage: string | null;
   banner: string | null;
   article: Block[];
+  /** Department, for grouping and filtering (labels per language in jobDepartments). */
+  department: JobDepartment;
+  /** Where the job is (Google for Jobs needs it). */
+  location: { city: string; postalCode: string; region: string };
+  /** ISO date after which the listing is no longer shown as open to search engines. */
+  validThrough: string;
 };
 
 export type LegalDoc = {

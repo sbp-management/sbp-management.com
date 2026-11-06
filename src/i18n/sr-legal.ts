@@ -53,10 +53,9 @@ export const srLegal = {
             { p: "Za rad ovog veb-sajta i za komunikaciju sa vama koristimo sledeće spoljne pružaoce usluga. Svaki od njih detaljnije je opisan u nastavku:" },
             {
               ul: [
-                "Netlify, Inc. (SAD) – hosting ovog veb-sajta",
+                "Netlify, Inc. (SAD) – hosting ovog veb-sajta i prijem kontakt formulara i formulara za prijavu na oglase (videti odeljak 4)",
                 "One.com Group AB (Švedska) – registracija domena i serveri imena (DNS)",
                 "Google Ireland Limited (Irska) – e-pošta za naše adrese @sbp-management.com (Google Workspace)",
-                "Plus Five Five, Inc. koji posluje pod imenom Resend (SAD) – dostava poruka poslatih putem kontakt formulara (videti odeljak 4)",
               ],
             },
             { h: "Hosting veb-sajta: Netlify" },
@@ -111,7 +110,7 @@ export const srLegal = {
             { p: "datenschutz@sbp-management.com" },
             { h: "Prenos podataka u treće zemlje" },
             {
-              p: "Koristimo usluge kompanija sa sedištem u SAD ili sa tamošnjim matičnim kompanijama: naš hosting provajder Netlify i naš provajder e-pošte Google (videti odeljak 2), kao i servis za dostavu e-pošte Resend (videti odeljak 4). Podaci stoga mogu biti preneti u SAD. Prenos podataka Netlify-ju i Google-u zasniva se na EU–US Data Privacy Framework (odluka Evropske komisije o adekvatnosti, čl. 45 GDPR) i na standardnim ugovornim klauzulama EU (čl. 46 GDPR). Isto važi i za Resend, koji je takođe sertifikovan u okviru EU–US Data Privacy Framework i prihvatio je standardne ugovorne klauzule EU.",
+              p: "Koristimo usluge kompanija sa sedištem u SAD ili sa tamošnjim matičnim kompanijama: naš hosting provajder Netlify i naš provajder e-pošte Google (videti odeljak 2). Podaci stoga mogu biti preneti u SAD. Prenos podataka Netlify-ju i Google-u zasniva se na EU–US Data Privacy Framework (odluka Evropske komisije o adekvatnosti, čl. 45 GDPR) i na standardnim ugovornim klauzulama EU (čl. 46 GDPR).",
             },
             { h: "Opoziv vašeg pristanka za obradu podataka" },
             {
@@ -172,7 +171,7 @@ export const srLegal = {
               p: "Ako nam pošaljete upit putem kontakt formulara, vaše podatke iz formulara, uključujući kontakt podatke koje ste tamo naveli, čuvamo u svrhu obrade upita i za slučaj dodatnih pitanja. Ove podatke ne prosleđujemo bez vašeg pristanka.",
             },
             {
-              p: "Za dostavu poruka iz kontakt formulara u naš poštanski sandučić koristimo servis za dostavu e-pošte Resend, kojim upravlja Plus Five Five, Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA (Resend), i to njegov EU region. Resend obrađuje sadržaj formulara isključivo radi dostave poruke. Sa Resend-om smo zaključili ugovor o obradi podataka (čl. 28 GDPR), koji uključuje standardne ugovorne klauzule EU; Resend je takođe sertifikovan u okviru EU–US Data Privacy Framework. Detalji: https://resend.com/legal/dpa",
+              p: "Podatke poslate putem kontakt formulara i formulara za prijavu na oglase prima, čuva i prosleđuje nam e-poštom naš hosting provajder Netlify (servis „Netlify Forms“). Netlify obrađuje te podatke u naše ime na osnovu ugovora o obradi podataka (videti odeljak 2). Radi zaštite od neželjenih poruka, Netlify automatski proverava poslate podatke, između ostalog pomoću servisa Akismet (Automattic Inc., SAD). Poslate podatke brišemo kod Netlify-ja čim ih obradimo.",
             },
             {
               p: "Ovi podaci se obrađuju na osnovu čl. 6 st. 1 tač. b GDPR ako je vaš upit povezan sa ispunjenjem ugovora ili je neophodan za sprovođenje predugovornih mera. U svim ostalim slučajevima obrada se zasniva na našem legitimnom interesu za efikasnu obradu upita upućenih nama (čl. 6 st. 1 tač. f GDPR) ili na vašem pristanku (čl. 6 st. 1 tač. a GDPR), ako je on zatražen.",

@@ -1,260 +1,19 @@
-/* Generated verbatim from the live sbp-management.com HTML. Edit the text here; do not re-run the extractor over manual edits. */
+/**
+ * Open positions in Germany (current list from SBP, 2026-11-06): all for doctors, in Balingen and Albstadt.
+ * The employer is not named publicly. Each listing gets its own page with the application form, and Google
+ * for Jobs data (JobPosting). Remove a listing here when it is filled and add its slug to jobs-retired.ts,
+ * so its old address forwards to the job overview.
+ */
 
 import type { JobDetail } from "./types";
 
 export const jobDetails: JobDetail[] = [
   {
-    slug: "aemp-leitung-m-w-d-sterilgutversorgung-sebnitz",
-    title: "AEMP Leitung (m/w/d) Sterilgutversorgung Sebnitz",
-    category: "2024.05",
-    date: "October 3, 2024",
-    author: "Nikola Banda | Gesundheitsökonom",
-    authorImage: null,
-    banner: null,
-    article: [
-      {
-        type: "h5",
-        text: [
-          {
-            t: "AEMP - Leitung Sterilgutversorgung (m/w/d) für eine Klinikkette, in Voll- oder Teilzeit, unbefristet",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Für eine modern ausgestattete Sterilgutversorgung mit hohem Auftragsvolumen in Sebnitz, suchen wir eine Leitung für den Standort, die bereit ist, die Fachkunde 3 (Managementkurs) zu absolvieren, oder schon eine Fachkunde 3 besitzt.",
-          },
-        ],
-      },
-      {
-        type: "quote",
-        text: [
-          {
-            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
-          },
-        ],
-      },
-      {
-        type: "h6",
-        text: [
-          {
-            t: "Ihre Vorteile",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Der Arbeitgeber bietet Ihnen folgende Vorteile:",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Geregelte Arbeitszeit ohne Wochenendarbeit",
-            },
-          ],
-          [
-            {
-              t: "Gestaltungsspielraum für unternehmerische Entscheidungen",
-            },
-          ],
-          [
-            {
-              t: "Flache Hierarchien und kurze Entscheidungswege",
-            },
-          ],
-          [
-            {
-              t: "Anspruchsvolle Tätigkeit mit attraktiven Rahmenbedingungen",
-            },
-          ],
-          [
-            {
-              t: "Strukturierte Einarbeitung und regelmäßige Weiterbildungen",
-            },
-          ],
-          [
-            {
-              t: "Betriebliche Altersvorsorge",
-            },
-          ],
-          [
-            {
-              t: "Unterstützung bei der Vereinbarkeit von Familie und Beruf durch flexible Arbeits- und Teilzeitmodelle",
-            },
-          ],
-          [
-            {
-              t: "Betriebliches Gesundheitsmanagement",
-            },
-          ],
-          [
-            {
-              t: "Mitarbeiterrabatte und Vergünstigungen für Freizeitaktivitäten und Veranstaltungen",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h6",
-        text: [
-          {
-            t: "Ihre Aufgaben",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Was erwartet Sie?",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Hauptverantwortung für die zentrale Betreuung der AEMP",
-            },
-          ],
-          [
-            {
-              t: "Organisation und Koordination der Betriebsabläufe",
-            },
-          ],
-          [
-            {
-              t: "Führung des Teams, inklusive Dienstplanerstellung",
-            },
-          ],
-          [
-            {
-              t: "Sicherstellung der gesetzeskonformen Aufbereitung von Medizinprodukten (Reinigung, Desinfektion, Sterilisation)",
-            },
-          ],
-          [
-            {
-              t: "Mitarbeit im gesamten AEMP-Bereich",
-            },
-          ],
-          [
-            {
-              t: "Mitwirkung am Qualitätsmanagement, Vorbereitung und Begleitung von Audits",
-            },
-          ],
-          [
-            {
-              t: "Erstellung und Pflege von Leistungsstatistiken",
-            },
-          ],
-          [
-            {
-              t: "Reparatur- und Reklamationsmanagement",
-            },
-          ],
-          [
-            {
-              t: "Datenpflege sowie Analyse und Auswertung mit AEMP-Software",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h6",
-        text: [
-          {
-            t: "Ihr Profil",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Welche Qualifikationen benötigen Sie?",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Fachkundekurs 3 oder Managementlehrgang zur Leitung einer AEMP, oder Bereitschaft diesen zu absolvieren",
-            },
-          ],
-          [
-            {
-              t: "Berufserfahrung im Bereich der AEMP",
-            },
-          ],
-          [
-            {
-              t: "Sozial-, Fach- und Kommunikationskompetenz",
-            },
-          ],
-          [
-            {
-              t: "Verantwortungsbewusstsein und selbstständige Arbeitsweise",
-            },
-          ],
-          [
-            {
-              t: "Führungskompetenz und Teamgeist",
-            },
-          ],
-          [
-            {
-              t: "Fundierte EDV-Kenntnisse",
-            },
-          ],
-          [
-            {
-              t: "Motivation zur Weiterentwicklung bestehender Strukturen",
-            },
-            {
-              br: 1,
-            },
-          ],
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Ansprechpartner: Herr Nikola Banda  ",
-          },
-          {
-            t: "Tel.: +49 176 322 260 62",
-            href: "tel:+4917632226062",
-          },
-          {
-            t: "  ",
-          },
-          {
-            t: "n.banda@sbp-management.com",
-            href: "mailto:n.banda@sbp-management.com",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    slug: "anasthesietechnische-assistenten-ata-m-w-d-in-frankfurt-am-main-in-voll-oder-teilzeit-unbefristet-202327",
-    title:
-      "Anästhesietechnische Assistenten (ATA) (m/w/d) in Frankfurt am Main in Voll- oder Teilzeit, unbefristet",
-    category: "2023.27",
-    date: "October 3, 2024",
-    author: "Nikola Banda | Gesundheitsökonom",
+    slug: "oberarzt-m-w-d-intensivmedizin-in-albstadt",
+    title: "Oberarzt (m/w/d) Intensivmedizin in Albstadt",
+    category: "2026.01",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
     authorImage: null,
     banner: null,
     article: [
@@ -262,7 +21,7 @@ export const jobDetails: JobDetail[] = [
         type: "h4",
         text: [
           {
-            t: "Anästhesietechnische Assistenten (ATA) (m/w/d) in Frankfurt am Main in Voll- oder Teilzeit, unbefristet",
+            t: "Oberarzt (m/w/d) Intensivmedizin in Albstadt",
           },
         ],
       },
@@ -270,14 +29,7 @@ export const jobDetails: JobDetail[] = [
         type: "p",
         text: [
           {
-            t: "Für eine schön gelegene Klinik in Frankfurt am Main suchen wir qualifizierte ",
-          },
-          {
-            t: "ATAs",
-            b: 1,
-          },
-          {
-            t: ".",
+            t: "Für eine Klinik in Albstadt (Baden-Württemberg) suchen wir eine Oberärztin oder einen Oberarzt (m/w/d) auf der Intensivstation.",
           },
         ],
       },
@@ -287,70 +39,6 @@ export const jobDetails: JobDetail[] = [
           {
             t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
           },
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Ihre Vorteile",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Die Klinik bietet Ihnen folgende Vorteile:",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Vergütung nach TVöD inkl attraktiven Angeboten zur betrieblichen Altersvorsorge",
-            },
-          ],
-          [
-            {
-              t: "Zuverlässige Dienstplangestaltung",
-            },
-          ],
-          [
-            {
-              t: "Job, Familie und Freizeit in perfekter Balance",
-            },
-          ],
-          [
-            {
-              t: "Mitarbeit in einem leistungsstarken, ",
-            },
-            {
-              t: "innovativen Krankenhaus",
-              b: 1,
-            },
-            {
-              t: " in angenehmer Arbeitsatmosphäre",
-            },
-          ],
-          [
-            {
-              t: "Sicherer Arbeitsplatz in einem abwechslungsreichen und anspruchsvollen Arbeitsgebiet",
-            },
-          ],
-          [
-            {
-              t: "Betriebssport von Fitness über Yoga bis hin zur Fußballmannschaft",
-            },
-          ],
-          [
-            {
-              t: "Beste Erreichbarkeit mit öffentlichen Nahverkehrsmitteln",
-              b: 1,
-            },
-          ],
         ],
       },
       {
@@ -362,29 +50,21 @@ export const jobDetails: JobDetail[] = [
         ],
       },
       {
-        type: "p",
-        text: [
-          {
-            t: "Was wird Sie in der Klinik erwarten?",
-          },
-        ],
-      },
-      {
         type: "ul",
         items: [
           [
             {
-              t: "Mitarbeit im Team der Anästhiepflege",
+              t: "Oberärztliche Verantwortung auf der Intensivstation",
             },
           ],
           [
             {
-              t: "Versorgung der Patient:innen im Zentral-OP, im Ambulanten-OP und die Betreuung im Aufwachraum",
+              t: "Anleitung und Weiterbildung der Assistenzärztinnen und -ärzte",
             },
           ],
           [
             {
-              t: "Weitere Einsatzgebiete können der Augen-OP, die Endoskopie, das MRT sowie die Pflegestationen im Rahmen der Visiten des Akutschmerzdienstes sein",
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
             },
           ],
         ],
@@ -398,523 +78,16 @@ export const jobDetails: JobDetail[] = [
         ],
       },
       {
-        type: "p",
-        text: [
-          {
-            t: "Welche Qualifikationen benötigen Sie?",
-          },
-        ],
-      },
-      {
         type: "ul",
         items: [
           [
             {
-              t: "Sie haben die Ausbildung zum Anästhesietechnischen Assistenten / ATA (m/w/d) erfolgreich absolviert",
+              t: "Facharztanerkennung mit Zusatzweiterbildung Intensivmedizin (zum Beispiel in Innerer Medizin oder Anästhesiologie)",
             },
           ],
           [
             {
-              t: "oder sind in der Gesundheits- und Krankenpflege ausgebildet und haben Erfahrung in der Anästhesie bzw. die entsprechende Fachweiterbildung",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt vom unserem Experten-Team beraten.",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "‍",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "‍",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "‍",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    slug: "assistenzarzt-fur-die-gynakologie-und-geburtshilfe-m-w-d-in-vollzeit-unbefristet-202402",
-    title:
-      "Assistenzarzt für die Gynäkologie und Geburtshilfe (m/w/d) in Vollzeit, unbefristet",
-    category: "2024.02",
-    date: "January 22, 2025",
-    author: "Sabina Banda | CEO Geschäftsführung",
-    authorImage: null,
-    banner: null,
-    article: [
-      {
-        type: "h4",
-        text: [
-          {
-            t: "Assistenzarzt (m/w/d) Frauenheilkunde und Geburtshilfe in Vollzeit, unbefristet",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Für ein modernes, staatliches Klinikum in Kooperation mit den Universitätskliniken Magdeburg und Dresden suchen wir Assistenzärzte (m/w/d) in Weiterbildung zum Facharzt für Frauenheilkunde und Geburtshilfe.",
-          },
-        ],
-      },
-      {
-        type: "quote",
-        text: [
-          {
-            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
-          },
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Ihre Vorteile",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Der Arbeitgeber bietet Ihnen folgende Vorteile:",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Volle Weiterbildung im Bereich Gynäkologie, inklusive Spezialisierung in der Urogynäkologie",
-            },
-          ],
-          [
-            {
-              t: "Hocherfahrene Chefärztin, die zu den führenden Spezialisten Deutschlands zählt",
-            },
-          ],
-          [
-            {
-              t: "Moderne medizintechnische Ausstattung",
-            },
-          ],
-          [
-            {
-              t: "Flexible Arbeitszeitmodelle",
-            },
-          ],
-          [
-            {
-              t: "Attraktive Vergütung in Anlehnung an TV Ärzte/VKA",
-            },
-          ],
-          [
-            {
-              t: "Kommunale Klinikum",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Ihr Profil",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Welche Qualifikationen benötigen Sie?",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Fachliche und soziale Kompetenz",
-            },
-          ],
-          [
-            {
-              t: "Berufserlaubnis",
-            },
-          ],
-          [
-            {
-              t: "Motivation zur interdisziplinären Zusammenarbeit",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Falls Sie Interesse an unserem Angebot besitzen, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt vom unserem Experten-Team beraten.",
-          },
-          {
-            br: 1,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    slug: "assistenzarzt-m-w-d-gefasschirurgie-in-brandenburg-in-voll-oder-teilzeit-unbefristet-202328",
-    title:
-      "Assistenzarzt (m/w/d) Gefäßchirurgie in Brandenburg in Voll- oder Teilzeit, unbefristet",
-    category: "2023.28",
-    date: "August 31, 2023",
-    author: "Sabina Banda Geschäftsführung",
-    authorImage: null,
-    banner: null,
-    article: [
-      {
-        type: "h4",
-        text: [
-          {
-            t: "Assistenzarzt (m/w/d) Gefäßchirurgie in Voll- oder Teilzeit, unbefristet",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Für eine schön gelegene Klinik in Brandenburg (nahe Berlin) in der Nähe zu Hamburg suchen wir Assistenzärzte (m/w/d) für die Gefäßchirurgie.",
-          },
-        ],
-      },
-      {
-        type: "quote",
-        text: [
-          {
-            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
-          },
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Ihre Vorteile",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Die Klinik bietet Ihnen folgende Vorteile:",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Einen strukturierten Einarbeitungsprozess",
-            },
-          ],
-          [
-            {
-              t: "Eigenverantwortliches, supervidiertes Arbeiten in guter Arbeitsatmosphäre",
-            },
-          ],
-          [
-            {
-              t: "Ein qualifiziertes und gut zusammenarbeitendes Team aus Ärzten und Pflegefachkräften",
-            },
-          ],
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Eine attraktive Vergütung in Anlehnung an den TV Ärzte/VKA sowie eine arbeitgeberfinanzierte Altersversorgung",
-            },
-          ],
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Flexible Arbeitszeitmodelle",
-            },
-          ],
-          [
-            {
-              t: "Eine hochmoderne medizintechnische Ausstattung",
-            },
-          ],
-          [
-            {
-              t: "Durchführung eines sehr großen Spektrums viszeralchirurgischer, laparoskopischer Eingriffe inkl. Adipositaschirurgie",
-            },
-          ],
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Die Weiterbildungszeit zum Facharzt für Viszeralchirurgie von 24 Monaten, beantragt sind 48 Monate",
-            },
-          ],
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Eine großzügige Unterstützung der internen und externen Weiterbildung",
-            },
-          ],
-          [
-            {
-              t: "Unterstützung bei der Einarbeitung und Wohnungssuche",
-            },
-          ],
-          [
-            {
-              t: "Eine Kinderbetreuung durch ein Montessori-Kinderhaus in unmittelbarer",
-            },
-          ],
-          [
-            {
-              t: "Nachbarschaft zum Arbeitsort",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Ihr Profil",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Welche Qualifikationen benötigen Sie?",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Sie haben Interesse am Fach Chirurgie",
-            },
-          ],
-          [
-            {
-              t: "Sie sind Arzt und haben die Approbation oder die Berufserlaubnis",
-            },
-          ],
-          [
-            {
-              t: "Sie sind eine Persönlichkeit mit fachlichen und sozialen Kompetenzen",
-            },
-          ],
-          [
-            {
-              t: "Sie arbeiten engagiert, verantwortungsbewusst und patientenorientiert",
-            },
-          ],
-          [
-            {
-              t: "Sie möchten sich aktiv in den Krankenhausalltag einbringen",
-            },
-          ],
-          [
-            {
-              t: "Sie sind innovations- und motivationsfähig und schätzen die interdisziplinäre Zusammenarbeit",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Falls Sie Interesse an unserem Angebot besitzen, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt vom unserem Experten-Team beraten.",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    slug: "facharzt-m-w-d-fuer-frauenheilkunde-und-geburtshilfe-in-vollzeit-unbefristet-202403",
-    title:
-      "Facharzt (m/w/d) für Frauenheilkunde und Geburtshilfe in Vollzeit, unbefristet",
-    category: "2024.03",
-    date: "January 22, 2025",
-    author: "Sabina Banda | CEO Geschäftsführung",
-    authorImage: null,
-    banner: null,
-    article: [
-      {
-        type: "h4",
-        text: [
-          {
-            t: "Facharzt (m/w/d) für Frauenheilkunde und Geburtshilfe in Vollzeit, unbefristet",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Für ein modernes, kommunales Klinikum in Kooperation mit den Universitätskliniken Magdeburg und Dresden suchen wir Fachärzte (m/w/d) für die Frauenheilkunde und Geburtshilfe.",
-          },
-        ],
-      },
-      {
-        type: "quote",
-        text: [
-          {
-            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
-          },
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Ihre Vorteile",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Der Arbeitgeber bietet Ihnen folgende Vorteile:",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Vielseitige, verantwortungsvolle Tätigkeit in einer modernen Klinik",
-            },
-          ],
-          [
-            {
-              t: "Kollegiales, unterstützendes Team und gute Work-Life-Balance",
-            },
-          ],
-          [
-            {
-              t: "Attraktive Vergütung nach Tarif (HTV Ärzte) und Nebentätigkeiten möglich",
-            },
-          ],
-          [
-            {
-              t: "Umfangreiche Fort- und Weiterbildungsangebote",
-            },
-          ],
-          [
-            {
-              t: "Aussicht auf die Chefarzt-Stelle",
-            },
-          ],
-          [
-            {
-              t: "Betriebliche Altersvorsorge, Jahressonderzahlungen und Gesundheitsförderung",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Ihr Profil",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Welche Qualifikationen benötigen Sie?",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Abgeschlossene Facharztausbildung",
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
             },
           ],
           [
@@ -924,7 +97,35 @@ export const jobDetails: JobDetail[] = [
           ],
           [
             {
-              t: "Teamfähigkeit und Engagement",
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
             },
           ],
         ],
@@ -941,27 +142,25 @@ export const jobDetails: JobDetail[] = [
         type: "p",
         text: [
           {
-            t: "Falls Sie Interesse an unserem Angebot besitzen, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt vom unserem Experten-Team beraten.",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "‍",
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
           },
         ],
       },
     ],
+    department: "intensive",
+    location: {
+      city: "Albstadt",
+      postalCode: "72458",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
   },
   {
-    slug: "mtra-m-w-d-in-frankfurt-am-main-in-voll-oder-teilzeit-unbefristet-202324",
-    title:
-      "MTRA (m/w/d) in Frankfurt am Main in Voll- oder Teilzeit, unbefristet",
-    category: "2023.24",
-    date: "September 29, 2024",
-    author: "Sabina Banda CEO Geschäftsführung",
+    slug: "leitender-oberarzt-m-w-d-radiologie-in-albstadt",
+    title: "Leitender Oberarzt (m/w/d) Radiologie in Albstadt",
+    category: "2026.02",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
     authorImage: null,
     banner: null,
     article: [
@@ -969,7 +168,7 @@ export const jobDetails: JobDetail[] = [
         type: "h4",
         text: [
           {
-            t: "MTRAs (m/w/d) für eine Klinik in Frankfurt am Main in Voll- oder Teilzeit, unbefristet",
+            t: "Leitender Oberarzt (m/w/d) Radiologie in Albstadt",
           },
         ],
       },
@@ -977,14 +176,7 @@ export const jobDetails: JobDetail[] = [
         type: "p",
         text: [
           {
-            t: "Für eine zentral gelegene Klinik in Frankfurt am Main suchen wir qualifizierte ",
-          },
-          {
-            t: "Medizintechnische-Radiologie-Assistenten",
-            b: 1,
-          },
-          {
-            t: ".",
+            t: "Für eine Klinik in Albstadt (Baden-Württemberg) suchen wir eine Leitende Oberärztin oder einen Leitenden Oberarzt (m/w/d) in der Radiologie.",
           },
         ],
       },
@@ -1000,119 +192,26 @@ export const jobDetails: JobDetail[] = [
         type: "h5",
         text: [
           {
-            t: "Ihre Vorteile",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Die Klinik bietet Ihnen folgende Vorteile:",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Mitarbeit in einem leistungsstarken, innovativen Krankenhaus in angenehmer Arbeitsatmosphäre",
-            },
-          ],
-          [
-            {
-              t: "Sicherer Arbeitsplatz in einem abwechslungsreichen und anspruchsvollen Arbeitsgebiet",
-            },
-          ],
-          [
-            {
-              t: "Gezielte Einarbeitung",
-              b: 1,
-            },
-          ],
-          [
-            {
-              t: "Übertarifliche Vergütung inkl. attraktiven Angeboten zur betrieblichen Altersvorsorge",
-              b: 1,
-            },
-          ],
-          [
-            {
-              t: "Vielfältige interne und externe ",
-            },
-            {
-              t: "Fortbildungsmöglichkeiten",
-              b: 1,
-            },
-            {
-              t: " inkl. der Nutzung des CNE-Online-Fortbildungsportals ▪",
-            },
-          ],
-          [
-            {
-              t: "Job, Familie und Freizeit in perfekter Balance",
-            },
-          ],
-          [
-            {
-              t: "Betriebssport von Fitness über Yoga bis hin zur Fußballmannschaft",
-            },
-          ],
-          [
-            {
-              t: "Beste Erreichbarkeit mit öffentlichen Nahverkehrsmitteln",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
             t: "Ihre Aufgaben",
           },
         ],
       },
       {
-        type: "p",
-        text: [
-          {
-            t: "Was wird Sie in der Klinik erwarten?",
-          },
-        ],
-      },
-      {
         type: "ul",
         items: [
           [
             {
-              t: "Konventionelle Röntgendiagnostik in digitaler Technik",
+              t: "Leitende oberärztliche Verantwortung in der Radiologie und Vertretung der Chefärztin oder des Chefarztes",
             },
           ],
           [
             {
-              t: "Mehrzeilenspiral-CT (128 Zeilen)",
+              t: "Anleitung und Weiterbildung der Assistenzärztinnen und -ärzte",
             },
           ],
           [
             {
-              t: "Ganzkörper-MRT",
-            },
-          ],
-          [
-            {
-              t: "Angiographie und Interventionen",
-            },
-          ],
-          [
-            {
-              t: "Komplette digitale Datenverarbeitung und Archivierung (RIS/PACS)",
-            },
-          ],
-          [
-            {
-              t: "Teilnahme an Nacht- und Wochenenddiensten",
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
             },
           ],
         ],
@@ -1126,10 +225,35 @@ export const jobDetails: JobDetail[] = [
         ],
       },
       {
-        type: "p",
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Radiologie und mehrjährige Erfahrung als Oberärztin oder Oberarzt",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
         text: [
           {
-            t: "Welche Qualifikationen benötigen Sie?",
+            t: "So begleiten wir Sie",
           },
         ],
       },
@@ -1138,17 +262,17 @@ export const jobDetails: JobDetail[] = [
         items: [
           [
             {
-              t: "Abgeschlossene Ausbildung zum MTRA (m/w/d)",
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
             },
           ],
           [
             {
-              t: "Persönliches Engagement, Teamfähigkeit und Flexibilität",
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
             },
           ],
           [
             {
-              t: "Freundlicher und professioneller Umgang mit Patienten und Angehörigen",
+              t: "Begleitung beim Umzug und Ankommen in der Region",
             },
           ],
         ],
@@ -1165,239 +289,25 @@ export const jobDetails: JobDetail[] = [
         type: "p",
         text: [
           {
-            t: "Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt vom unserem Experten-Team beraten.",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "‍",
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
           },
         ],
       },
     ],
+    department: "radiology",
+    location: {
+      city: "Albstadt",
+      postalCode: "72458",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
   },
   {
-    slug: "pflegedienstleitung-m-w-d-baden-wurttemberg",
-    title: "Pflegedienstleitung (m/w/d) Baden-Württemberg",
-    category: "2024.05",
-    date: "October 3, 2024",
-    author: "Nikola Banda Gesundheitsökonom",
-    authorImage: null,
-    banner: null,
-    article: [
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Pflegedienstleitung (PDL) (m/w/d) in Vollzeit, unbefristet",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Für eine schön gelegene Klinik in Baden-Württemberg in der Nähe der französischen Grenze suchen wir eine qualifizierte Pflegedientsleitung (PDL).",
-          },
-        ],
-      },
-      {
-        type: "quote",
-        text: [
-          {
-            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
-          },
-        ],
-      },
-      {
-        type: "h6",
-        text: [
-          {
-            t: "Ihre Vorteile",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Die Klinik bietet Ihnen folgende Vorteile:",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Überdurchschnittliche Vergütung zzgl. attraktiven Zulagen",
-            },
-          ],
-          [
-            {
-              t: "Zuverlässige Dienstplangestaltung und Vereinbarkeit von Familie und Beruf",
-            },
-          ],
-          [
-            {
-              t: "Geförderte INDIVIDUELLE Fort- und Weiterbildung",
-            },
-          ],
-          [
-            {
-              t: "Jobrad, Tablet oder Tankgutscheine",
-            },
-          ],
-          [
-            {
-              t: "Mitarbeiterrabatte für eine Vielzahl von Topmarken",
-            },
-          ],
-          [
-            {
-              t: "Kostenlose Onlinefachbibliothek",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h6",
-        text: [
-          {
-            t: "Ihre Aufgaben",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Was wird Sie in der Klinik erwarten?",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Verantwortlich für das Personalmanagement, inklusive Planung, Auswahl, Einarbeitung und Führung des Teams",
-            },
-          ],
-          [
-            {
-              t: "Strategische Weiterentwicklung der Pflegequalität und internen Abläufe",
-            },
-          ],
-          [
-            {
-              t: "Überwachung der Pflegedokumentation und Qualitätsprozesse",
-            },
-          ],
-          [
-            {
-              t: "Planung und Koordination von Fortbildungen in Zusammenarbeit mit der Klinikleitung",
-            },
-          ],
-          [
-            {
-              t: "Sicherstellung der Hygiene- und Arzneimittelversorgung",
-            },
-          ],
-          [
-            {
-              t: "Verantwortlich für die Organisation der Speisen-, Wäsche- und Medizinproduktverwaltung",
-            },
-          ],
-          [
-            {
-              t: "Umsetzung kontinuierlicher Verbesserungsprozesse und Einhaltung gesetzlicher Vorgaben",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h6",
-        text: [
-          {
-            t: "Ihr Profil",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Welche Qualifikationen benötigen Sie?",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "3 jähriges Examen als Pflegefachkraft Weiterbildung zur Führungskraft (min. Stationsleiterkurs)",
-            },
-          ],
-          [
-            {
-              t: "Führungserfahrung",
-            },
-          ],
-          [
-            {
-              t: "Bereitschaft zur eigenständigen Fort- und Weiterbildungen",
-            },
-          ],
-          [
-            {
-              t: "Selbständige Arbeitsweise Kommunikationsfähigkeit",
-            },
-          ],
-          [
-            {
-              t: "Teamfähigkeit",
-            },
-          ],
-          [
-            {
-              t: "EDV-Kenntnisse",
-            },
-          ],
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Ansprechpartner: Herr Nikola Banda  Tel.: ",
-          },
-          {
-            t: "+49 176 322 260 62",
-            href: "tel:+4917632226062",
-          },
-          {
-            t: " E-Mail:",
-          },
-          {
-            t: " n.banda@sbp-management.com",
-            href: "mailto:n.banda@sbp-management.com",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    slug: "pflegefachkrafte-m-w-d-intensiv-padiatrie-u-neonatologie-in-frankfurt-am-main-in-voll-oder-teilzeit-unbefristet-202325",
-    title:
-      "Pflegefachkräfte (m/w/d) Pädiatrie in Frankfurt am Main in Vollzeit, unbefristet",
-    category: "2023.25",
-    date: "May 5, 2025",
-    author: "Nikola Banda | Gesundheitsökonom",
+    slug: "facharzt-m-w-d-fuer-radiologie-in-albstadt",
+    title: "Facharzt (m/w/d) für Radiologie in Albstadt",
+    category: "2026.03",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
     authorImage: null,
     banner: null,
     article: [
@@ -1405,7 +315,7 @@ export const jobDetails: JobDetail[] = [
         type: "h4",
         text: [
           {
-            t: "Pflegefachkräfte (m/w/d) Pädiatrie für eine Klinik in Frankfurt am Main in Volllzeit, unbefristet",
+            t: "Facharzt (m/w/d) für Radiologie in Albstadt",
           },
         ],
       },
@@ -1413,14 +323,7 @@ export const jobDetails: JobDetail[] = [
         type: "p",
         text: [
           {
-            t: "Für eine schön gelegene Klinik in Frankfurt am Main suchen wir qualifizierte ",
-          },
-          {
-            t: "Pflegekräfte für die Intensivstation Pädiatrie und Neonatologie",
-            b: 1,
-          },
-          {
-            t: ".",
+            t: "Für eine Klinik in Albstadt (Baden-Württemberg) suchen wir eine Fachärztin oder einen Facharzt (m/w/d) in der Radiologie.",
           },
         ],
       },
@@ -1436,181 +339,26 @@ export const jobDetails: JobDetail[] = [
         type: "h5",
         text: [
           {
-            t: "Ihre Vorteile",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Die Klinik bietet Ihnen folgende Vorteile:",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Überdurchschnittliche Vergütung zzgl. attraktiven Zulagen",
-            },
-          ],
-          [
-            {
-              t: "4.000,00 EUR Willkommensbonus",
-              b: 1,
-            },
-            {
-              t: " für Fachkäfte mit deutschem Diplom oder vollem Anerkennunsgbescheid",
-            },
-          ],
-          [
-            {
-              t: "Wohnung",
-              b: 1,
-            },
-            {
-              t: " in Frankfurt verfügbar",
-            },
-          ],
-          [
-            {
-              t: "Arbeitsplatz für Ehepartner",
-              b: 1,
-            },
-            {
-              t: " möglich",
-            },
-          ],
-          [
-            {
-              t: "unbefristeter Arbeitsvertrag",
-              b: 1,
-            },
-          ],
-          [
-            {
-              t: "Zuverlässige Dienstplangestaltung",
-            },
-          ],
-          [
-            {
-              t: "Durch Wechselschicht bis zu ",
-            },
-            {
-              t: "39 Tage Urlaub",
-              b: 1,
-            },
-            {
-              t: " im Jahr möglich",
-            },
-          ],
-          [
-            {
-              t: "Job, Familie und Freizeit in perfekter Balance",
-            },
-          ],
-          [
-            {
-              t: "Mitarbeit in einem leistungsstarken, ",
-            },
-            {
-              t: "innovativen Krankenhaus",
-              b: 1,
-            },
-            {
-              t: " in angenehmer Arbeitsatmosphäre",
-            },
-          ],
-          [
-            {
-              t: "Beste Erreichbarkeit mit öffentlichen Nahverkehrsmitteln",
-              b: 1,
-            },
-          ],
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Weiterbildungsmöglichkeiten",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Fachweiterbildung Intensiv- und Anästhesiepflege",
-            },
-          ],
-          [
-            {
-              t: "Fachweiterbildung Pädiatrische Intensivpflege",
-            },
-          ],
-          [
-            {
-              t: "Fachweiterbildung Operationsdienst",
-            },
-          ],
-          [
-            {
-              t: "Weiterbildung Führen und Leiten – Stations-, Funktionsdienst- und Wohnbereichsleitung",
-            },
-          ],
-          [
-            {
-              t: "Weiterbildung Praxisanleitung",
-            },
-          ],
-          [
-            {
-              t: "Weiterbildung Atmungstherapie nach der Deutschen Gesellschaft für Pneumologie (DGP)",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
             t: "Ihre Aufgaben",
           },
         ],
       },
       {
-        type: "p",
-        text: [
-          {
-            t: "Was wird Sie in der Klinik erwarten?",
-          },
-        ],
-      },
-      {
         type: "ul",
         items: [
           [
             {
-              t: "Sie arbeiten in einem aufgeschlossenen, kompetenten und interdisziplinären Team",
+              t: "Fachärztliche Betreuung der Patientinnen und Patienten in der Radiologie",
             },
           ],
           [
             {
-              t: "Eine Abteilung auf neustem technischen Stand",
+              t: "Anleitung der Assistenzärztinnen und -ärzte",
             },
           ],
           [
             {
-              t: "Eine strukturierte Einarbeitung",
-            },
-          ],
-          [
-            {
-              t: "Regelmäßige Fort- und Weiterbildungen",
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
             },
           ],
         ],
@@ -1624,10 +372,35 @@ export const jobDetails: JobDetail[] = [
         ],
       },
       {
-        type: "p",
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Radiologie",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
         text: [
           {
-            t: "Welche Qualifikationen benötigen Sie?",
+            t: "So begleiten wir Sie",
           },
         ],
       },
@@ -1636,22 +409,17 @@ export const jobDetails: JobDetail[] = [
         items: [
           [
             {
-              t: "Sie haben eine abgeschlossene Ausbildung der Gesundheits- und Kinderkrankenpflege (m/w/d)",
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
             },
           ],
           [
             {
-              t: "Oder nachweislich mindestens 5 Jahre Berufserfahrung auf der Pädiatrie",
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
             },
           ],
           [
             {
-              t: "Vorteil: Fachweiterbildung Pädiatrische Intensivmedizin",
-            },
-          ],
-          [
-            {
-              t: "Sie sind eine motivierte und erfahrende Persönlichkeit, die mit guten Fachkenntnissen im Bereich der neonatologischen Intensivpflege unser Team verstärkt",
+              t: "Begleitung beim Umzug und Ankommen in der Region",
             },
           ],
         ],
@@ -1668,19 +436,25 @@ export const jobDetails: JobDetail[] = [
         type: "p",
         text: [
           {
-            t: "Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt vom unserem Experten-Team beraten.",
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
           },
         ],
       },
     ],
+    department: "radiology",
+    location: {
+      city: "Albstadt",
+      postalCode: "72458",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
   },
   {
-    slug: "pflegefachkrafte-m-w-d-intensivstation-in-frankfurt-am-main-in-voll-oder-teilzeit-unbefristet-202326",
-    title:
-      "Pflegefachkräfte (m/w/d) Intensivstation in Frankfurt am Main in Voll- oder Teilzeit, unbefristet",
-    category: "2023.26",
-    date: "October 3, 2024",
-    author: "Nikola Banda | Gesundheitsökonom",
+    slug: "oberarzt-m-w-d-paediatrische-gastroenterologie-in-balingen",
+    title: "Oberarzt (m/w/d) Pädiatrische Gastroenterologie in Balingen",
+    category: "2026.04",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
     authorImage: null,
     banner: null,
     article: [
@@ -1688,7 +462,7 @@ export const jobDetails: JobDetail[] = [
         type: "h4",
         text: [
           {
-            t: "Pflegefachkräfte (m/w/d) ITS Pädiatrie u. Neonatologie für eine Klinik in Frankfurt am Main in Voll- oder Teilzeit, unbefristet",
+            t: "Oberarzt (m/w/d) Pädiatrische Gastroenterologie in Balingen",
           },
         ],
       },
@@ -1696,14 +470,7 @@ export const jobDetails: JobDetail[] = [
         type: "p",
         text: [
           {
-            t: "Für eine schön gelegene Klinik in Frankfurt am Main suchen wir qualifizierte ",
-          },
-          {
-            t: "Pflegekräfte für die Intensivstation",
-            b: 1,
-          },
-          {
-            t: ".",
+            t: "Für eine Klinik in Balingen (Baden-Württemberg) suchen wir eine Oberärztin oder einen Oberarzt (m/w/d) in der Pädiatrischen Gastroenterologie.",
           },
         ],
       },
@@ -1719,148 +486,26 @@ export const jobDetails: JobDetail[] = [
         type: "h5",
         text: [
           {
-            t: "Ihre Vorteile",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "Die Klinik bietet Ihnen folgende Vorteile:",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Überdurchschnittliche Vergütung zzgl. attraktiven Zulagen",
-            },
-          ],
-          [
-            {
-              t: "Zuverlässige Dienstplangestaltung",
-            },
-          ],
-          [
-            {
-              t: "Durch Wechselschicht bis zu ",
-            },
-            {
-              t: "39 Tage Urlaub",
-              b: 1,
-            },
-            {
-              t: " im Jahr möglich",
-            },
-          ],
-          [
-            {
-              t: "Job, Familie und Freizeit in perfekter Balance",
-            },
-          ],
-          [
-            {
-              t: "Mitarbeit in einem leistungsstarken, ",
-            },
-            {
-              t: "innovativen Krankenhaus",
-              b: 1,
-            },
-            {
-              t: " in angenehmer Arbeitsatmosphäre",
-            },
-          ],
-          [
-            {
-              t: "Sicherer Arbeitsplatz in einem abwechslungsreichen und anspruchsvollen Arbeitsgebiet",
-            },
-          ],
-          [
-            {
-              t: "Betriebssport von Fitness über Yoga bis hin zur Fußballmannschaft",
-            },
-          ],
-          [
-            {
-              t: "Beste Erreichbarkeit mit öffentlichen Nahverkehrsmitteln",
-              b: 1,
-            },
-          ],
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
-            t: "Weiterbildungsmöglichkeiten",
-          },
-        ],
-      },
-      {
-        type: "ul",
-        items: [
-          [
-            {
-              t: "Fachweiterbildung Intensiv- und Anästhesiepflege",
-            },
-          ],
-          [
-            {
-              t: "Fachweiterbildung Pädiatrische Intensivpflege",
-            },
-          ],
-          [
-            {
-              t: "Fachweiterbildung Operationsdienst",
-            },
-          ],
-          [
-            {
-              t: "Weiterbildung Führen und Leiten – Stations-, Funktionsdienst- und Wohnbereichsleitung",
-            },
-          ],
-          [
-            {
-              t: "Weiterbildung Praxisanleitung",
-            },
-          ],
-          [
-            {
-              t: "Weiterbildung Atmungstherapie nach der Deutschen Gesellschaft für Pneumologie (DGP)",
-            },
-          ],
-        ],
-      },
-      {
-        type: "h5",
-        text: [
-          {
             t: "Ihre Aufgaben",
           },
         ],
       },
       {
-        type: "p",
-        text: [
-          {
-            t: "Was wird Sie in der Klinik erwarten?",
-          },
-        ],
-      },
-      {
         type: "ul",
         items: [
           [
             {
-              t: "Neben der interdisziplinären Notfallversorgung betreuen Sie schwerpunktmäßig Patient:innen in unserer Klinik für Pneumologie, Intensiv- und Beatmungsmedizin",
+              t: "Oberärztliche Verantwortung in der Pädiatrischen Gastroenterologie",
             },
           ],
           [
             {
-              t: "Es erwarten Sie mit allen Komfort eingerichtete und sehr gut aufgestellte Arbeitsbereiche sowie ein dynamisches und leistungsstarkes Team",
+              t: "Anleitung und Weiterbildung der Assistenzärztinnen und -ärzte",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
             },
           ],
         ],
@@ -1874,10 +519,35 @@ export const jobDetails: JobDetail[] = [
         ],
       },
       {
-        type: "p",
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Kinder- und Jugendmedizin, idealerweise mit Schwerpunkt Kinder-Gastroenterologie",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
         text: [
           {
-            t: "Welche Qualifikationen benötigen Sie?",
+            t: "So begleiten wir Sie",
           },
         ],
       },
@@ -1886,17 +556,17 @@ export const jobDetails: JobDetail[] = [
         items: [
           [
             {
-              t: "Sie habe Ihre Ausbildung in der Gesundheits- und Krankenpflege erfolgreich abgeschlossen",
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
             },
           ],
           [
             {
-              t: "Sie verfügen über Berufserfahrung auf der Intensivstation oder haben sogar die entsprechende Zusatzqualifikation oder Fachweiterbildung",
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
             },
           ],
           [
             {
-              t: "Sie haben Lust in einem engagierten sowie interdisziplinären Team zu arbeiten",
+              t: "Begleitung beim Umzug und Ankommen in der Region",
             },
           ],
         ],
@@ -1913,26 +583,2516 @@ export const jobDetails: JobDetail[] = [
         type: "p",
         text: [
           {
-            t: "Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt vom unserem Experten-Team beraten.",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "‍",
-          },
-        ],
-      },
-      {
-        type: "p",
-        text: [
-          {
-            t: "‍",
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
           },
         ],
       },
     ],
+    department: "pediatrics",
+    location: {
+      city: "Balingen",
+      postalCode: "72336",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "oberarzt-m-w-d-kindernotaufnahme-in-balingen",
+    title: "Oberarzt (m/w/d) Kindernotaufnahme in Balingen",
+    category: "2026.05",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Oberarzt (m/w/d) Kindernotaufnahme in Balingen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Balingen (Baden-Württemberg) suchen wir eine Oberärztin oder einen Oberarzt (m/w/d) in der Kindernotaufnahme.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Oberärztliche Verantwortung in der Kindernotaufnahme",
+            },
+          ],
+          [
+            {
+              t: "Anleitung und Weiterbildung der Assistenzärztinnen und -ärzte",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Kinder- und Jugendmedizin, idealerweise mit Erfahrung in der pädiatrischen Notfallmedizin",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "pediatrics",
+    location: {
+      city: "Balingen",
+      postalCode: "72336",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "facharzt-m-w-d-fuer-kinder-und-jugendmedizin-in-balingen",
+    title: "Facharzt (m/w/d) für Kinder- und Jugendmedizin in Balingen",
+    category: "2026.06",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Facharzt (m/w/d) für Kinder- und Jugendmedizin in Balingen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Balingen (Baden-Württemberg) suchen wir eine Fachärztin oder einen Facharzt (m/w/d) in der Kinder- und Jugendmedizin.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Fachärztliche Betreuung der Patientinnen und Patienten in der Kinder- und Jugendmedizin",
+            },
+          ],
+          [
+            {
+              t: "Anleitung der Assistenzärztinnen und -ärzte",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Kinder- und Jugendmedizin",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "pediatrics",
+    location: {
+      city: "Balingen",
+      postalCode: "72336",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "oberarzt-m-w-d-zentrale-notaufnahme-in-balingen",
+    title: "Oberarzt (m/w/d) Zentrale Notaufnahme in Balingen",
+    category: "2026.07",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Oberarzt (m/w/d) Zentrale Notaufnahme in Balingen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Balingen (Baden-Württemberg) suchen wir eine Oberärztin oder einen Oberarzt (m/w/d) in der Zentralen Notaufnahme.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Oberärztliche Verantwortung in der Zentralen Notaufnahme",
+            },
+          ],
+          [
+            {
+              t: "Anleitung und Weiterbildung der Assistenzärztinnen und -ärzte",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung in einem Gebiet der unmittelbaren Patientenversorgung, idealerweise mit Zusatzbezeichnung Klinische Akut- und Notfallmedizin",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "emergency",
+    location: {
+      city: "Balingen",
+      postalCode: "72336",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "assistenzarzt-m-w-d-zentrale-notaufnahme-in-balingen",
+    title: "Assistenzarzt (m/w/d) Zentrale Notaufnahme in Balingen",
+    category: "2026.08",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Assistenzarzt (m/w/d) Zentrale Notaufnahme in Balingen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Balingen (Baden-Württemberg) suchen wir eine Assistenzärztin oder einen Assistenzarzt (m/w/d) in der Zentralen Notaufnahme.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Ärztliche Betreuung der Patientinnen und Patienten in der Zentralen Notaufnahme unter fachärztlicher Anleitung",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Abgeschlossenes Medizinstudium",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "emergency",
+    location: {
+      city: "Balingen",
+      postalCode: "72336",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "oberarzt-m-w-d-innere-medizin-zentrale-notaufnahme-in-albstadt",
+    title: "Oberarzt (m/w/d) Innere Medizin / Zentrale Notaufnahme in Albstadt",
+    category: "2026.09",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Oberarzt (m/w/d) Innere Medizin / Zentrale Notaufnahme in Albstadt",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Albstadt (Baden-Württemberg) suchen wir eine Oberärztin oder einen Oberarzt (m/w/d) in der Inneren Medizin und der Zentralen Notaufnahme.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Oberärztliche Verantwortung in der Inneren Medizin und der Zentralen Notaufnahme",
+            },
+          ],
+          [
+            {
+              t: "Anleitung und Weiterbildung der Assistenzärztinnen und -ärzte",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Innere Medizin, idealerweise mit Zusatzbezeichnung Klinische Akut- und Notfallmedizin",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "internal",
+    location: {
+      city: "Albstadt",
+      postalCode: "72458",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "oberarzt-m-w-d-pneumologie-in-albstadt",
+    title: "Oberarzt (m/w/d) Pneumologie in Albstadt",
+    category: "2026.10",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Oberarzt (m/w/d) Pneumologie in Albstadt",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Albstadt (Baden-Württemberg) suchen wir eine Oberärztin oder einen Oberarzt (m/w/d) in der Pneumologie.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Oberärztliche Verantwortung in der Pneumologie",
+            },
+          ],
+          [
+            {
+              t: "Anleitung und Weiterbildung der Assistenzärztinnen und -ärzte",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Innere Medizin und Pneumologie",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "pulmonology",
+    location: {
+      city: "Albstadt",
+      postalCode: "72458",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "facharzt-m-w-d-fuer-pneumologie-in-albstadt",
+    title: "Facharzt (m/w/d) für Pneumologie in Albstadt",
+    category: "2026.11",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Facharzt (m/w/d) für Pneumologie in Albstadt",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Albstadt (Baden-Württemberg) suchen wir eine Fachärztin oder einen Facharzt (m/w/d) in der Pneumologie.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Fachärztliche Betreuung der Patientinnen und Patienten in der Pneumologie",
+            },
+          ],
+          [
+            {
+              t: "Anleitung der Assistenzärztinnen und -ärzte",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Innere Medizin und Pneumologie",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "pulmonology",
+    location: {
+      city: "Albstadt",
+      postalCode: "72458",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "facharzt-m-w-d-fuer-innere-medizin-mit-weiterbildung-pneumologie-in-albstadt",
+    title:
+      "Facharzt (m/w/d) für Innere Medizin mit Weiterbildung Pneumologie in Albstadt",
+    category: "2026.12",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Facharzt (m/w/d) für Innere Medizin mit Weiterbildung Pneumologie in Albstadt",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Albstadt (Baden-Württemberg) suchen wir eine Fachärztin oder einen Facharzt (m/w/d) in der Pneumologie.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Fachärztliche Betreuung der Patientinnen und Patienten in der Pneumologie",
+            },
+          ],
+          [
+            {
+              t: "Anleitung der Assistenzärztinnen und -ärzte",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Innere Medizin und Bereitschaft zur Weiterbildung in der Pneumologie",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "pulmonology",
+    location: {
+      city: "Albstadt",
+      postalCode: "72458",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "leitender-oberarzt-m-w-d-allgemeine-innere-medizin-in-albstadt",
+    title: "Leitender Oberarzt (m/w/d) Allgemeine Innere Medizin in Albstadt",
+    category: "2026.13",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Leitender Oberarzt (m/w/d) Allgemeine Innere Medizin in Albstadt",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Albstadt (Baden-Württemberg) suchen wir eine Leitende Oberärztin oder einen Leitenden Oberarzt (m/w/d) in der Allgemeinen Inneren Medizin.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Leitende oberärztliche Verantwortung in der Allgemeinen Inneren Medizin und Vertretung der Chefärztin oder des Chefarztes",
+            },
+          ],
+          [
+            {
+              t: "Anleitung und Weiterbildung der Assistenzärztinnen und -ärzte",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Innere Medizin und mehrjährige Erfahrung als Oberärztin oder Oberarzt",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "internal",
+    location: {
+      city: "Albstadt",
+      postalCode: "72458",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "oberarzt-m-w-d-geriatrie-schlaganfallversorgung-in-albstadt",
+    title: "Oberarzt (m/w/d) Geriatrie / Schlaganfallversorgung in Albstadt",
+    category: "2026.14",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Oberarzt (m/w/d) Geriatrie / Schlaganfallversorgung in Albstadt",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Albstadt (Baden-Württemberg) suchen wir eine Oberärztin oder einen Oberarzt (m/w/d) in der Geriatrie und der Schlaganfallversorgung.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Oberärztliche Verantwortung in der Geriatrie und der Schlaganfallversorgung",
+            },
+          ],
+          [
+            {
+              t: "Anleitung und Weiterbildung der Assistenzärztinnen und -ärzte",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Innere Medizin oder Neurologie, idealerweise mit Zusatzweiterbildung Geriatrie und Erfahrung in der Schlaganfallversorgung",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "geriatrics",
+    location: {
+      city: "Albstadt",
+      postalCode: "72458",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "oberarzt-m-w-d-neurologie-in-albstadt",
+    title: "Oberarzt (m/w/d) Neurologie in Albstadt",
+    category: "2026.15",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Oberarzt (m/w/d) Neurologie in Albstadt",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Albstadt (Baden-Württemberg) suchen wir eine Oberärztin oder einen Oberarzt (m/w/d) in der Neurologie.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Oberärztliche Verantwortung in der Neurologie",
+            },
+          ],
+          [
+            {
+              t: "Anleitung und Weiterbildung der Assistenzärztinnen und -ärzte",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Neurologie",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "neurology",
+    location: {
+      city: "Albstadt",
+      postalCode: "72458",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "facharzt-m-w-d-fuer-anaesthesiologie-und-intensivmedizin-in-balingen",
+    title:
+      "Facharzt (m/w/d) für Anästhesiologie und Intensivmedizin in Balingen",
+    category: "2026.16",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Facharzt (m/w/d) für Anästhesiologie und Intensivmedizin in Balingen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Balingen (Baden-Württemberg) suchen wir eine Fachärztin oder einen Facharzt (m/w/d) in der Anästhesie und Intensivmedizin.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Fachärztliche Betreuung der Patientinnen und Patienten in der Anästhesie und Intensivmedizin",
+            },
+          ],
+          [
+            {
+              t: "Anleitung der Assistenzärztinnen und -ärzte",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Facharztanerkennung für Anästhesiologie",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "anesthesia",
+    location: {
+      city: "Balingen",
+      postalCode: "72336",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "assistenzarzt-m-w-d-anaesthesiologie-und-intensivmedizin-in-balingen",
+    title:
+      "Assistenzarzt (m/w/d) Anästhesiologie und Intensivmedizin in Balingen",
+    category: "2026.17",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Assistenzarzt (m/w/d) Anästhesiologie und Intensivmedizin in Balingen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Balingen (Baden-Württemberg) suchen wir eine Assistenzärztin oder einen Assistenzarzt (m/w/d) in der Anästhesie und Intensivmedizin.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Ärztliche Betreuung der Patientinnen und Patienten in der Anästhesie und Intensivmedizin unter fachärztlicher Anleitung",
+            },
+          ],
+          [
+            {
+              t: "Weiterbildung zur Fachärztin oder zum Facharzt für Anästhesiologie",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Abgeschlossenes Medizinstudium",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "anesthesia",
+    location: {
+      city: "Balingen",
+      postalCode: "72336",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "assistenzarzt-m-w-d-unfallchirurgie-und-orthopaedie-in-balingen",
+    title: "Assistenzarzt (m/w/d) Unfallchirurgie und Orthopädie in Balingen",
+    category: "2026.18",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Assistenzarzt (m/w/d) Unfallchirurgie und Orthopädie in Balingen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Balingen (Baden-Württemberg) suchen wir eine Assistenzärztin oder einen Assistenzarzt (m/w/d) in der Unfallchirurgie und Orthopädie.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Ärztliche Betreuung der Patientinnen und Patienten in der Unfallchirurgie und Orthopädie unter fachärztlicher Anleitung",
+            },
+          ],
+          [
+            {
+              t: "Weiterbildung zur Fachärztin oder zum Facharzt für Orthopädie und Unfallchirurgie",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Abgeschlossenes Medizinstudium",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "trauma",
+    location: {
+      city: "Balingen",
+      postalCode: "72336",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "assistenzarzt-m-w-d-gynaekologie-und-geburtshilfe-in-balingen",
+    title: "Assistenzarzt (m/w/d) Gynäkologie und Geburtshilfe in Balingen",
+    category: "2026.19",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Assistenzarzt (m/w/d) Gynäkologie und Geburtshilfe in Balingen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Balingen (Baden-Württemberg) suchen wir eine Assistenzärztin oder einen Assistenzarzt (m/w/d) in der Gynäkologie und Geburtshilfe.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Ärztliche Betreuung der Patientinnen und Patienten in der Gynäkologie und Geburtshilfe unter fachärztlicher Anleitung",
+            },
+          ],
+          [
+            {
+              t: "Weiterbildung zur Fachärztin oder zum Facharzt für Frauenheilkunde und Geburtshilfe",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Abgeschlossenes Medizinstudium",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "gynecology",
+    location: {
+      city: "Balingen",
+      postalCode: "72336",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "assistenzarzt-m-w-d-in-weiterbildung-allgemeinmedizin-in-balingen",
+    title:
+      "Assistenzarzt (m/w/d) in Weiterbildung Allgemeinmedizin in Balingen",
+    category: "2026.20",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Assistenzarzt (m/w/d) in Weiterbildung Allgemeinmedizin in Balingen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Balingen (Baden-Württemberg) suchen wir eine Assistenzärztin oder einen Assistenzarzt (m/w/d) in der Weiterbildung zur Allgemeinmedizin.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Ärztliche Betreuung der Patientinnen und Patienten in der Weiterbildung zur Allgemeinmedizin unter fachärztlicher Anleitung",
+            },
+          ],
+          [
+            {
+              t: "Weiterbildung zur Fachärztin oder zum Facharzt für Allgemeinmedizin",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Abgeschlossenes Medizinstudium",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "generalMedicine",
+    location: {
+      city: "Balingen",
+      postalCode: "72336",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
+  },
+  {
+    slug: "assistenzarzt-m-w-d-fuer-die-zusatzweiterbildung-palliativmedizin-in-albstadt",
+    title:
+      "Assistenzarzt (m/w/d) für die Zusatzweiterbildung Palliativmedizin in Albstadt",
+    category: "2026.21",
+    date: "November 6, 2026",
+    author: "Sabina Banda | CEO Geschäftsführung",
+    authorImage: null,
+    banner: null,
+    article: [
+      {
+        type: "h4",
+        text: [
+          {
+            t: "Assistenzarzt (m/w/d) für die Zusatzweiterbildung Palliativmedizin in Albstadt",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Für eine Klinik in Albstadt (Baden-Württemberg) suchen wir eine Assistenzärztin oder einen Assistenzarzt (m/w/d) in der Palliativmedizin.",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        text: [
+          {
+            t: "Keine Zeitarbeits- oder Leasingfirma! Sie schließen den Arbeitsvertrag direkt mit der Klinik.",
+          },
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihre Aufgaben",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Ärztliche Betreuung der Patientinnen und Patienten in der Palliativmedizin unter fachärztlicher Anleitung",
+            },
+          ],
+          [
+            {
+              t: "Erwerb der Zusatzweiterbildung Palliativmedizin",
+            },
+          ],
+          [
+            {
+              t: "Enge Zusammenarbeit mit Pflege und den anderen Fachbereichen",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Ihr Profil",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Abgeschlossenes Medizinstudium",
+            },
+          ],
+          [
+            {
+              t: "Approbation als Ärztin oder Arzt in Deutschland – oder die Bereitschaft, sie zu erwerben (wir begleiten Sie dabei)",
+            },
+          ],
+          [
+            {
+              t: "Sehr gute Deutschkenntnisse (C1)",
+            },
+          ],
+          [
+            {
+              t: "Teamfähigkeit, Verantwortungsbewusstsein und Engagement",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "So begleiten wir Sie",
+          },
+        ],
+      },
+      {
+        type: "ul",
+        items: [
+          [
+            {
+              t: "Beratung zu Approbation, Fachsprach- und Kenntnisprüfung",
+            },
+          ],
+          [
+            {
+              t: "Unterstützung bei Visum und Aufenthaltstitel",
+            },
+          ],
+          [
+            {
+              t: "Begleitung beim Umzug und Ankommen in der Region",
+            },
+          ],
+        ],
+      },
+      {
+        type: "h5",
+        text: [
+          {
+            t: "Erhalten Sie heute noch Ihren Termin für ein unverbindliches Kennenlernen",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: [
+          {
+            t: "Falls Sie Interesse an diesem Angebot haben, treten Sie gerne mit uns in Kontakt. Alle Leistungen von SBP sind für Sie kostenlos. Lassen Sie sich jetzt von unserem Experten-Team beraten.",
+          },
+        ],
+      },
+    ],
+    department: "palliative",
+    location: {
+      city: "Albstadt",
+      postalCode: "72458",
+      region: "Baden-Württemberg",
+    },
+    validThrough: "2027-02-28",
   },
 ];
