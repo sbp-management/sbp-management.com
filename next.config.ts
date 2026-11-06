@@ -8,12 +8,9 @@ const PAGE_KEYS = (Object.keys(paths) as PageKey[]).filter(
   (key) => !paths[key].includes("#") && !["candidates", "jobBoards"].includes(key),
 );
 
-/**
- * Paths that are not German pages: the language folders, Next.js / Netlify internals and static files
- * (__forms.html holds the Netlify Forms definitions and receives the form submissions).
- */
+/** Paths that are not German pages: the language folders, Next.js / Netlify internals and static files. */
 const NOT_RESERVED =
-  "(?!(?:de|en|ru|sr)(?:/|$)|_next/|\\.netlify/|\\.well-known/|images/|favicon\\.ico|icon\\.png|apple-icon\\.png|robots\\.txt|sitemap\\.xml|__forms\\.html)";
+  "(?!(?:de|en|ru|sr)(?:/|$)|_next/|\\.netlify/|\\.well-known/|images/|favicon\\.ico|icon\\.png|apple-icon\\.png|robots\\.txt|sitemap\\.xml)";
 
 /**
  * Security headers for every response. The Content-Security-Policy only allows this site's own

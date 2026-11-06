@@ -1,41 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useActionState } from "react";
+import { submitContact, type ContactState } from "@/app/actions";
 import { company } from "@/content/site";
 import type { Dictionary } from "@/i18n/dictionaries";
 
 type Copy = Dictionary["contactPage"]["form"];
-
-type FormValues = Record<string, string>;
-
-type FormState =
-  | { status: "idle" }
-  | { status: "success" }
-  | { status: "error"; fields: string[]; values: FormValues }
-  // Input was fine but Netlify did not accept the submission (network down, form not deployed).
-  | { status: "failed"; values: FormValues };
-
-const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-/** Fields that need fixing before the form can be sent (field names as in public/__forms.html). */
-function invalidFields(values: FormValues, isJob: boolean) {
-  const fields: string[] = [];
-  if (!values.Vorname?.trim()) fields.push("Vorname");
-  if (!values.Nachname?.trim()) fields.push("Nachname");
-  if (!EMAIL.test(values.Email?.trim() ?? "")) fields.push("Email");
-  // The job application form requires a message; the general form does not.
-  if (isJob && !values.Nachricht?.trim()) fields.push("Nachricht");
-  return fields;
-}
 
 const field =
   "mt-2 block min-h-12 w-full border border-line bg-white px-4 py-3 text-[1rem] text-ink transition-colors placeholder:text-muted/70 hover:border-ink/40 focus:border-brand focus:outline-none aria-[invalid=true]:border-[#c62828]";
 const label = "text-[0.8125rem] font-semibold text-ink";
 
 /**
- * Project / contact inquiry, or (with `job`) an application for one job listing. Sent to Netlify Forms
- * (forms "kontakt" and "bewerbung", defined in public/__forms.html): Netlify stores each submission and
- * emails it to us. Field names are the German keys of the old site; labels come from the dictionary.
+ * Project / contact inquiry, or (with `job`) an application for one job listing. Sends through
+ * the same server action as the old site (field names are the German keys that action expects;
+ * labels come from the dictionary). Applications need a message, as the action requires.
  */
 export function ContactFormV2({
   copy,
@@ -45,39 +24,17 @@ export function ContactFormV2({
   /** Title of the job listing this form applies for. */
   job?: { title: string; error: string };
 }) {
-  const [state, setState] = useState<FormState>({ status: "idle" });
-  const [pending, setPending] = useState(false);
+  const [state, action, pending] = useActionState<ContactState, FormData>(
+    submitContact,
+    { status: "idle" },
+  );
   const invalid = (name: string) =>
     state.status === "error" && state.fields.includes(name);
-  // The form is re-rendered after a failed attempt; refill it so nothing typed is lost.
+  // React resets the form after each submit; refill it so a failed attempt never loses what was typed.
   const value = (name: string) =>
     state.status === "error" || state.status === "failed"
       ? state.values[name]
       : undefined;
-
-  async function submit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const values = Object.fromEntries(
-      [...data.entries()].map(([k, v]) => [k, String(v)]),
-    );
-    const fields = invalidFields(values, !!job);
-    if (fields.length) return setState({ status: "error", fields, values });
-    setPending(true);
-    try {
-      // Netlify Forms only accepts submissions posted to a static file (see public/__forms.html).
-      const res = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(values).toString(),
-      });
-      setState(res.ok ? { status: "success" } : { status: "failed", values });
-    } catch {
-      setState({ status: "failed", values });
-    } finally {
-      setPending(false);
-    }
-  }
 
   if (state.status === "success") {
     return (
@@ -122,12 +79,8 @@ export function ContactFormV2({
   ];
 
   return (
-    <form onSubmit={submit} noValidate className="grid gap-6">
-      <input
-        type="hidden"
-        name="form-name"
-        value={job ? "bewerbung" : "kontakt"}
-      />
+    <form action={action} noValidate className="grid gap-6">
+      <input type="hidden" name="kind" value={job ? "job" : "contact"} />
       {job && <input type="hidden" name="Stelle" value={job.title} />}
 
       {!job && (

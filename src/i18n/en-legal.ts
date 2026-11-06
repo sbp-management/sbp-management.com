@@ -54,9 +54,10 @@ export const enLegal = {
             { p: "We use the following external service providers to run this website and to communicate with you. Each is described in more detail below:" },
             {
               ul: [
-                "Netlify, Inc. (USA) – hosting of this website and receipt of the contact and application forms (see section 4)",
+                "Netlify, Inc. (USA) – hosting of this website",
                 "One.com Group AB (Sweden) – domain registration and name servers (DNS)",
                 "Google Ireland Limited (Ireland) – email for our @sbp-management.com addresses (Google Workspace)",
+                "Plus Five Five, Inc. trading as Resend (USA) – delivery of messages sent with the contact form (see section 4)",
               ],
             },
             { h: "Website hosting: Netlify" },
@@ -111,7 +112,7 @@ export const enLegal = {
             { p: "datenschutz@sbp-management.com" },
             { h: "Data transfers to third countries" },
             {
-              p: "We use services of companies based in the USA or with parent companies there: our host Netlify and our email provider Google (see section 2). Data may therefore be transferred to the USA. Transfers to Netlify and Google are based on the EU–US Data Privacy Framework (adequacy decision of the European Commission, Art. 45 GDPR) and the EU standard contractual clauses (Art. 46 GDPR).",
+              p: "We use services of companies based in the USA or with parent companies there: our host Netlify and our email provider Google (see section 2), and the email delivery service Resend (see section 4). Data may therefore be transferred to the USA. Transfers to Netlify and Google are based on the EU–US Data Privacy Framework (adequacy decision of the European Commission, Art. 45 GDPR) and the EU standard contractual clauses (Art. 46 GDPR). The same applies to Resend, which is also certified under the EU–US Data Privacy Framework and has agreed to the EU standard contractual clauses.",
             },
             { h: "Withdrawal of your consent to data processing" },
             {
@@ -172,7 +173,7 @@ export const enLegal = {
               p: "If you send us inquiries via the contact form, your details from the form, including the contact details you provide there, will be stored by us for the purpose of processing the inquiry and in the event of follow-up questions. We do not pass on this data without your consent.",
             },
             {
-              p: "The details sent with the contact form and the application forms are received and stored by our host Netlify (\"Netlify Forms\" service) and forwarded to us by email. Netlify processes the details on our behalf under the data processing agreement (see section 2). To protect against spam, Netlify checks submissions automatically, also using the Akismet service (Automattic Inc., USA). We delete the submissions at Netlify once we have dealt with them.",
+              p: "To deliver the messages from the contact form to our mailbox, we use the email delivery service Resend, operated by Plus Five Five, Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA (Resend), using its EU region. Resend processes the content of the form only to deliver the message. We have concluded a data processing agreement (Art. 28 GDPR) with Resend, which includes the EU standard contractual clauses; Resend is also certified under the EU–US Data Privacy Framework. Details: https://resend.com/legal/dpa",
             },
             {
               p: "This data is processed on the basis of Art. 6(1)(b) GDPR if your inquiry is related to the fulfilment of a contract or is necessary for the implementation of pre-contractual measures. In all other cases, the processing is based on our legitimate interest in the effective processing of the inquiries addressed to us (Art. 6(1)(f) GDPR) or on your consent (Art. 6(1)(a) GDPR) if this has been requested.",

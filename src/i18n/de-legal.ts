@@ -54,9 +54,10 @@ export const deLegal = {
             { p: "Für den Betrieb dieser Website und die Kommunikation mit Ihnen setzen wir die folgenden externen Dienstleister ein. Sie werden nachfolgend jeweils näher beschrieben:" },
             {
               ul: [
-                "Netlify, Inc. (USA) – Hosting dieser Website und Entgegennahme der Kontakt- und Bewerbungsformulare (siehe Abschnitt 4)",
+                "Netlify, Inc. (USA) – Hosting dieser Website",
                 "One.com Group AB (Schweden) – Domainregistrierung und Nameserver (DNS)",
                 "Google Ireland Limited (Irland) – E-Mail für unsere @sbp-management.com-Adressen (Google Workspace)",
+                "Plus Five Five, Inc., handelnd als Resend (USA) – Zustellung der über das Kontaktformular gesendeten Nachrichten (siehe Abschnitt 4)",
               ],
             },
             { h: "Hosting der Website: Netlify" },
@@ -111,7 +112,7 @@ export const deLegal = {
             { p: "datenschutz@sbp-management.com" },
             { h: "Datenübermittlung in Drittstaaten" },
             {
-              p: "Wir nutzen Dienste von Unternehmen mit Sitz in den USA bzw. mit dortiger Muttergesellschaft: unseren Hoster Netlify und unseren E-Mail-Anbieter Google (siehe Abschnitt 2). Daten können daher in die USA übermittelt werden. Übermittlungen an Netlify und Google erfolgen auf Grundlage des EU-US Data Privacy Framework (Angemessenheitsbeschluss der Europäischen Kommission, Art. 45 DSGVO) und der EU-Standardvertragsklauseln (Art. 46 DSGVO).",
+              p: "Wir nutzen Dienste von Unternehmen mit Sitz in den USA bzw. mit dortiger Muttergesellschaft: unseren Hoster Netlify und unseren E-Mail-Anbieter Google (siehe Abschnitt 2) sowie den E-Mail-Zustelldienst Resend (siehe Abschnitt 4). Daten können daher in die USA übermittelt werden. Übermittlungen an Netlify und Google erfolgen auf Grundlage des EU-US Data Privacy Framework (Angemessenheitsbeschluss der Europäischen Kommission, Art. 45 DSGVO) und der EU-Standardvertragsklauseln (Art. 46 DSGVO). Gleiches gilt für Resend; Resend ist ebenfalls nach dem EU-US Data Privacy Framework zertifiziert und hat den EU-Standardvertragsklauseln zugestimmt.",
             },
             { h: "Widerruf Ihrer Einwilligung zur Datenverarbeitung" },
             {
@@ -172,7 +173,7 @@ export const deLegal = {
               p: "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.",
             },
             {
-              p: "Die über das Kontaktformular und die Bewerbungsformulare gesendeten Angaben werden von unserem Hoster Netlify (Dienst „Netlify Forms“) entgegengenommen, gespeichert und per E-Mail an uns weitergeleitet. Netlify verarbeitet die Angaben in unserem Auftrag auf Grundlage des Vertrags über Auftragsverarbeitung (siehe Abschnitt 2). Zum Schutz vor Spam prüft Netlify die Einsendungen automatisch, auch mithilfe des Dienstes Akismet (Automattic Inc., USA). Wir löschen die Einsendungen bei Netlify, sobald wir sie bearbeitet haben.",
+              p: "Für die Zustellung der Nachrichten aus dem Kontaktformular in unser Postfach nutzen wir den E-Mail-Zustelldienst Resend, betrieben von Plus Five Five, Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA (Resend), unter Nutzung der EU-Region. Resend verarbeitet den Inhalt des Formulars ausschließlich zur Zustellung der Nachricht. Wir haben mit Resend einen Vertrag über Auftragsverarbeitung (Art. 28 DSGVO) geschlossen, der die EU-Standardvertragsklauseln enthält; Resend ist zudem nach dem EU-US Data Privacy Framework zertifiziert. Details: https://resend.com/legal/dpa",
             },
             {
               p: "Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), sofern diese abgefragt wurde.",

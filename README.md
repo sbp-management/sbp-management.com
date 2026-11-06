@@ -38,18 +38,20 @@ The site is hosted on [Netlify](https://www.netlify.com/), which detects Next.js
 1. Netlify → Add new project → Import an existing project → GitHub → `sbp-management/sbp-management.com`.
    - Branch to deploy: the branch with the relaunch (currently `redesign`; or merge it into `main` first).
    - Build settings are read from `netlify.toml` – leave the fields in the dashboard as detected.
-2. Forms: the contact and application forms use **Netlify Forms** (forms `kontakt` and `bewerbung`, defined in `public/__forms.html`). In Netlify → Project configuration → Forms, enable form detection, then redeploy; under Forms → Form notifications add an email notification to `info@sbp-management.com`. Submissions are also listed under Forms in the dashboard; delete them there once handled (see the Privacy Policy). No environment variables are needed.
+2. Site configuration → Environment variables (scope: Builds + Functions):
+   - `RESEND_API_KEY` – the Resend key (secret).
+   - `CONTACT_FROM` – e.g. `SBP Website <website@sbp-management.com>` (sender on a domain verified in Resend).
 3. Deploy, then test on the `*.netlify.app` address before switching the domain: the German pages at the root, `/en`, `/ru`, `/sr`, a job listing (`/jobs/deutschland/…`), and one contact-form message.
 
 ### Domain (sbp-management.com)
 
 - Netlify → Domain management → add `www.sbp-management.com` as the **primary** domain and `sbp-management.com` (redirects to www). The canonical URLs, sitemap and share previews use `https://www.sbp-management.com` (`SITE_URL` in `src/i18n/metadata.ts`).
-- DNS stays at one.com. Change **only** the website records as Netlify shows them (the `www` CNAME to the Netlify address and the apex `A` record to Netlify's load balancer). Leave the `MX` and `TXT` (SPF/DKIM/DMARC, Google verification) records untouched, so email keeps working.
+- DNS stays at one.com. Change **only** the website records as Netlify shows them (the `www` CNAME to the Netlify address and the apex `A` record to Netlify's load balancer). Leave the `MX`, `TXT` (SPF/DKIM/DMARC, Google and Resend verification) records untouched, so email keeps working.
 - Netlify issues the HTTPS certificate automatically once DNS points to it.
 
 ### After going live
 
 - Run Google PageSpeed Insights on the main pages, and check usage on Netlify's usage page.
-- Form spam is filtered by Netlify (honeypot field `website` and Netlify's spam filter); suspected spam lands under Forms → Spam submissions.
+- The contact form's flood protection is kept in memory, so on Netlify it is per server instance and resets with each deploy (best effort only).
 
 Images are resized and converted to AVIF/WebP on request by Netlify's image CDN (`next/image`).
