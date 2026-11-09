@@ -14,6 +14,7 @@ import {
 import { JsonLd } from "@/components/v2/json-ld";
 import { Review } from "@/components/v2/review";
 import { ArrowRight, Heading } from "@/components/v2/ui";
+import { jobTitle } from "@/content/job-text";
 import { jobDetails } from "@/content/jobs-data";
 import { photoSet, type PhotoSet } from "@/content/photo-sets";
 import { href, type PageKey } from "@/i18n/config";
@@ -177,11 +178,10 @@ export async function CareerPage({ career: key }: { career: CareerKey }) {
               <li key={job.slug} className="border-b border-line">
                 <Link
                   href={`${href(locale, "jobsGermany")}/${job.slug}`}
-                  lang="de"
                   className="group grid gap-2 py-5 transition-colors hover:bg-paper sm:grid-cols-[1fr_auto] sm:items-center sm:gap-6 sm:px-4"
                 >
                   <span className="font-display text-[1.25rem] leading-snug text-ink group-hover:text-brand">
-                    {job.title}
+                    {jobTitle(job, locale)}
                   </span>
                   <span
                     lang={locale}

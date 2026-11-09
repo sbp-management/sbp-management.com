@@ -151,10 +151,7 @@ export function JobBoard({
                 {labels.ref} {job.category}
               </span>
               <span>
-                <span
-                  lang="de"
-                  className="block font-display text-[1.25rem] leading-snug text-ink group-hover:text-brand"
-                >
+                <span className="block font-display text-[1.25rem] leading-snug text-ink group-hover:text-brand">
                   {job.title}
                 </span>
                 <span className="mt-1 block text-[0.875rem] text-muted">

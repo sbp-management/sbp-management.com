@@ -430,6 +430,9 @@ export const deCareers = {
 
   /** Filter above the job listings on the Jobs in Germany page; departments match JobDepartment in content/types.ts. */
   jobFilter: {
+    /** On a listing page: other positions in the same department or town, and the doctors guide. */
+    related: "Ähnliche Stellen",
+    guide: "Approbation, Sprache, Visum: der Weg für Ärztinnen und Ärzte",
     department: "Fachbereich",
     location: "Ort",
     all: "Alle",

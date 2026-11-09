@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ContactFormV2 } from "@/components/v2/contact-form";
 import { JsonLd } from "@/components/v2/json-ld";
 import { JobArticle } from "@/components/v2/job-article";
 import { Reveal } from "@/components/v2/reveal";
-import { Container, Eyebrow, TextLink } from "@/components/v2/ui";
+import { ArrowRight, Container, Eyebrow, TextLink } from "@/components/v2/ui";
+import {
+  jobArticle,
+  jobCity,
+  jobMetaDescription,
+  jobProfile,
+  jobSupport,
+  jobTasks,
+  jobTitle,
+} from "@/content/job-text";
 import { jobDetails } from "@/content/jobs-data";
 import { company } from "@/content/site";
 import type { Block, JobDetail, Seg } from "@/content/types";
@@ -13,9 +22,12 @@ import { href, type Locale } from "@/i18n/config";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
 import { pathMetadata, SITE_URL } from "@/i18n/metadata";
 
-/** Path of one listing in a given language (the listing text itself is German everywhere). */
+/** Path of one listing in a given language. */
 const jobPath = (locale: Locale, slug: string) =>
   `${href(locale, "jobsGermany")}/${slug}`;
+
+/** How many similar positions are shown under a listing. */
+const RELATED = 4;
 
 export function generateStaticParams() {
   return jobDetails.map((job) => ({ slug: job.slug }));
@@ -27,11 +39,15 @@ export async function generateMetadata({
   const { slug } = await params;
   const job = jobDetails.find((j) => j.slug === slug);
   if (!job) return {};
-  const { jobListing } = await getDictionary();
-  return pathMetadata((l) => jobPath(l, slug), {
-    title: job.title,
-    description: `${jobListing.eyebrow}: ${job.title}, ${job.location.region}. ${jobListing.applyBody}`,
-  });
+  const locale = await getLocale();
+  return pathMetadata(
+    (l) => jobPath(l, slug),
+    {
+      title: jobTitle(job, locale),
+      description: jobMetaDescription(job, locale),
+    },
+    { absoluteTitle: true },
+  );
 }
 
 /** Listing text as simple HTML, for the job description search engines show. */
@@ -57,13 +73,16 @@ function isoDate(date: string) {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 }
 
-/** Google for Jobs data (schema.org JobPosting) for one listing; SBP Management is the contact. */
-function jobPosting(job: JobDetail, url: string) {
+/**
+ * Google for Jobs data (schema.org JobPosting) for one listing in one language; SBP Management is
+ * the contact, the hospital is not named.
+ */
+function jobPosting(job: JobDetail, locale: Locale, url: string) {
   return {
     "@context": "https://schema.org",
     "@type": "JobPosting",
-    title: job.title,
-    description: blocksToHtml(job.article),
+    title: jobTitle(job, locale),
+    description: blocksToHtml(jobArticle(job, locale)),
     datePosted: isoDate(job.date),
     validThrough: `${job.validThrough}T23:59:59+01:00`,
     identifier: {
@@ -87,12 +106,33 @@ function jobPosting(job: JobDetail, url: string) {
         addressCountry: "DE",
       },
     },
+    industry: "Healthcare",
+    occupationalCategory: "Physician",
+    responsibilities: jobTasks(job, locale).join("; "),
+    qualifications: jobProfile(job, locale).join("; "),
+    jobBenefits: jobSupport(locale).join("; "),
     directApply: true,
     url,
   };
 }
 
-/** One job listing in the design of the relaunch: header, listing text, contact person, application form. */
+/** Other open positions, the same department first, then the same town. */
+function relatedJobs(job: JobDetail) {
+  const score = (j: JobDetail) =>
+    (j.department === job.department ? 2 : 0) +
+    (j.location.city === job.location.city ? 1 : 0);
+  return jobDetails
+    .filter((j) => j.slug !== job.slug)
+    .map((j, i) => ({ j, i, s: score(j) }))
+    .sort((a, b) => b.s - a.s || a.i - b.i)
+    .slice(0, RELATED)
+    .map(({ j }) => j);
+}
+
+/**
+ * One job listing: header, listing text in the visitor's language, application form, similar
+ * positions and a link to the guide for doctors.
+ */
 export default async function JobListingPage({
   params,
 }: PageProps<"/[locale]/jobs/germany/[slug]">) {
@@ -102,7 +142,7 @@ export default async function JobListingPage({
 
   const locale = await getLocale();
   const dict = await getDictionary();
-  const { jobListing: t, jobRegions, contactPage } = dict;
+  const { jobListing: t, jobRegions, contactPage, jobFilter } = dict;
   const published = new Date(job.date);
   const date = Number.isNaN(published.getTime())
     ? job.date
@@ -111,10 +151,13 @@ export default async function JobListingPage({
         month: "long",
         year: "numeric",
       });
+  const related = relatedJobs(job);
 
   return (
     <>
-      <JsonLd data={jobPosting(job, `${SITE_URL}${jobPath(locale, slug)}`)} />
+      <JsonLd
+        data={jobPosting(job, locale, `${SITE_URL}${jobPath(locale, slug)}`)}
+      />
       <section className="bg-paper pt-14 pb-14 lg:pt-20 lg:pb-20">
         <Container>
           <TextLink
@@ -126,11 +169,8 @@ export default async function JobListingPage({
           <Eyebrow>
             {t.eyebrow} · {jobRegions.germany.openings.ref} {job.category}
           </Eyebrow>
-          <h1
-            lang="de"
-            className="max-w-[56rem] font-display text-[clamp(2rem,1.3rem+2.4vw,3.5rem)] leading-[1.08] font-medium tracking-[-0.02em]"
-          >
-            {job.title}
+          <h1 className="max-w-[56rem] font-display text-[clamp(2rem,1.3rem+2.4vw,3.5rem)] leading-[1.08] font-medium tracking-[-0.02em]">
+            {jobTitle(job, locale)}
           </h1>
           <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-[0.9375rem]">
             <div>
@@ -141,49 +181,37 @@ export default async function JobListingPage({
             </div>
             <div>
               <dt className="text-[0.75rem] font-bold tracking-[0.1em] text-muted uppercase">
+                {jobFilter.department}
+              </dt>
+              <dd className="mt-1 text-ink">
+                {jobFilter.departments[job.department]} · {jobCity(job, locale)}
+              </dd>
+            </div>
+            <div>
+              <dt className="text-[0.75rem] font-bold tracking-[0.1em] text-muted uppercase">
                 {t.contact}
               </dt>
-              <dd className="mt-1 flex items-center gap-3 text-ink">
-                {job.authorImage && (
-                  <span className="relative size-8 overflow-hidden rounded-full bg-brand">
-                    <Image
-                      src={job.authorImage}
-                      alt=""
-                      fill
-                      sizes="32px"
-                      className="object-cover"
-                    />
-                  </span>
-                )}
-                <span lang="de">{job.author}</span>
+              <dd lang="de" className="mt-1 text-ink">
+                {job.author}
               </dd>
             </div>
           </dl>
-          {t.note && (
-            <p className="mt-6 text-[0.875rem] text-muted">{t.note}</p>
-          )}
         </Container>
       </section>
-
-      {job.banner && (
-        <Container className="pt-12 lg:pt-16">
-          <div className="relative aspect-[3/1] overflow-hidden">
-            <Image
-              src={job.banner}
-              alt=""
-              fill
-              sizes="(min-width: 1360px) 1296px, 100vw"
-              className="object-cover"
-            />
-          </div>
-        </Container>
-      )}
 
       <section className="py-16 lg:py-24">
         <Container className="grid gap-16 lg:grid-cols-[1.5fr_1fr] lg:gap-20">
           <Reveal>
-            <div lang="de" className="max-w-[46rem]">
-              <JobArticle blocks={job.article} />
+            <div className="max-w-[46rem]">
+              <JobArticle blocks={jobArticle(job, locale)} />
+              <p className="mt-10">
+                <TextLink
+                  href={href(locale, "careerDoctors")}
+                  className="text-ink"
+                >
+                  {jobFilter.guide}
+                </TextLink>
+              </p>
             </div>
           </Reveal>
           <Reveal className="lg:sticky lg:top-28 lg:self-start">
@@ -194,12 +222,46 @@ export default async function JobListingPage({
               <p className="mt-3 mb-8 text-[0.9375rem] leading-relaxed">
                 {t.applyBody}
               </p>
+              {/* SBP reads applications in German, so the German title goes with them. */}
               <ContactFormV2
                 copy={contactPage.form}
-                job={{ title: job.title, error: t.jobError }}
+                job={{ title: jobTitle(job, "de"), error: t.jobError }}
               />
             </div>
           </Reveal>
+        </Container>
+      </section>
+
+      {/* Similar positions: keeps visitors on the site and links every listing to others. */}
+      <section className="border-t border-line bg-paper py-16 lg:py-20">
+        <Container>
+          <h2 className="font-display text-[1.75rem] leading-tight font-medium">
+            {jobFilter.related}
+          </h2>
+          <ul className="mt-8 border-t border-line">
+            {related.map((r) => (
+              <li key={r.slug} className="border-b border-line">
+                <Link
+                  href={jobPath(locale, r.slug)}
+                  className="group grid gap-2 py-5 transition-colors hover:bg-white sm:grid-cols-[1fr_auto] sm:items-center sm:gap-6 sm:px-4"
+                >
+                  <span>
+                    <span className="block font-display text-[1.25rem] leading-snug text-ink group-hover:text-brand">
+                      {jobTitle(r, locale)}
+                    </span>
+                    <span className="mt-1 block text-[0.875rem] text-muted">
+                      {jobFilter.departments[r.department]} ·{" "}
+                      {jobCity(r, locale)}
+                    </span>
+                  </span>
+                  <span className="flex items-center gap-2 text-[0.875rem] font-semibold text-ink group-hover:text-brand">
+                    {jobRegions.germany.openings.view}
+                    <ArrowRight className="transition-transform duration-200 group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Container>
       </section>
     </>

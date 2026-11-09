@@ -622,7 +622,7 @@ export const srPages = {
     published: "Objavljeno",
     contact: "Vaša kontakt osoba",
     back: "Svi oglasi u Nemačkoj",
-    note: "Oglas je na nemačkom jeziku.",
+    note: "",
     applyTitle: "Prijavite se za ovo radno mesto",
     applyBody: "Pošaljite nam svoje podatke i kratku poruku o sebi. Javićemo vam se lično.",
     jobError: "Molimo unesite ime, prezime, važeću adresu e-pošte i kratku poruku.",
@@ -639,7 +639,7 @@ export const srPages = {
       openings: {
         eyebrow: "Aktuelni oglasi",
         title: "Oglasi za posao u Nemačkoj",
-        note: "Oglasi na nemačkom jeziku",
+        note: "",
         ref: "Br.",
         view: "Pogledajte oglas",
         all: "Svi oglasi",

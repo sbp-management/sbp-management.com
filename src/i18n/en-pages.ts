@@ -618,7 +618,7 @@ export const enPages = {
     published: "Published",
     contact: "Your contact",
     back: "All openings in Germany",
-    note: "This listing is in German.",
+    note: "",
     applyTitle: "Apply for this position",
     applyBody: "Send us your details and a short message about yourself. We will get back to you personally.",
     jobError: "Please fill in your first name, last name, a valid email address, and a short message.",
@@ -635,7 +635,7 @@ export const enPages = {
       openings: {
         eyebrow: "Current openings",
         title: "Job openings in Germany",
-        note: "Listings in German",
+        note: "",
         ref: "Ref.",
         view: "View listing",
         all: "All listings",

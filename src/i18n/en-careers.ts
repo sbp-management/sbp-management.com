@@ -420,6 +420,9 @@ export const enCareers = {
 
   /** Filter above the job listings on the Jobs in Germany page; departments match JobDepartment in content/types.ts. */
   jobFilter: {
+    /** On a listing page: other positions in the same department or town, and the doctors guide. */
+    related: "Similar positions",
+    guide: "Medical licence, language, visa: the path for doctors",
     department: "Department",
     location: "Location",
     all: "All",

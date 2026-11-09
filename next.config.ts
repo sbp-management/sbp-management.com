@@ -91,6 +91,11 @@ const nextConfig: NextConfig = {
       { source: "/services", destination: "/leistungsfelder", permanent: true },
       { source: "/stellenausschreibungen", destination: "/jobs/deutschland", permanent: true },
       { source: "/stellenausschreibungen/:slug", destination: "/jobs/deutschland/:slug", permanent: true },
+      // Pages of the old site that Google still had (Search Console, 2026-11): the homepage under
+      // /home and /en/home, and "Vorgehensweise" (how we work), now on the About page.
+      { source: "/home", destination: "/", permanent: true },
+      { source: "/en/home", destination: "/en", permanent: true },
+      { source: "/vorgehensweise", destination: "/ueber-uns", permanent: true },
     ];
   },
   // A stray package-lock.json in the home folder otherwise gets picked as the workspace root.

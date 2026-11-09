@@ -7,6 +7,7 @@ import { JobBoard } from "@/components/v2/job-board";
 import { photoSet } from "@/content/photo-sets";
 import { Band, SquareList } from "@/components/v2/page-parts";
 import { ButtonLink, Eyebrow, Heading, TextLink } from "@/components/v2/ui";
+import { jobCity, jobTitle } from "@/content/job-text";
 import { jobDetails } from "@/content/jobs-data";
 import { href } from "@/i18n/config";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
@@ -65,11 +66,11 @@ export default async function GermanyJobsPage() {
                 items={jobDetails.map((job) => ({
                   slug: job.slug,
                   href: `${href(locale, "jobsGermany")}/${job.slug}`,
-                  title: job.title,
+                  title: jobTitle(job, locale),
                   category: job.category,
                   department: job.department,
                   departmentLabel: jobFilter.departments[job.department],
-                  city: job.location.city,
+                  city: jobCity(job, locale),
                 }))}
                 labels={{
                   department: jobFilter.department,
