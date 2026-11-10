@@ -12,7 +12,7 @@ export const enLegal = {
       meta: { title: "Privacy Policy", description: "How SBP Management processes personal data on this website." },
       eyebrow: "Legal",
       title: "Privacy Policy",
-      updated: "Last updated: [date of publication]",
+      updated: "Published: 30 October 2026",
       note: "A German version of this privacy policy is available on our German website.",
       sections: [
         {
@@ -35,10 +35,10 @@ export const enLegal = {
             },
             { h: "What do we use your data for?" },
             {
-              p: "Part of the data is collected to ensure that the website is provided without errors. Data you send us through the contact form or by email is used to answer your inquiry.",
+              p: "Part of the data is collected to ensure that the website is provided without errors. Data you send us through the contact form or by email is used to answer your inquiry. If you have consented, we also analyse statistically how the website is used.",
             },
             { h: "Analytics and tracking" },
-            { p: "This website does not use analytics, tracking, or advertising tools." },
+            { p: "With your consent we use Google Analytics to analyse how our website is used (see section 4). We do not use advertising or remarketing tools." },
             { h: "What rights do you have regarding your data?" },
             {
               p: "You have the right at any time to receive information free of charge about the origin, recipient, and purpose of your stored personal data. You also have the right to request the correction or deletion of this data. If you have given consent to data processing, you can withdraw this consent at any time for the future. You also have the right, under certain circumstances, to request the restriction of the processing of your personal data. Furthermore, you have the right to lodge a complaint with the competent supervisory authority.",
@@ -99,9 +99,9 @@ export const enLegal = {
             { p: "The controller responsible for data processing on this website is:" },
             {
               ul: [
-                "SBP-Management",
+                "SBP Management e.K.",
                 "Grußdorfstraße 3a, 13507 Berlin, Germany",
-                "Managing director: Sabina Banda",
+                "Owner: Sabina Banda",
                 "Phone: +49 (0)30 437 46 351",
                 "Email: info@sbp-management.com",
               ],
@@ -215,11 +215,13 @@ export const enLegal = {
       note: "Information according to § 5 DDG (German Digital Services Act).",
       sections: [
         {
-          heading: "SBP-Management",
+          heading: "SBP Management e.K.",
           blocks: [
-            { ul: ["Managing director: Ms Sabina Banda", "Address: Grußdorfstraße 3a, 13507 Berlin, Germany"] },
+            { ul: ["Owner: Ms Sabina Banda", "Address: Grußdorfstraße 3a, 13507 Berlin, Germany"] },
             { h: "Contact" },
             { ul: ["Phone: +49 (0)30 437 46 351", "Fax: +49 (0)30 437 46 565", "Email: info@sbp-management.com"] },
+            { h: "Commercial register" },
+            { p: "Registered in the commercial register (Handelsregister). Register court: Amtsgericht Charlottenburg, register number: HRA 65793 B" },
             { h: "VAT ID" },
             { p: "VAT identification number: DE275333280" },
           ],

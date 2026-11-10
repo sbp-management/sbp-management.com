@@ -12,7 +12,7 @@ export const deLegal = {
       meta: { title: "Datenschutz", description: "Wie SBP Management personenbezogene Daten auf dieser Website verarbeitet." },
       eyebrow: "Rechtliches",
       title: "Datenschutzhinweise",
-      updated: "Stand: [Datum der Veröffentlichung]",
+      updated: "Veröffentlicht am 30.10.2026",
       note: "",
       sections: [
         {
@@ -35,10 +35,10 @@ export const deLegal = {
             },
             { h: "Wofür nutzen wir Ihre Daten?" },
             {
-              p: "Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Daten, die Sie uns über das Kontaktformular oder per E-Mail übermitteln, verwenden wir zur Beantwortung Ihrer Anfrage.",
+              p: "Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Daten, die Sie uns über das Kontaktformular oder per E-Mail übermitteln, verwenden wir zur Beantwortung Ihrer Anfrage. Wenn Sie eingewilligt haben, werten wir außerdem statistisch aus, wie die Website genutzt wird.",
             },
             { h: "Analyse und Tracking" },
-            { p: "Diese Website verwendet keine Analyse-, Tracking- oder Werbetools." },
+            { p: "Mit Ihrer Einwilligung nutzen wir Google Analytics, um auszuwerten, wie unsere Website genutzt wird (siehe Abschnitt 4). Werbe- oder Remarketing-Tools setzen wir nicht ein." },
             { h: "Welche Rechte haben Sie bezüglich Ihrer Daten?" },
             {
               p: "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.",
@@ -99,9 +99,9 @@ export const deLegal = {
             { p: "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:" },
             {
               ul: [
-                "SBP-Management",
+                "SBP Management e.K.",
                 "Grußdorfstraße 3a, 13507 Berlin, Deutschland",
-                "Geschäftsführung: Sabina Banda",
+                "Inhaberin: Sabina Banda",
                 "Telefon: +49 (0)30 437 46 351",
                 "E-Mail: info@sbp-management.com",
               ],
@@ -215,11 +215,13 @@ export const deLegal = {
       note: "Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz).",
       sections: [
         {
-          heading: "SBP-Management",
+          heading: "SBP Management e.K.",
           blocks: [
-            { ul: ["Geschäftsführung: Frau Sabina Banda", "Adresse: Grußdorfstraße 3a, 13507 Berlin, Deutschland"] },
+            { ul: ["Inhaberin: Frau Sabina Banda", "Adresse: Grußdorfstraße 3a, 13507 Berlin, Deutschland"] },
             { h: "Kontakt" },
             { ul: ["Tel.: +49 (0)30 437 46 351", "Fax: +49 (0)30 437 46 565", "E-Mail: info@sbp-management.com"] },
+            { h: "Handelsregister" },
+            { p: "Eingetragen im Handelsregister. Registergericht: Amtsgericht Charlottenburg, Registernummer: HRA 65793 B" },
             { h: "Umsatzsteuer-ID" },
             { p: "Umsatzsteuer-Identifikationsnummer: DE275333280" },
           ],

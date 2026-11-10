@@ -13,7 +13,7 @@ export default async function ImprintPage() {
   return (
     <LegalPage
       doc={legal.imprint}
-      risk="Check: legal form, commercial register entry and person responsible for content (§ 18 MStV) are missing; “§ 5 DDG” line added – confirm"
+      risk="Register entry checked 2026-11-10 against the official printout (SBP Management e.K., Amtsgericht Charlottenburg, HRA 65793 B, owner Sabina Banda, Einzelunternehmen). Check whether § 18 MStV applies; “§ 5 DDG” line – confirm"
     />
   );
 }

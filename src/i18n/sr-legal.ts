@@ -11,7 +11,7 @@ export const srLegal = {
       meta: { title: "Politika privatnosti", description: "Kako SBP Management obrađuje podatke o ličnosti na ovom veb-sajtu." },
       eyebrow: "Pravne informacije",
       title: "Politika privatnosti",
-      updated: "Poslednje ažuriranje: [datum objavljivanja]",
+      updated: "Objavljeno: 30. oktobar 2026.",
       note: "Verzija ove politike privatnosti na nemačkom jeziku dostupna je na našem nemačkom veb-sajtu.",
       sections: [
         {
@@ -34,10 +34,10 @@ export const srLegal = {
             },
             { h: "U koje svrhe koristimo vaše podatke?" },
             {
-              p: "Deo podataka prikuplja se kako bi se obezbedilo pružanje veb-sajta bez grešaka. Podaci koje nam pošaljete putem kontakt formulara ili e-poštom koriste se za odgovor na vaš upit.",
+              p: "Deo podataka prikuplja se kako bi se obezbedilo pružanje veb-sajta bez grešaka. Podaci koje nam pošaljete putem kontakt formulara ili e-poštom koriste se za odgovor na vaš upit. Ako ste dali saglasnost, takođe statistički analiziramo kako se veb-sajt koristi.",
             },
             { h: "Analitika i praćenje" },
-            { p: "Ovaj veb-sajt ne koristi alate za analitiku, praćenje ili oglašavanje." },
+            { p: "Uz vašu saglasnost koristimo Google Analytics da bismo analizirali kako se naš veb-sajt koristi (videti odeljak 4). Alate za oglašavanje ili remarketing ne koristimo." },
             { h: "Koja prava imate u pogledu svojih podataka?" },
             {
               p: "U svakom trenutku imate pravo da besplatno dobijete informacije o poreklu, primaocu i svrsi svojih sačuvanih podataka o ličnosti. Takođe imate pravo da zahtevate ispravku ili brisanje tih podataka. Ako ste dali pristanak za obradu podataka, taj pristanak možete u svakom trenutku opozvati za ubuduće. Pored toga, pod određenim uslovima imate pravo da zahtevate ograničenje obrade svojih podataka o ličnosti. Osim toga, imate pravo da podnesete pritužbu nadležnom nadzornom organu.",
@@ -98,9 +98,9 @@ export const srLegal = {
             { p: "Rukovalac odgovoran za obradu podataka na ovom veb-sajtu je:" },
             {
               ul: [
-                "SBP-Management",
+                "SBP Management e.K.",
                 "Grußdorfstraße 3a, 13507 Berlin, Nemačka",
-                "Direktorka: Sabina Banda",
+                "Vlasnica: Sabina Banda",
                 "Telefon: +49 (0)30 437 46 351",
                 "E-pošta: info@sbp-management.com",
               ],
@@ -214,11 +214,13 @@ export const srLegal = {
       note: "Podaci u skladu sa § 5 DDG (nemački Zakon o digitalnim uslugama).",
       sections: [
         {
-          heading: "SBP-Management",
+          heading: "SBP Management e.K.",
           blocks: [
-            { ul: ["Direktorka: gospođa Sabina Banda", "Adresa: Grußdorfstraße 3a, 13507 Berlin, Nemačka"] },
+            { ul: ["Vlasnica: gospođa Sabina Banda", "Adresa: Grußdorfstraße 3a, 13507 Berlin, Nemačka"] },
             { h: "Kontakt" },
             { ul: ["Telefon: +49 (0)30 437 46 351", "Faks: +49 (0)30 437 46 565", "E-pošta: info@sbp-management.com"] },
+            { h: "Trgovinski registar" },
+            { p: "Upisano u trgovinski registar Nemačke (Handelsregister). Registarski sud: Amtsgericht Charlottenburg, registarski broj: HRA 65793 B" },
             { h: "PDV identifikacioni broj" },
             { p: "PDV identifikacioni broj: DE275333280" },
           ],
