@@ -34,6 +34,15 @@ export const sr: Dictionary = {
     comingSoon: "uskoro",
   },
 
+  consent: {
+    title: "Kolačići za statistiku?",
+    body: "Uz vašu saglasnost koristimo Google Analytics da bismo razumeli kako se naš veb-sajt koristi. Pri tome se postavljaju kolačići i podaci se prenose kompaniji Google, uključujući i u SAD. Bez saglasnosti ništa se ne učitava. Svoj izbor možete promeniti u bilo kom trenutku preko „Podešavanja kolačića“ na dnu stranice.",
+    privacy: "Politika privatnosti",
+    accept: "Prihvatam",
+    decline: "Odbijam",
+    settings: "Podešavanja kolačića",
+  },
+
   nav: {
     items: [
       { label: "O nama", link: "about" },

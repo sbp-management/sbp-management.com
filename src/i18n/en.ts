@@ -34,6 +34,15 @@ export const en: Dictionary = {
     comingSoon: "coming soon",
   },
 
+  consent: {
+    title: "Cookies for statistics?",
+    body: "With your consent we use Google Analytics to understand how our website is used. This sets cookies and sends data to Google, including to the USA. Without consent nothing is loaded. You can change your choice at any time via “Cookie settings” at the bottom of the page.",
+    privacy: "Privacy Policy",
+    accept: "Accept",
+    decline: "Decline",
+    settings: "Cookie settings",
+  },
+
   nav: {
     items: [
       { label: "About Us", link: "about" },

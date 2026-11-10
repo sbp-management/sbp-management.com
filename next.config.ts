@@ -14,8 +14,9 @@ const NOT_RESERVED =
 
 /**
  * Security headers for every response. The Content-Security-Policy only allows this site's own
- * scripts, styles, fonts and images (everything is self-hosted); inline scripts/styles are needed
- * by Next.js. It is left out in development, where React needs eval() for debugging.
+ * scripts, styles, fonts and images (everything is self-hosted), plus Google Analytics, which is
+ * only loaded after the visitor consents (src/components/v2/analytics.tsx); inline scripts/styles are
+ * needed by Next.js. It is left out in development, where React needs eval() for debugging.
  */
 const securityHeaders = [
   { key: "Strict-Transport-Security", value: "max-age=31536000" },
@@ -29,11 +30,11 @@ const securityHeaders = [
           key: "Content-Security-Policy",
           value: [
             "default-src 'self'",
-            "script-src 'self' 'unsafe-inline'",
+            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
             "style-src 'self' 'unsafe-inline'",
-            "img-src 'self' data: blob:",
+            "img-src 'self' data: blob: https://*.google-analytics.com https://*.googletagmanager.com",
             "font-src 'self'",
-            "connect-src 'self'",
+            "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
             "frame-ancestors 'none'",
             "base-uri 'self'",
             "form-action 'self'",

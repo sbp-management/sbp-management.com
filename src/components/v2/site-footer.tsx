@@ -3,6 +3,7 @@ import Link from "next/link";
 import { company } from "@/content/site";
 import { href, type Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
+import { CookieSettingsButton } from "./analytics";
 import { Mosaic } from "./mosaic";
 import { Container } from "./ui";
 
@@ -110,7 +111,7 @@ export function SiteFooter({
             <p>
               © {new Date().getFullYear()} {footer.copyright}
             </p>
-            <ul className="flex gap-6">
+            <ul className="flex flex-wrap gap-x-6 gap-y-2">
               {footer.legal.map((l) => (
                 <li key={l.label}>
                   <Link
@@ -121,6 +122,9 @@ export function SiteFooter({
                   </Link>
                 </li>
               ))}
+              <li>
+                <CookieSettingsButton label={dict.consent.settings} />
+              </li>
             </ul>
           </div>
         </Container>

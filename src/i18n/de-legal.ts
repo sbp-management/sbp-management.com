@@ -57,6 +57,7 @@ export const deLegal = {
                 "Netlify, Inc. (USA) – Hosting dieser Website",
                 "One.com Group AB (Schweden) – Domainregistrierung und Nameserver (DNS)",
                 "Google Ireland Limited (Irland) – E-Mail für unsere @sbp-management.com-Adressen (Google Workspace)",
+                "Google Ireland Limited (Irland) – Webanalyse mit Google Analytics, nur mit Ihrer Einwilligung (siehe Abschnitt 4)",
                 "Plus Five Five, Inc., handelnd als Resend (USA) – Zustellung der über das Kontaktformular gesendeten Nachrichten (siehe Abschnitt 4)",
               ],
             },
@@ -112,7 +113,7 @@ export const deLegal = {
             { p: "datenschutz@sbp-management.com" },
             { h: "Datenübermittlung in Drittstaaten" },
             {
-              p: "Wir nutzen Dienste von Unternehmen mit Sitz in den USA bzw. mit dortiger Muttergesellschaft: unseren Hoster Netlify und unseren E-Mail-Anbieter Google (siehe Abschnitt 2) sowie den E-Mail-Zustelldienst Resend (siehe Abschnitt 4). Daten können daher in die USA übermittelt werden. Übermittlungen an Netlify und Google erfolgen auf Grundlage des EU-US Data Privacy Framework (Angemessenheitsbeschluss der Europäischen Kommission, Art. 45 DSGVO) und der EU-Standardvertragsklauseln (Art. 46 DSGVO). Gleiches gilt für Resend; Resend ist ebenfalls nach dem EU-US Data Privacy Framework zertifiziert und hat den EU-Standardvertragsklauseln zugestimmt.",
+              p: "Wir nutzen Dienste von Unternehmen mit Sitz in den USA bzw. mit dortiger Muttergesellschaft: unseren Hoster Netlify und unseren E-Mail-Anbieter Google (siehe Abschnitt 2), mit Ihrer Einwilligung Google Analytics (siehe Abschnitt 4) sowie den E-Mail-Zustelldienst Resend (siehe Abschnitt 4). Daten können daher in die USA übermittelt werden. Übermittlungen an Netlify und Google erfolgen auf Grundlage des EU-US Data Privacy Framework (Angemessenheitsbeschluss der Europäischen Kommission, Art. 45 DSGVO) und der EU-Standardvertragsklauseln (Art. 46 DSGVO). Gleiches gilt für Resend; Resend ist ebenfalls nach dem EU-US Data Privacy Framework zertifiziert und hat den EU-Standardvertragsklauseln zugestimmt.",
             },
             { h: "Widerruf Ihrer Einwilligung zur Datenverarbeitung" },
             {
@@ -159,10 +160,20 @@ export const deLegal = {
           blocks: [
             { h: "Cookies" },
             {
-              p: "Diese Website setzt keine Cookies und verwendet keine Cookies zu Analyse- oder Werbezwecken. Auch unser Hosting-Anbieter Netlify setzt auf dieser Website keine Cookies.",
+              p: "Diese Website setzt Cookies nur mit Ihrer Einwilligung, und zwar ausschließlich für die Webanalyse mit Google Analytics (siehe unten). Ohne Einwilligung werden keine Cookies gesetzt. Ihre Entscheidung im Cookie-Banner speichern wir im lokalen Speicher Ihres Browsers (localStorage), damit der Banner nicht bei jedem Seitenaufruf erneut erscheint; dies ist technisch erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Unser Hosting-Anbieter Netlify setzt auf dieser Website keine Cookies.",
             },
             {
               p: "Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren.",
+            },
+            { h: "Google Analytics" },
+            {
+              p: "Diese Website nutzt, sofern Sie eingewilligt haben, Google Analytics 4, einen Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland (Google). Google Analytics ermöglicht es uns, das Verhalten der Besucher auszuwerten, z. B. aufgerufene Seiten, Verweildauer, verwendetes Gerät und Browser sowie die ungefähre Herkunft (Land, Stadt). Dazu werden Cookies (_ga, _ga_*) auf Ihrem Endgerät gespeichert, die bis zu 2 Jahre gültig sind. Google Analytics 4 speichert keine vollständigen IP-Adressen. Google-Signale und Werbefunktionen sind deaktiviert.",
+            },
+            {
+              p: "Google Analytics wird erst geladen, nachdem Sie im Cookie-Banner auf „Akzeptieren“ geklickt haben. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie unten auf der Seite „Cookie-Einstellungen“ öffnen und „Ablehnen“ wählen; die Analytics-Cookies werden dann gelöscht.",
+            },
+            {
+              p: "Wir haben mit Google einen Vertrag über Auftragsverarbeitung (Art. 28 DSGVO) geschlossen. Daten können auch durch die Google LLC in den USA verarbeitet werden; die Google LLC ist nach dem EU-US Data Privacy Framework zertifiziert, ergänzend gelten die EU-Standardvertragsklauseln. Die erhobenen Daten werden nach 14 Monaten gelöscht. Details: https://business.safety.google/adsprocessorterms/ und https://policies.google.com/privacy",
             },
             { h: "Schriftarten" },
             {

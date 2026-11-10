@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Source_Serif_4 } from "next/font/google";
+import { Analytics } from "@/components/v2/analytics";
 import { JsonLd } from "@/components/v2/json-ld";
 import { SHOW_REVIEW } from "@/components/v2/review";
 import { ReviewPanel } from "@/components/v2/review-panel";
@@ -88,6 +89,7 @@ export default async function LocaleLayout({
           {children}
         </main>
         <SiteFooter locale={locale} dict={dict} />
+        <Analytics text={dict.consent} privacyHref={href(locale, "privacy")} />
         {SHOW_REVIEW && <ReviewPanel />}
       </body>
     </html>

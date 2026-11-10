@@ -33,6 +33,15 @@ export const de = {
     comingSoon: "in Kürze",
   },
 
+  consent: {
+    title: "Cookies für Statistik?",
+    body: "Mit Ihrer Einwilligung nutzen wir Google Analytics, um zu verstehen, wie unsere Website genutzt wird. Dabei werden Cookies gesetzt und Daten an Google übermittelt, auch in die USA. Ohne Einwilligung wird nichts geladen. Sie können Ihre Wahl jederzeit über „Cookie-Einstellungen“ unten auf der Seite ändern.",
+    privacy: "Datenschutzerklärung",
+    accept: "Akzeptieren",
+    decline: "Ablehnen",
+    settings: "Cookie-Einstellungen",
+  },
+
   nav: {
     items: [
       { label: "Über uns", link: "about" },

@@ -13,7 +13,7 @@ export default async function PrivacyPage() {
   return (
     <LegalPage
       doc={legal.privacy}
-      risk="Legal review required before publishing: hosting provider, data transfers outside the EU and processing agreements still open; the German Datenschutz page must be updated to match"
+      risk="Legal review required before publishing: hosting provider, data transfers outside the EU and processing agreements still open; Google Analytics section and cookie banner (added 2026-11-10) need legal review; the German Datenschutz page must be updated to match"
     />
   );
 }
