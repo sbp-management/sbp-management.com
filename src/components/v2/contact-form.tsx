@@ -1,11 +1,48 @@
 "use client";
 
-import { useActionState } from "react";
+import { useEffect, useActionState, useSyncExternalStore } from "react";
 import { submitContact, type ContactState } from "@/app/actions";
 import { company } from "@/content/site";
 import type { Dictionary } from "@/i18n/dictionaries";
 
 type Copy = Dictionary["contactPage"]["form"];
+
+type Utm = { source: string; medium: string; campaign: string };
+const EMPTY_UTM: Utm = { source: "", medium: "", campaign: "" };
+const UTM_STORAGE_KEY = "sbp_utm";
+
+/**
+ * An ad link tags itself with ?utm_source=&utm_medium=&utm_campaign= (see the recruiting-ads
+ * proposal). A visitor who lands on one page and applies from another should still be counted, so
+ * the tag is kept in sessionStorage for the rest of the visit; a new tag in the URL always wins.
+ * Read with useSyncExternalStore (same pattern as the consent banner in analytics.tsx), so the
+ * client-only value arrives without a setState-in-effect render pass.
+ */
+function urlUtm(): Utm | null {
+  const params = new URLSearchParams(window.location.search);
+  const source = params.get("utm_source");
+  if (!source) return null;
+  return { source, medium: params.get("utm_medium") ?? "", campaign: params.get("utm_campaign") ?? "" };
+}
+
+/** Pure snapshot: the current URL's tag, else whatever a previous page on this visit stored.
+ * Returning a string (not an object) lets useSyncExternalStore compare snapshots by value, so it
+ * never needs memoizing to avoid a re-render loop. */
+function utmSnapshot(): string {
+  try {
+    const fromUrl = urlUtm();
+    if (fromUrl) return JSON.stringify(fromUrl);
+    return sessionStorage.getItem(UTM_STORAGE_KEY) ?? SERVER_UTM;
+  } catch {
+    return SERVER_UTM;
+  }
+}
+
+const SERVER_UTM = JSON.stringify(EMPTY_UTM);
+/** useSyncExternalStore never needs to be told about a change here (the tag doesn't change again
+ * after mount), but still re-reads the snapshot once the client takes over, which is what gets the
+ * real tag onto the page without a setState call inside an effect. */
+const noSubscription = () => () => {};
 
 const field =
   "mt-2 block min-h-12 w-full border border-line bg-white px-4 py-3 text-[1rem] text-ink transition-colors placeholder:text-muted/70 hover:border-ink/40 focus:border-brand focus:outline-none aria-[invalid=true]:border-[#c62828]";
@@ -28,6 +65,20 @@ export function ContactFormV2({
     submitContact,
     { status: "idle" },
   );
+  // Empty on the server-rendered page (no window there); filled in right after mount.
+  const utm = JSON.parse(useSyncExternalStore(noSubscription, utmSnapshot, () => SERVER_UTM)) as Utm;
+  // Persisting is a plain storage write, not a state update, so it stays out of utmSnapshot above.
+  useEffect(() => {
+    const fromUrl = urlUtm();
+    if (fromUrl) {
+      try {
+        sessionStorage.setItem(UTM_STORAGE_KEY, JSON.stringify(fromUrl));
+      } catch {
+        // Private browsing or storage disabled: the application still sends, just without the tag
+        // surviving a later page view.
+      }
+    }
+  }, []);
   const invalid = (name: string) =>
     state.status === "error" && state.fields.includes(name);
   // React resets the form after each submit; refill it so a failed attempt never loses what was typed.
@@ -82,6 +133,10 @@ export function ContactFormV2({
     <form action={action} noValidate className="grid gap-6">
       <input type="hidden" name="kind" value={job ? "job" : "contact"} />
       {job && <input type="hidden" name="Stelle" value={job.title} />}
+      {/* Where this application came from (an ad link's utm_ tags, read in readUtm above). */}
+      <input type="hidden" name="utm_source" value={utm.source} />
+      <input type="hidden" name="utm_medium" value={utm.medium} />
+      <input type="hidden" name="utm_campaign" value={utm.campaign} />
 
       {!job && (
         <div>

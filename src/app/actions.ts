@@ -14,10 +14,31 @@ export type ContactState =
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-/** Fields copied into the email, in this order. */
-const FIELDS = ["Anliegen", "Stelle", "Vorname", "Nachname", "Email", "Telefonnummer", "Organisation", "Qualifikation", "Nachricht"];
+/** Fields copied into the email, in this order. "Quelle" is filled in below, not read directly from the form. */
+const FIELDS = ["Anliegen", "Stelle", "Quelle", "Vorname", "Nachname", "Email", "Telefonnummer", "Organisation", "Qualifikation", "Nachricht"];
 
 const text = (data: FormData, key: string) => String(data.get(key) ?? "").trim();
+
+/**
+ * Where an application came from. contact-form.tsx reads a tagged ad link's utm_source/utm_medium/
+ * utm_campaign client-side (sessionStorage keeps the tag if the visitor browses on before applying)
+ * and resends them as hidden fields. Naming matches the recruiting-ads proposal's link convention.
+ */
+const CHANNELS: Record<string, string> = {
+  facebook: "Facebook",
+  instagram: "Instagram",
+  google: "Google Ads",
+  linkedin: "LinkedIn",
+};
+
+function channelLabel(data: FormData): string {
+  const source = text(data, "utm_source").slice(0, 60);
+  const medium = text(data, "utm_medium").slice(0, 60);
+  const campaign = text(data, "utm_campaign").slice(0, 80);
+  const name = !source ? "Website" : (CHANNELS[source.toLowerCase()] ?? `Andere (${source})`);
+  const withMedium = medium ? `${name} – ${medium}` : name;
+  return campaign ? `${withMedium} (Kampagne: ${campaign})` : withMedium;
+}
 
 /**
  * Validates the contact / application form and emails it to company.email via Resend.
@@ -32,6 +53,7 @@ export async function submitContact(_prev: ContactState, data: FormData): Promis
 
   const values: FormValues = { kind: text(data, "kind") };
   for (const key of FIELDS) values[key] = text(data, key);
+  values.Quelle = channelLabel(data);
 
   const fields: string[] = [];
   if (!values.Vorname) fields.push("Vorname");
