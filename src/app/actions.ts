@@ -89,16 +89,18 @@ export async function submitContact(_prev: ContactState, data: FormData): Promis
   // The job application form requires a message; the general forms do not.
   if (values.kind === "job" && !values.Nachricht) fields.push("Nachricht");
   if (values.Nachricht.length > 5000) fields.push("Nachricht");
-  const cv = values.kind === "job" ? await readCv(data, `${values.Vorname} ${values.Nachname}`) : null;
-  if (cv === "invalid") fields.push("Lebenslauf");
   if (fields.length) return { status: "error", fields, values };
 
   const h = await headers();
   // Netlify passes the visitor's IP in x-nf-client-connection-ip; x-forwarded-for elsewhere.
   const ip = h.get("x-nf-client-connection-ip") ?? h.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
+  // Checked before the CV is read, so repeated large uploads are turned away without being processed.
   if (isRateLimited(ip)) return { status: "failed", values };
 
-  return (await deliver(values, cv === "invalid" ? null : cv)) ? { status: "success" } : { status: "failed", values };
+  const cv = values.kind === "job" ? await readCv(data, `${values.Vorname} ${values.Nachname}`) : null;
+  if (cv === "invalid") return { status: "error", fields: ["Lebenslauf"], values };
+
+  return (await deliver(values, cv)) ? { status: "success" } : { status: "failed", values };
 }
 
 async function deliver(values: FormValues, cv: Attachment | null): Promise<boolean> {
