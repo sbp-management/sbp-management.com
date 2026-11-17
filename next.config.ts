@@ -101,6 +101,8 @@ const nextConfig: NextConfig = {
   },
   // A stray package-lock.json in the home folder otherwise gets picked as the workspace root.
   turbopack: { root: path.join(__dirname) },
+  // Application forms can carry a CV of up to 4 MB (checked in src/app/actions.ts); the default limit is 1 MB.
+  experimental: { serverActions: { bodySizeLimit: "5mb" } },
   // All images live in /public/images (copied from the old Webflow site), so no remote hosts are allowed.
   images: {
     // Browsers that support AVIF get it (smallest); the rest get WebP. Each visitor only downloads
