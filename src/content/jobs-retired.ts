@@ -12,4 +12,6 @@ export const retiredJobs = [
   "pflegedienstleitung-m-w-d-baden-wurttemberg",
   "pflegefachkrafte-m-w-d-intensiv-padiatrie-u-neonatologie-in-frankfurt-am-main-in-voll-oder-teilzeit-unbefristet-202325",
   "pflegefachkrafte-m-w-d-intensivstation-in-frankfurt-am-main-in-voll-oder-teilzeit-unbefristet-202326",
+  "assistenzarzt-m-w-d-zentrale-notaufnahme-in-balingen",
+  "oberarzt-m-w-d-neurologie-in-albstadt",
 ];
