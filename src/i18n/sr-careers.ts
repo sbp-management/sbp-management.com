@@ -426,7 +426,11 @@ export const srCareers = {
   jobFilter: {
     /** On a listing page: other positions in the same department or town, and the doctors guide. */
     related: "Slični oglasi",
-    guide: "Aprobacija, jezik, viza: put za lekare u Nemačku",
+    guide: {
+      physician: "Aprobacija, jezik, viza: put za lekare u Nemačku",
+      nurse: "Priznavanje kvalifikacije, jezik, viza: put za medicinske sestre",
+      midwife: "Priznavanje kvalifikacije, jezik, viza: put za babice",
+    },
     department: "Oblast",
     location: "Mesto",
     all: "Sve",
@@ -434,7 +438,9 @@ export const srCareers = {
     count: "Broj oglasa: {n}",
     departments: {
       anesthesia: "Anesteziologija i intenzivna nega",
+      diabetology: "Dijabetologija",
       emergency: "Urgentni centar",
+      gastroenterology: "Gastroenterologija",
       generalMedicine: "Opšta medicina",
       geriatrics: "Gerijatrija",
       gynecology: "Ginekologija i akušerstvo",

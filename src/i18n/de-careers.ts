@@ -432,7 +432,11 @@ export const deCareers = {
   jobFilter: {
     /** On a listing page: other positions in the same department or town, and the doctors guide. */
     related: "Ähnliche Stellen",
-    guide: "Approbation, Sprache, Visum: der Weg für Ärztinnen und Ärzte",
+    guide: {
+      physician: "Approbation, Sprache, Visum: der Weg für Ärztinnen und Ärzte",
+      nurse: "Anerkennung, Sprache, Visum: der Weg für Pflegefachkräfte",
+      midwife: "Anerkennung, Sprache, Visum: der Weg für Hebammen",
+    },
     department: "Fachbereich",
     location: "Ort",
     all: "Alle",
@@ -440,7 +444,9 @@ export const deCareers = {
     count: "{n} Stellen",
     departments: {
       anesthesia: "Anästhesie und Intensivmedizin",
+      diabetology: "Diabetologie",
       emergency: "Zentrale Notaufnahme",
+      gastroenterology: "Gastroenterologie",
       generalMedicine: "Allgemeinmedizin",
       geriatrics: "Geriatrie",
       gynecology: "Gynäkologie und Geburtshilfe",

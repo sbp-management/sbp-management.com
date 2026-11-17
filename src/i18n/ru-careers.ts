@@ -431,7 +431,11 @@ export const ruCareers = {
   jobFilter: {
     /** On a listing page: other positions in the same department or town, and the doctors guide. */
     related: "Похожие вакансии",
-    guide: "Апробация, язык, виза: путь для врачей в Германию",
+    guide: {
+      physician: "Апробация, язык, виза: путь для врачей в Германию",
+      nurse: "Признание квалификации, язык, виза: путь для медицинских сестёр",
+      midwife: "Признание квалификации, язык, виза: путь для акушерок",
+    },
     department: "Отделение",
     location: "Город",
     all: "Все",
@@ -439,7 +443,9 @@ export const ruCareers = {
     count: "Вакансий: {n}",
     departments: {
       anesthesia: "Анестезиология и интенсивная терапия",
+      diabetology: "Диабетология",
       emergency: "Центральное приемное отделение",
+      gastroenterology: "Гастроэнтерология",
       generalMedicine: "Общая медицина",
       geriatrics: "Гериатрия",
       gynecology: "Гинекология и акушерство",
