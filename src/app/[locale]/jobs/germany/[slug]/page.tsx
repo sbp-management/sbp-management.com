@@ -73,6 +73,20 @@ function isoDate(date: string) {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 }
 
+/** occupationalCategory for Google for Jobs, by profession. */
+function occupationalCategory(job: JobDetail) {
+  if (job.profession === "nurse") return "Registered Nurse";
+  if (job.profession === "midwife") return "Midwife";
+  return "Physician";
+}
+
+/** Career guide page to link to, by profession. */
+function careerGuidePath(job: JobDetail) {
+  if (job.profession === "nurse") return "careerNurses" as const;
+  if (job.profession === "midwife") return "careerMidwives" as const;
+  return "careerDoctors" as const;
+}
+
 /**
  * Google for Jobs data (schema.org JobPosting) for one listing in one language; SBP Management is
  * the contact, the hospital is not named.
@@ -107,10 +121,10 @@ function jobPosting(job: JobDetail, locale: Locale, url: string) {
       },
     },
     industry: "Healthcare",
-    occupationalCategory: "Physician",
+    occupationalCategory: occupationalCategory(job),
     responsibilities: jobTasks(job, locale).join("; "),
     qualifications: jobProfile(job, locale).join("; "),
-    jobBenefits: jobSupport(locale).join("; "),
+    jobBenefits: jobSupport(job, locale).join("; "),
     directApply: true,
     url,
   };
@@ -206,10 +220,10 @@ export default async function JobListingPage({
               <JobArticle blocks={jobArticle(job, locale)} />
               <p className="mt-10">
                 <TextLink
-                  href={href(locale, "careerDoctors")}
+                  href={href(locale, careerGuidePath(job))}
                   className="text-ink"
                 >
-                  {jobFilter.guide}
+                  {jobFilter.guide[job.profession ?? "physician"]}
                 </TextLink>
               </p>
             </div>

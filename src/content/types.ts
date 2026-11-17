@@ -14,7 +14,9 @@ export type Block =
 /** Departments of the open positions (labels in each dictionary under jobDepartments). */
 export type JobDepartment =
   | "anesthesia"
+  | "diabetology"
   | "emergency"
+  | "gastroenterology"
   | "generalMedicine"
   | "geriatrics"
   | "gynecology"
@@ -27,8 +29,14 @@ export type JobDepartment =
   | "radiology"
   | "trauma";
 
-/** Level of a doctor's position: Oberarzt, Leitender Oberarzt, Facharzt, Assistenzarzt. */
-export type JobLevel = "OA" | "LOA" | "FA" | "AA";
+/**
+ * Level of the position: for a doctor, Oberarzt, Leitender Oberarzt, Facharzt or Assistenzarzt;
+ * PF is a registered nurse (Pflegefachkraft), HEB a midwife (Hebamme).
+ */
+export type JobLevel = "OA" | "LOA" | "FA" | "AA" | "PF" | "HEB";
+
+/** Which profession's wording (medical licence vs. nursing/midwifery licence, etc.) a listing uses. */
+export type JobProfession = "physician" | "nurse" | "midwife";
 
 /** A text in each language of the site (de, en, ru, sr). */
 export type JobText = { de: string; en: string; ru: string; sr: string };
@@ -48,6 +56,10 @@ export type JobDetail = {
   level: JobLevel;
   /** Department, for grouping and filtering (labels per language in jobFilter.departments). */
   department: JobDepartment;
+  /** Inpatient hospital (default) or an outpatient practice/MVZ — picks the intro/direct-employment wording. */
+  venue?: "hospital" | "practice";
+  /** physician (default), nurse or midwife — picks the professional-licence line in the profile. */
+  profession?: JobProfession;
   /** Job title without the town. */
   title: JobText;
   /** Where in the hospital, as it completes the sentences in job-templates.ts ("in der Neurologie"). */

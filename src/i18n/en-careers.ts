@@ -422,7 +422,11 @@ export const enCareers = {
   jobFilter: {
     /** On a listing page: other positions in the same department or town, and the doctors guide. */
     related: "Similar positions",
-    guide: "Medical licence, language, visa: the path for doctors",
+    guide: {
+      physician: "Medical licence, language, visa: the path for doctors",
+      nurse: "Recognition, language, visa: the path for nurses",
+      midwife: "Recognition, language, visa: the path for midwives",
+    },
     department: "Department",
     location: "Location",
     all: "All",
@@ -430,7 +434,9 @@ export const enCareers = {
     count: "{n} positions",
     departments: {
       anesthesia: "Anaesthesia and intensive care",
+      diabetology: "Diabetology",
       emergency: "Emergency department",
+      gastroenterology: "Gastroenterology",
       generalMedicine: "General medicine",
       geriatrics: "Geriatrics",
       gynecology: "Gynaecology and obstetrics",
