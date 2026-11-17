@@ -518,6 +518,10 @@ export const dePages = {
       success: "Vielen Dank. Ihre Nachricht wurde gesendet – wir melden uns in Kürze bei Ihnen.",
       error: "Bitte geben Sie Ihren Vornamen, Ihren Nachnamen und eine gültige E-Mail-Adresse an.",
       failed: "Ihre Nachricht konnte nicht gesendet werden. Bitte schreiben Sie uns direkt:",
+      /** CV upload, application form only. */
+      cv: "Lebenslauf (optional)",
+      cvHint: "PDF oder Word, höchstens 4 MB",
+      cvError: "Der Lebenslauf muss eine PDF- oder Word-Datei mit höchstens 4 MB sein.",
     },
   },
 

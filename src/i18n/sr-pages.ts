@@ -521,6 +521,10 @@ export const srPages = {
       success: "Hvala vam. Vaša poruka je poslata – uskoro ćemo vam se javiti.",
       error: "Molimo vas da unesete ime, prezime i ispravnu adresu e-pošte.",
       failed: "Vašu poruku nije bilo moguće poslati. Pišite nam direktno:",
+      /** CV upload, application form only. */
+      cv: "Biografija – CV (opciono)",
+      cvHint: "PDF ili Word, najviše 4 MB",
+      cvError: "CV mora biti PDF ili Word fajl od najviše 4 MB.",
     },
   },
 

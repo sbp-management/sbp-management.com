@@ -517,6 +517,10 @@ export const enPages = {
       success: "Thank you. Your message has been sent – we will get back to you shortly.",
       error: "Please fill in your first name, last name, and a valid email address.",
       failed: "Your message could not be sent. Please write to us directly:",
+      /** CV upload, application form only. */
+      cv: "CV (optional)",
+      cvHint: "PDF or Word, max. 4 MB",
+      cvError: "Your CV must be a PDF or Word file of no more than 4 MB.",
     },
   },
 
