@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useActionState, useState, useSyncExternalStore } from "react";
 import { submitContact, type ContactState } from "@/app/actions";
 import { company } from "@/content/site";
@@ -59,10 +60,13 @@ const label = "text-[0.8125rem] font-semibold text-ink";
 export function ContactFormV2({
   copy,
   job,
+  privacyHref,
 }: {
   copy: Copy;
   /** Title of the job listing this form applies for. */
   job?: { title: string; error: string };
+  /** Locale path to the Privacy Policy page, linked from the consent line. */
+  privacyHref: string;
 }) {
   const [state, action, pending] = useActionState<ContactState, FormData>(
     submitContact,
@@ -279,7 +283,13 @@ export function ContactFormV2({
 
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-[28rem] text-[0.8125rem] text-muted">
-          {copy.required} {copy.consent}
+          {copy.required} {copy.consent}{" "}
+          <Link
+            href={privacyHref}
+            className="text-ink underline decoration-current/30 underline-offset-4 hover:decoration-current"
+          >
+            {copy.privacyLink}
+          </Link>
         </p>
         <button
           type="submit"

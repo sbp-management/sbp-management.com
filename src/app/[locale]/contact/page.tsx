@@ -5,7 +5,8 @@ import { ContactFormV2 } from "@/components/v2/contact-form";
 import { Band, PageHero } from "@/components/v2/page-parts";
 import { Heading } from "@/components/v2/ui";
 import { company } from "@/content/site";
-import { getDictionary } from "@/i18n/dictionaries";
+import { href } from "@/i18n/config";
+import { getDictionary, getLocale } from "@/i18n/dictionaries";
 import { Review } from "@/components/v2/review";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -15,6 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ContactPage() {
   const { contactPage: c } = await getDictionary();
+  const locale = await getLocale();
 
   const details = [
     {
@@ -65,9 +67,9 @@ export default async function ContactPage() {
             <div className="mt-8">
               <Review
                 kind="risk"
-                note="Legal check: consent wording and link to the Privacy Policy"
+                note="Legal check: consent wording – link to the Privacy Policy added 2026-11-18, still as running text (not a checkbox)"
               >
-                <ContactFormV2 copy={c.form} />
+                <ContactFormV2 copy={c.form} privacyHref={href(locale, "privacy")} />
               </Review>
             </div>
           </Reveal>

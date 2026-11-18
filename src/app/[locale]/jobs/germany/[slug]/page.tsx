@@ -288,6 +288,7 @@ export default async function JobListingPage({
               {/* SBP reads applications in German, so the German title goes with them. */}
               <ContactFormV2
                 copy={contactPage.form}
+                privacyHref={href(locale, "privacy")}
                 job={{ title: jobTitle(job, "de"), error: t.jobError }}
               />
             </div>
