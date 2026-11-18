@@ -8,6 +8,7 @@ import { JobArticle } from "@/components/v2/job-article";
 import { Reveal } from "@/components/v2/reveal";
 import { ArrowRight, Container, Eyebrow, TextLink } from "@/components/v2/ui";
 import {
+  JOB_LOCATION_DETAIL,
   jobArticle,
   jobCity,
   jobMetaDescription,
@@ -124,8 +125,11 @@ function jobPosting(job: JobDetail, locale: Locale, url: string) {
       "@type": "Place",
       address: {
         "@type": "PostalAddress",
-        addressLocality: job.location.city,
-        postalCode: job.location.postalCode,
+        // In "region" mode we don't have one postal code for an entire Bundesland, so both the
+        // locality and the postal code are left out rather than publishing a wrong/fake one.
+        ...(JOB_LOCATION_DETAIL === "exact"
+          ? { addressLocality: job.location.city, postalCode: job.location.postalCode }
+          : { addressLocality: job.location.region }),
         addressRegion: job.location.region,
         addressCountry: "DE",
       },
