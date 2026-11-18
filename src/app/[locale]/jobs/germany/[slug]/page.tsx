@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ContactFormV2 } from "@/components/v2/contact-form";
@@ -79,6 +80,15 @@ function occupationalCategory(job: JobDetail) {
   if (job.profession === "midwife") return "Midwife";
   return "Physician";
 }
+
+/**
+ * The one recruiting contact shown with a photo on every listing (job.author holds "Name | Role").
+ * Update these here if the contact changes; they aren't per-job since there's only ever one.
+ */
+const CONTACT_PHOTO = "/images/team/ana-zakarashvili-2026-10-27.jpg";
+const CONTACT_EMAIL = "a.zakarashvili@sbp-management.com";
+const CONTACT_WHATSAPP = "+49 172 76 21292";
+const CONTACT_WHATSAPP_HREF = "https://wa.me/491727621292";
 
 /** Career guide page to link to, by profession. */
 function careerGuidePath(job: JobDetail) {
@@ -180,36 +190,71 @@ export default async function JobListingPage({
           >
             {t.back}
           </TextLink>
-          <Eyebrow>
-            {t.eyebrow} · {jobRegions.germany.openings.ref} {job.category}
-          </Eyebrow>
-          <h1 className="max-w-[56rem] font-display text-[clamp(2rem,1.3rem+2.4vw,3.5rem)] leading-[1.08] font-medium tracking-[-0.02em]">
-            {jobTitle(job, locale)}
-          </h1>
-          <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-[0.9375rem]">
-            <div>
-              <dt className="text-[0.75rem] font-bold tracking-[0.1em] text-muted uppercase">
-                {t.published}
-              </dt>
-              <dd className="mt-1 text-ink">{date}</dd>
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
+            <div className="min-w-0">
+              <Eyebrow>
+                {t.eyebrow} · {jobRegions.germany.openings.ref} {job.category}
+              </Eyebrow>
+              <h1 className="max-w-[48rem] font-display text-[clamp(2rem,1.3rem+2.4vw,3.5rem)] leading-[1.08] font-medium tracking-[-0.02em]">
+                {jobTitle(job, locale)}
+              </h1>
+              <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-[0.9375rem]">
+                <div>
+                  <dt className="text-[0.75rem] font-bold tracking-[0.1em] text-muted uppercase">
+                    {t.published}
+                  </dt>
+                  <dd className="mt-1 text-ink">{date}</dd>
+                </div>
+                <div>
+                  <dt className="text-[0.75rem] font-bold tracking-[0.1em] text-muted uppercase">
+                    {jobFilter.department}
+                  </dt>
+                  <dd className="mt-1 text-ink">
+                    {jobFilter.departments[job.department]} ·{" "}
+                    {jobCity(job, locale)}
+                  </dd>
+                </div>
+              </dl>
             </div>
-            <div>
-              <dt className="text-[0.75rem] font-bold tracking-[0.1em] text-muted uppercase">
-                {jobFilter.department}
-              </dt>
-              <dd className="mt-1 text-ink">
-                {jobFilter.departments[job.department]} · {jobCity(job, locale)}
-              </dd>
+            {/* Recruiting contact, with a photo, at the right of the headline. */}
+            <div className="flex shrink-0 items-center gap-4 lg:flex-col lg:items-end lg:text-right">
+              <div className="size-16 shrink-0 overflow-hidden rounded-full bg-paper ring-1 ring-line sm:size-20">
+                <Image
+                  src={CONTACT_PHOTO}
+                  alt={job.author.split("|")[0]?.trim() ?? job.author}
+                  width={80}
+                  height={80}
+                  sizes="80px"
+                  className="size-full object-cover"
+                />
+              </div>
+              <dl className="text-[0.9375rem]">
+                <dt className="text-[0.75rem] font-bold tracking-[0.1em] text-muted uppercase">
+                  {t.contact}
+                </dt>
+                <dd lang="de" className="mt-1 text-ink">
+                  {job.author.split("|")[0]?.trim()}
+                  <span className="block text-[0.8125rem] text-muted">
+                    {job.author.split("|")[1]?.trim()}
+                  </span>
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="mt-2 block text-[0.8125rem] text-ink underline decoration-current/30 underline-offset-4 hover:decoration-current"
+                  >
+                    {CONTACT_EMAIL}
+                  </a>
+                  <a
+                    href={CONTACT_WHATSAPP_HREF}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 block text-[0.8125rem] text-ink underline decoration-current/30 underline-offset-4 hover:decoration-current"
+                  >
+                    WhatsApp: {CONTACT_WHATSAPP}
+                  </a>
+                </dd>
+              </dl>
             </div>
-            <div>
-              <dt className="text-[0.75rem] font-bold tracking-[0.1em] text-muted uppercase">
-                {t.contact}
-              </dt>
-              <dd lang="de" className="mt-1 text-ink">
-                {job.author}
-              </dd>
-            </div>
-          </dl>
+          </div>
         </Container>
       </section>
 
