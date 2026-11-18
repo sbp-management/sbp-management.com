@@ -86,7 +86,7 @@ function occupationalCategory(job: JobDetail) {
  * The one recruiting contact shown with a photo on every listing (job.author holds "Name | Role").
  * Update these here if the contact changes; they aren't per-job since there's only ever one.
  */
-const CONTACT_PHOTO = "/images/team/ana-zakarashvili-2026-11-18.jpg";
+const CONTACT_PHOTO = "/images/team/ana-zakarashvili-2026-11-19.jpg";
 const CONTACT_EMAIL = "a.zakarashvili@sbp-management.com";
 const CONTACT_WHATSAPP = "+49 172 76 21292";
 const CONTACT_WHATSAPP_HREF = "https://wa.me/491727621292";
