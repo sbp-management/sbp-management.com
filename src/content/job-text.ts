@@ -2,15 +2,35 @@ import type { Locale } from "@/i18n/config";
 import { jobTemplates } from "./job-templates";
 import type { Block, JobDetail } from "./types";
 
+/**
+ * Location detail shown everywhere a job's place appears — the listing text, the search-result
+ * description, the location filter, and the structured data Google reads for Google for Jobs.
+ *
+ * "exact": the real town (e.g. "Albstadt"). Needed for Google for Jobs eligibility and for
+ * location/radius search to match these listings — this is what the site used before and what
+ * we measured passing Google's Rich Results Test.
+ * "region": only the Bundesland (e.g. "Baden-Württemberg"), per the client's instruction of
+ * 2026-11-18. Expect Google for Jobs eligibility and local-search matching to weaken; the real
+ * town is still kept in each job's data (job.location.city), so switching this back to "exact"
+ * is the only change needed to fully restore the previous behaviour.
+ */
+export const JOB_LOCATION_DETAIL: "exact" | "region" = "region";
+
 /** Replaces {name} placeholders. */
 const fill = (text: string, values: Record<string, string>) =>
   text.replace(/\{(\w+)\}/g, (_, key: string) => values[key] ?? "");
 
 const seg = (t: string) => [{ t }];
 
-/** Town name as written in running text and titles of a language. */
+/** The region name as written in running text and titles of a language. */
+const jobRegionName = (job: JobDetail, locale: Locale) =>
+  jobTemplates[locale].region[job.location.region] ?? job.location.region;
+
+/** Town (or, in "region" mode, Bundesland) name as written in running text and titles. */
 export const jobCity = (job: JobDetail, locale: Locale) =>
-  jobTemplates[locale].cityName[job.location.city] ?? job.location.city;
+  JOB_LOCATION_DETAIL === "region"
+    ? jobRegionName(job, locale)
+    : (jobTemplates[locale].cityName[job.location.city] ?? job.location.city);
 
 /** Job title with the town, e.g. "Oberarzt (m/w/d) Neurologie in Albstadt". */
 export const jobTitle = (job: JobDetail, locale: Locale) =>
@@ -54,12 +74,15 @@ export const jobMetaDescription = (job: JobDetail, locale: Locale) =>
 export function jobArticle(job: JobDetail, locale: Locale): Block[] {
   const t = jobTemplates[locale];
   const venue = job.venue ?? "hospital";
-  // A city-state (e.g. Berlin) has the same name as its region, so showing both is redundant.
-  const regionName = t.region[job.location.region] ?? job.location.region;
+  const regionName = jobRegionName(job, locale);
+  // In "region" mode the {city} slot already holds the Bundesland, so the parenthetical would be
+  // redundant (and the same is true for a city-state like Berlin, whose city equals its region).
   const region =
-    job.location.city === job.location.region ? "" : ` (${regionName})`;
+    JOB_LOCATION_DETAIL === "region" || job.location.city === job.location.region
+      ? ""
+      : ` (${regionName})`;
   const intro = fill(t.intro[venue], {
-    city: t.city[job.location.city] ?? job.location.city,
+    city: jobCity(job, locale),
     region,
     role: t.role[job.level],
     area: job.area[locale],

@@ -12,7 +12,7 @@ import { SectionTitle } from "./page-parts";
 const PHOTOS: (string | null)[] = [
   "/images/team/sabina-banda-2026-10-27.jpg",
   "/images/team/nikola-banda-2026-10-27.jpg",
-  "/images/team/ana-zakarashvili-2026-10-27.jpg",
+  "/images/team/ana-zakarashvili-2026-11-18.jpg",
   "/images/team/josephine-heinrich-2026-10-27.jpg",
   "/images/team/milica-golubovic-2026-10-27.jpg",
   "/images/team/esra-simsek-2026-10-30.jpg",
