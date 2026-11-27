@@ -203,9 +203,13 @@ export function QuickApplyForm({
   }, []);
 
   const reported = useRef(false);
+  const thanks = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (state.status === "success" && !reported.current) {
       reported.current = true;
+      // The thank-you note is much shorter than the form: bring it into view (on phones the page
+      // would otherwise stay scrolled down to the footer).
+      thanks.current?.scrollIntoView({ behavior: "smooth", block: "start" });
       trackLead("schnellbewerbung");
     }
   }, [state.status]);
@@ -229,7 +233,7 @@ export function QuickApplyForm({
 
   if (state.status === "success") {
     return (
-      <div role="status" className="border border-line bg-white p-6 sm:p-8">
+      <div ref={thanks} role="status" className="scroll-mt-28 border border-line bg-white p-6 sm:p-8">
         <h2 className="font-display text-[1.75rem] leading-tight font-medium text-ink">
           Vielen Dank für Ihre Bewerbung!
         </h2>
@@ -514,8 +518,11 @@ export function QuickApplyForm({
           ) : (
             <span />
           )}
+          {/* Separate keys: otherwise React reuses the "Weiter" button as the submit button, and the
+              click that leads to the last step would already submit the form. */}
           {step < STEPS.length - 1 ? (
             <button
+              key="next"
               type="button"
               onClick={next}
               className="min-h-12 bg-ink px-8 text-[1rem] font-semibold text-white transition-colors hover:bg-brand"
@@ -524,6 +531,7 @@ export function QuickApplyForm({
             </button>
           ) : (
             <button
+              key="submit"
               type="submit"
               disabled={pending}
               className="min-h-12 bg-ink px-8 text-[1rem] font-semibold text-white transition-colors hover:bg-brand disabled:opacity-60"
