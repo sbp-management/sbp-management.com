@@ -1,7 +1,6 @@
 "use server";
 
-import { headers } from "next/headers";
-import { company } from "@/content/site";
+import { isRateLimited, sendToInbox, type MailAttachment } from "@/lib/inbox";
 
 export type FormValues = Record<string, string>;
 
@@ -52,7 +51,7 @@ const CV_TYPES: Record<string, number[]> = {
   doc: [0xd0, 0xcf, 0x11, 0xe0], // old Word format
 };
 
-type Attachment = { filename: string; content: string };
+type Attachment = MailAttachment;
 
 /** The uploaded CV as an email attachment; null = none uploaded; "invalid" = wrong type or too large. */
 async function readCv(data: FormData, name: string): Promise<Attachment | null | "invalid"> {
@@ -91,11 +90,8 @@ export async function submitContact(_prev: ContactState, data: FormData): Promis
   if (values.Nachricht.length > 5000) fields.push("Nachricht");
   if (fields.length) return { status: "error", fields, values };
 
-  const h = await headers();
-  // Netlify passes the visitor's IP in x-nf-client-connection-ip; x-forwarded-for elsewhere.
-  const ip = h.get("x-nf-client-connection-ip") ?? h.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
   // Checked before the CV is read, so repeated large uploads are turned away without being processed.
-  if (isRateLimited(ip)) return { status: "failed", values };
+  if (await isRateLimited()) return { status: "failed", values };
 
   const cv = values.kind === "job" ? await readCv(data, `${values.Vorname} ${values.Nachname}`) : null;
   if (cv === "invalid") return { status: "error", fields: ["Lebenslauf"], values };
@@ -109,64 +105,11 @@ async function deliver(values: FormValues, cv: Attachment | null): Promise<boole
   const body = FIELDS.filter((key) => values[key]).map((key) => `${key}: ${values[key]}`).join("\n\n");
   const emailText = cv ? `${body}\n\nLebenslauf: im Anhang (${cv.filename})` : body;
 
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    if (process.env.NODE_ENV === "production") {
-      console.error("[contact] RESEND_API_KEY is not set; message NOT delivered:", subject);
-      return false;
-    }
-    console.info(`[contact] dev mode, not sent:\n${subject}\n\n${body}`);
-    return true;
-  }
-
-  const payload = JSON.stringify({
-    from: process.env.CONTACT_FROM || `SBP Website <website@sbp-management.com>`,
-    to: [company.email],
-    reply_to: values.Email,
+  return sendToInbox({
     subject,
     text: emailText,
-    ...(cv && { attachments: [cv] }),
+    replyTo: values.Email,
+    attachments: cv ? [cv] : undefined,
+    logText: body,
   });
-  // Same key on the retry, so Resend never sends the message twice.
-  const idempotencyKey = crypto.randomUUID();
-
-  for (let attempt = 1; attempt <= 2; attempt++) {
-    try {
-      const res = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
-          "Idempotency-Key": idempotencyKey,
-        },
-        body: payload,
-        signal: AbortSignal.timeout(8000),
-      });
-      if (res.ok) return true;
-      console.error(`[contact] Resend rejected (attempt ${attempt}): ${res.status} ${await res.text()}`);
-      // 4xx means bad config or input; retrying will not help (except 429 rate limiting).
-      if (res.status < 500 && res.status !== 429) return false;
-    } catch (err) {
-      console.error(`[contact] Resend request failed (attempt ${attempt}):`, err);
-    }
-    if (attempt === 1) await new Promise((r) => setTimeout(r, 1000));
-  }
-  return false;
-}
-
-/**
- * Best-effort flood protection: at most 5 submissions per IP per 10 minutes.
- * Kept in memory, so it is per server instance and resets on deploy.
- */
-const WINDOW_MS = 10 * 60 * 1000;
-const MAX_PER_WINDOW = 5;
-const recent = new Map<string, number[]>();
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const hits = (recent.get(ip) ?? []).filter((t) => now - t < WINDOW_MS);
-  hits.push(now);
-  recent.set(ip, hits);
-  if (recent.size > 10_000) recent.clear();
-  return hits.length > MAX_PER_WINDOW;
 }
