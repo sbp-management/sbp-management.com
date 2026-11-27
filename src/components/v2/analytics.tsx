@@ -165,6 +165,16 @@ export function Analytics({ text, privacyHref }: { text: ConsentText; privacyHre
   );
 }
 
+/**
+ * Call when a form was sent successfully: reports the GA event generate_lead, but only after the
+ * visitor agreed to statistics (and GA is loaded); otherwise it does nothing. The parked google-ads
+ * branch extends this with the Google Ads conversion.
+ */
+export function trackLead(kind: "job" | "contact" | "schnellbewerbung") {
+  if (!GA_ID || readChoice() !== "granted" || !window.gtag) return;
+  window.gtag("event", "generate_lead", { send_to: GA_ID, lead_type: kind });
+}
+
 /** Footer link that reopens the banner, so consent can be withdrawn as easily as it was given. */
 export function CookieSettingsButton({ label }: { label: string }) {
   if (!GA_ID) return null;
