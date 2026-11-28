@@ -2,7 +2,7 @@
  * "Schnellbewerbung" landing page (/schnellbewerbung, German only, not in the menu or sitemap): the
  * positions a Google Ads link can name with ?stelle=, and the answer options of the form. Change the
  * list here; the page and the server action read it from this file. Titles must match the ads.
- * Anonymous on purpose (rule E1): no hospital names or towns; a region at most "Süddeutschland".
+ * Anonymous on purpose (rule E1): no hospital names or towns; at most a region (as in the ads).
  */
 
 export type QuickGroup = "Pflege" | "Hebamme" | "Ärzte";
@@ -13,29 +13,29 @@ export type QuickPosition = {
   title: string;
   /** Pre-selects "Ihr Beruf"; none for an open application. */
   group?: QuickGroup;
-  /** Shown after the title on the page, e.g. "Süddeutschland"; leave out when not confirmed. */
+  /** Shown after the title on the page (e.g. "Süddeutschland", "Hessen"); must match the ads. */
   region?: string;
 };
 
 export const quickPositions: QuickPosition[] = [
-  { slug: "pflege-notaufnahme", title: "Pflegefachkraft (m/w/d) Notaufnahme", group: "Pflege" },
-  { slug: "pflege-altersmedizin", title: "Pflegefachkraft (m/w/d) Altersmedizin", group: "Pflege" },
-  { slug: "pflege-pneumologie", title: "Pflegefachkraft (m/w/d) Pneumologie", group: "Pflege" },
-  { slug: "pflege-paediatrie", title: "Pflegefachkraft (m/w/d) Pädiatrie", group: "Pflege" },
-  { slug: "pflege-allgemein", title: "Pflegefachkraft (m/w/d) Allgemeinpflege", group: "Pflege" },
-  { slug: "intensivpflege", title: "Fachpflegekraft (m/w/d) Intensivpflege", group: "Pflege" },
-  { slug: "kinderkrankenpflege", title: "Gesundheits- und Kinderkrankenpfleger (m/w/d)", group: "Pflege" },
-  { slug: "hebamme-kreisssaal", title: "Hebamme (m/w/d) Kreißsaal", group: "Hebamme" },
-  { slug: "zurueck-in-die-klinik", title: "Zurück in die Klinik – Pflege (m/w/d)", group: "Pflege" },
+  { slug: "pflege-notaufnahme", title: "Pflegefachkraft (m/w/d) Notaufnahme", group: "Pflege", region: "Süddeutschland" },
+  { slug: "pflege-altersmedizin", title: "Pflegefachkraft (m/w/d) Altersmedizin", group: "Pflege", region: "Süddeutschland" },
+  { slug: "pflege-pneumologie", title: "Pflegefachkraft (m/w/d) Pneumologie", group: "Pflege", region: "Süddeutschland" },
+  { slug: "pflege-paediatrie", title: "Pflegefachkraft (m/w/d) Pädiatrie", group: "Pflege", region: "Süddeutschland" },
+  { slug: "pflege-allgemein", title: "Pflegefachkraft (m/w/d) Allgemeinpflege", group: "Pflege", region: "Hessen" },
+  { slug: "intensivpflege", title: "Fachpflegekraft (m/w/d) Intensivpflege", group: "Pflege", region: "Hessen" },
+  { slug: "kinderkrankenpflege", title: "Gesundheits- und Kinderkrankenpfleger (m/w/d)", group: "Pflege", region: "Hessen" },
+  { slug: "hebamme-kreisssaal", title: "Hebamme (m/w/d) Kreißsaal", group: "Hebamme", region: "Hessen" },
+  { slug: "zurueck-in-die-klinik", title: "Zurück in die Klinik – Pflegefachkraft (m/w/d) Innere Medizin", group: "Pflege" },
   { slug: "oa-pneumologie", title: "Oberarzt (m/w/d) Pneumologie", group: "Ärzte", region: "Süddeutschland" },
   { slug: "oa-paed-notaufnahme", title: "Oberarzt (m/w/d) Pädiatrische Notaufnahme", group: "Ärzte", region: "Süddeutschland" },
   { slug: "oa-kinder-gastroenterologie", title: "Oberarzt (m/w/d) Kinder-Gastroenterologie", group: "Ärzte", region: "Süddeutschland" },
   { slug: "fa-kinder-jugendmedizin", title: "Facharzt (m/w/d) Kinder- und Jugendmedizin", group: "Ärzte", region: "Süddeutschland" },
   { slug: "oa-altersmedizin-schlaganfall", title: "Oberarzt (m/w/d) Altersmedizin und Schlaganfall", group: "Ärzte", region: "Süddeutschland" },
-  { slug: "oa-innere-geriatrie", title: "Oberarzt (m/w/d) Innere Medizin und Geriatrie", group: "Ärzte", region: "Süddeutschland" },
-  { slug: "fa-innere-geriatrie", title: "Facharzt (m/w/d) Innere Medizin, Geriatrie", group: "Ärzte", region: "Süddeutschland" },
-  { slug: "fa-gastroenterologie", title: "Facharzt (m/w/d) Gastroenterologie", group: "Ärzte", region: "Süddeutschland" },
-  { slug: "fa-diabetologie", title: "Facharzt (m/w/d) Diabetologie", group: "Ärzte", region: "Süddeutschland" },
+  { slug: "oa-innere-geriatrie", title: "Oberarzt (m/w/d) Innere Medizin und Geriatrie", group: "Ärzte", region: "Hessen" },
+  { slug: "fa-innere-geriatrie", title: "Facharzt (m/w/d) Innere Medizin, Geriatrie", group: "Ärzte", region: "Hessen" },
+  { slug: "fa-gastroenterologie", title: "Facharzt (m/w/d) Gastroenterologie", group: "Ärzte", region: "Berlin/Brandenburg" },
+  { slug: "fa-diabetologie", title: "Facharzt (m/w/d) Diabetologie", group: "Ärzte", region: "Berlin/Brandenburg" },
   { slug: "initiativ", title: "Andere / Initiativbewerbung" },
 ];
 

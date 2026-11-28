@@ -30,10 +30,14 @@ const CHANNELS: Record<string, string> = {
   linkedin: "LinkedIn",
 };
 
+/** An ad tag on one line: a line break could otherwise fake an extra "Label:" line in the email. */
+const tag = (data: FormData, key: string, max: number) =>
+  text(data, key).replace(/[\r\n\u2028\u2029]+/g, " ").trim().slice(0, max);
+
 function channelLabel(data: FormData): string {
-  const source = text(data, "utm_source").slice(0, 60);
-  const medium = text(data, "utm_medium").slice(0, 60);
-  const campaign = text(data, "utm_campaign").slice(0, 80);
+  const source = tag(data, "utm_source", 60);
+  const medium = tag(data, "utm_medium", 60);
+  const campaign = tag(data, "utm_campaign", 80);
   const name = !source ? "Website" : (CHANNELS[source.toLowerCase()] ?? `Andere (${source})`);
   const withMedium = medium ? `${name} – ${medium}` : name;
   return campaign ? `${withMedium} (Kampagne: ${campaign})` : withMedium;
