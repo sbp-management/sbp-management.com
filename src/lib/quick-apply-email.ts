@@ -1,4 +1,5 @@
 import { quickLimits, quickOptions, quickPosition } from "@/content/quick-apply";
+import { leadChannel } from "@/lib/lead-source";
 
 /**
  * Checks and cleans a "Schnellbewerbung" and builds its email. Kept free of sending so it can be
@@ -52,12 +53,8 @@ export const utmValue = (value: string) =>
 
 /** "Quelle:" from utm_source; nothing else from the visitor is trusted for it. */
 export function quickSource(source: string) {
-  const s = source.toLowerCase();
-  if (!s) return "Website";
-  if (s === "google") return "Google Ads";
-  if (s === "facebook" || s === "instagram") return "Facebook / Instagram";
-  if (s === "meta") return "Meta Ads";
-  return `Sonstige: ${source}`;
+  const channel = leadChannel(source);
+  return channel === "Sonstige" ? `Sonstige: ${source}` : channel;
 }
 
 /** "2026-11-27 14:03 (Europe/Berlin)". */

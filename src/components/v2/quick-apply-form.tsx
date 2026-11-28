@@ -210,9 +210,9 @@ export function QuickApplyForm({
       // The thank-you note is much shorter than the form: bring it into view (on phones the page
       // would otherwise stay scrolled down to the footer).
       thanks.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      trackLead("schnellbewerbung");
+      trackLead("schnellbewerbung", { source: utm.source, campaign: utm.campaign, content: utm.content });
     }
-  }, [state.status]);
+  }, [state.status, utm.source, utm.campaign, utm.content]);
 
   const serverFields = state.status === "error" ? state.fields : [];
   const err = (f: QuickField) => shown.includes(f) || serverFields.includes(f);

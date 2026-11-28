@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { googleAds } from "@/content/google-ads";
+import { cleanTag, leadChannel } from "@/lib/lead-source";
 
 /**
  * Consent banner with two categories, each loaded only after the visitor opts in
@@ -159,15 +160,28 @@ function removeGoogleCookies() {
   }
 }
 
+/** Ad tags of the visit that led to the form (utm_source, utm_campaign, utm_content). */
+export type LeadTags = { source?: string; campaign?: string; content?: string };
+
 /**
- * Call when a form was sent successfully. Reports a GA event (statistics consent) and a Google Ads
- * conversion (marketing consent); does nothing for what the visitor has not agreed to.
+ * Call when a form was sent successfully. Reports the GA event generate_lead (statistics consent)
+ * with the form and the lead's source, so analytics can tell website applications, Google Ads and
+ * Facebook / Instagram apart; for the Schnellbewerbung also the Google Ads conversion (marketing
+ * consent). Does nothing for what the visitor has not agreed to.
  */
-export function trackLead(kind: LeadKind) {
+export function trackLead(kind: LeadKind, tags: LeadTags = {}) {
   const consent = parse(readRaw());
   if (!consent || !window.gtag) return;
   if (consent.analytics && GA_ID) {
-    window.gtag("event", "generate_lead", { send_to: GA_ID, lead_type: kind });
+    const source = cleanTag(tags.source ?? "");
+    window.gtag("event", "generate_lead", {
+      send_to: GA_ID,
+      lead_type: kind,
+      lead_source: leadChannel(source),
+      utm_source: source || "(none)",
+      campaign: cleanTag(tags.campaign ?? "") || "(none)",
+      ad: cleanTag(tags.content ?? "") || "(none)",
+    });
   }
   const label = ADS_LABEL[kind];
   if (consent.marketing && ADS_ID && label) {

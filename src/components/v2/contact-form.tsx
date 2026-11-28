@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useActionState, useState, useSyncExternalStore } from "react";
 import { submitContact, type ContactState } from "@/app/actions";
+import { trackLead } from "@/components/v2/analytics";
 import { company } from "@/content/site";
 import type { Dictionary } from "@/i18n/dictionaries";
 
@@ -76,6 +77,11 @@ export function ContactFormV2({
   const [cvTooBig, setCvTooBig] = useState(false);
   // Empty on the server-rendered page (no window there); filled in right after mount.
   const utm = JSON.parse(useSyncExternalStore(noSubscription, utmSnapshot, () => SERVER_UTM)) as Utm;
+  // A sent form is reported to Google Analytics (statistics consent only) with its source.
+  const sent = state.status === "success";
+  useEffect(() => {
+    if (sent) trackLead(job ? "job" : "contact", { source: utm.source, campaign: utm.campaign });
+  }, [sent, job, utm.source, utm.campaign]);
   // Persisting is a plain storage write, not a state update, so it stays out of utmSnapshot above.
   useEffect(() => {
     const fromUrl = urlUtm();
