@@ -56,7 +56,7 @@ export const srLegal = {
                 "Netlify, Inc. (SAD) – hosting ovog veb-sajta",
                 "One.com Group AB (Švedska) – registracija domena i serveri imena (DNS)",
                 "Google Ireland Limited (Irska) – e-pošta za naše adrese @sbp-management.com (Google Workspace)",
-                "Google Ireland Limited (Irska) – veb-analitika putem Google Analytics, samo uz vašu saglasnost (videti odeljak 4)",
+                "Google Ireland Limited (Irska) – veb-analitika putem Google Analytics i merenje konverzija putem Google Ads, u oba slučaja samo uz vašu saglasnost (videti odeljak 4)",
                 "Plus Five Five, Inc. koji posluje pod imenom Resend (SAD) – dostava poruka poslatih putem kontakt formulara (videti odeljak 4)",
               ],
             },
@@ -112,7 +112,7 @@ export const srLegal = {
             { p: "datenschutz@sbp-management.com" },
             { h: "Prenos podataka u treće zemlje" },
             {
-              p: "Koristimo usluge kompanija sa sedištem u SAD ili sa tamošnjim matičnim kompanijama: naš hosting provajder Netlify i naš provajder e-pošte Google (videti odeljak 2), uz vašu saglasnost Google Analytics (videti odeljak 4), kao i servis za dostavu e-pošte Resend (videti odeljak 4). Podaci stoga mogu biti preneti u SAD. Prenos podataka Netlify-ju i Google-u zasniva se na EU–US Data Privacy Framework (odluka Evropske komisije o adekvatnosti, čl. 45 GDPR) i na standardnim ugovornim klauzulama EU (čl. 46 GDPR). Isto važi i za Resend, koji je takođe sertifikovan u okviru EU–US Data Privacy Framework i prihvatio je standardne ugovorne klauzule EU.",
+              p: "Koristimo usluge kompanija sa sedištem u SAD ili sa tamošnjim matičnim kompanijama: naš hosting provajder Netlify i naš provajder e-pošte Google (videti odeljak 2), uz vašu saglasnost Google Analytics i Google Ads (videti odeljak 4), kao i servis za dostavu e-pošte Resend (videti odeljak 4). Podaci stoga mogu biti preneti u SAD. Prenos podataka Netlify-ju i Google-u zasniva se na EU–US Data Privacy Framework (odluka Evropske komisije o adekvatnosti, čl. 45 GDPR) i na standardnim ugovornim klauzulama EU (čl. 46 GDPR). Isto važi i za Resend, koji je takođe sertifikovan u okviru EU–US Data Privacy Framework i prihvatio je standardne ugovorne klauzule EU.",
             },
             { h: "Opoziv vašeg pristanka za obradu podataka" },
             {
@@ -159,7 +159,7 @@ export const srLegal = {
           blocks: [
             { h: "Kolačići" },
             {
-              p: "Ovaj veb-sajt postavlja kolačiće samo uz vašu saglasnost i isključivo za veb-analitiku putem Google Analytics (videti dole). Bez saglasnosti kolačići se ne postavljaju. Vaš izbor u baneru za kolačiće čuvamo u lokalnom skladištu vašeg pregledača (localStorage), kako se baner ne bi pojavljivao na svakoj stranici; to je tehnički neophodno (§ 25 st. 2 tač. 2 TDDDG). Naš hosting provajder Netlify ne postavlja kolačiće na ovom veb-sajtu.",
+              p: "Ovaj veb-sajt postavlja kolačiće samo uz vašu saglasnost i isključivo za veb-analitiku putem Google Analytics i za merenje uspeha naših oglasa putem Google Ads (videti dole). Bez saglasnosti kolačići se ne postavljaju. Vaš izbor u baneru za kolačiće čuvamo u lokalnom skladištu vašeg pregledača (localStorage), kako se baner ne bi pojavljivao na svakoj stranici; to je tehnički neophodno (§ 25 st. 2 tač. 2 TDDDG). Naš hosting provajder Netlify ne postavlja kolačiće na ovom veb-sajtu.",
             },
             {
               p: "Svoj pregledač možete podesiti tako da vas obaveštava o postavljanju kolačića, da kolačiće dozvoljava samo u pojedinačnim slučajevima, da isključi prihvatanje kolačića za određene slučajeve ili u potpunosti, kao i da aktivira automatsko brisanje kolačića pri zatvaranju pregledača.",
@@ -173,6 +173,16 @@ export const srLegal = {
             },
             {
               p: "Sa kompanijom Google zaključili smo ugovor o obradi podataka (čl. 28 GDPR). Podatke može obrađivati i Google LLC u SAD; Google LLC je sertifikovan prema EU-US Data Privacy Framework, a dodatno se primenjuju standardne ugovorne klauzule EU. Prikupljeni podaci brišu se nakon 14 meseci. Detalji: https://business.safety.google/adsprocessorterms/ i https://policies.google.com/privacy",
+            },
+            { h: "Praćenje konverzija Google Ads" },
+            {
+              p: "Oglase objavljujemo putem Google Ads, usluge kompanije Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irska (Google), npr. za naše oglase za posao. Ako ste dali saglasnost za kategoriju „Marketing“, koristimo praćenje konverzija Google Ads: kada na ovaj veb-sajt dođete preko nekog od naših oglasa, postavljaju se kolačići (_gcl_au, _gcl_aw, važe 90 dana). Ako zatim pošaljete prijavu putem naše stranice „Schnellbewerbung“ (brza prijava), Google saznaje da ta radnja potiče od oglasa. Mi dobijamo samo zbirne podatke (npr. koliko prijava je doneo neki oglas), bez podataka na osnovu kojih vas možemo identifikovati. Sadržaj vašeg formulara se ne prenosi kompaniji Google.",
+            },
+            {
+              p: "Remarketing i personalizovano oglašavanje ne koristimo. Google može povezati podatke sa postojećim Google nalogom ako ste prijavljeni; za to je odgovoran Google.",
+            },
+            {
+              p: "Google Ads se učitava tek nakon što u baneru za kolačiće izaberete „Marketing“ ili kliknete na „Prihvatam sve“. Pravni osnov je vaša saglasnost (čl. 6 st. 1 tač. a GDPR, § 25 st. 1 TDDDG), koju možete u bilo kom trenutku opozvati za ubuduće preko „Podešavanja kolačića“ na dnu stranice. Za merenje konverzija mi i Google smo svako za sebe rukovaoci podataka prema Google Ads Controller-Controller Data Protection Terms. Podatke može obrađivati i Google LLC u SAD; Google LLC je sertifikovan prema EU-US Data Privacy Framework, a dodatno se primenjuju standardne ugovorne klauzule EU. Detalji: https://business.safety.google/adscontrollerterms/ i https://policies.google.com/technologies/ads",
             },
             { h: "Fontovi" },
             {

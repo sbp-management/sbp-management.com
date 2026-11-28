@@ -14,10 +14,25 @@ const NOT_RESERVED =
 
 /**
  * Security headers for every response. The Content-Security-Policy only allows this site's own
- * scripts, styles, fonts and images (everything is self-hosted), plus Google Analytics, which is
- * only loaded after the visitor consents (src/components/v2/analytics.tsx); inline scripts/styles are
+ * scripts, styles, fonts and images (everything is self-hosted), plus Google Analytics and the
+ * Google Ads conversion tag, which are only loaded after the visitor consents (src/components/v2/analytics.tsx); inline scripts/styles are
  * needed by Next.js. It is left out in development, where React needs eval() for debugging.
  */
+/**
+ * Google hosts the Analytics / Ads tags talk to (only after consent). Ads conversions also go to the
+ * visitor's country Google domain, so the countries of our audience are listed; a visitor from
+ * elsewhere still converts through google.com.
+ */
+const GOOGLE_TLDS = ["com", "de", "at", "ch", "rs", "ba", "me", "mk", "hr", "si", "kz", "ru", "ua"];
+const GOOGLE_HOSTS = [
+  "https://*.google-analytics.com",
+  "https://*.analytics.google.com",
+  "https://*.googletagmanager.com",
+  "https://www.googleadservices.com",
+  "https://*.doubleclick.net",
+  ...GOOGLE_TLDS.map((tld) => `https://www.google.${tld}`),
+].join(" ");
+
 const securityHeaders = [
   { key: "Strict-Transport-Security", value: "max-age=31536000" },
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -30,11 +45,12 @@ const securityHeaders = [
           key: "Content-Security-Policy",
           value: [
             "default-src 'self'",
-            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
+            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net",
+            "frame-src https://td.doubleclick.net https://www.googletagmanager.com",
             "style-src 'self' 'unsafe-inline'",
-            "img-src 'self' data: blob: https://*.google-analytics.com https://*.googletagmanager.com",
+            `img-src 'self' data: blob: ${GOOGLE_HOSTS}`,
             "font-src 'self'",
-            "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
+            `connect-src 'self' ${GOOGLE_HOSTS}`,
             "frame-ancestors 'none'",
             "base-uri 'self'",
             "form-action 'self'",

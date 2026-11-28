@@ -34,11 +34,16 @@ export const de = {
   },
 
   consent: {
-    title: "Cookies für Statistik?",
-    body: "Mit Ihrer Einwilligung nutzen wir Google Analytics, um zu verstehen, wie unsere Website genutzt wird. Dabei werden Cookies gesetzt und Daten an Google übermittelt, auch in die USA. Ohne Einwilligung wird nichts geladen. Sie können Ihre Wahl jederzeit über „Cookie-Einstellungen“ unten auf der Seite ändern.",
+    title: "Cookies und Datenschutz",
+    body: "Mit Ihrer Einwilligung nutzen wir Dienste von Google, um zu verstehen, wie unsere Website genutzt wird und welche Anzeigen zu Bewerbungen führen. Dabei werden Cookies gesetzt und Daten an Google übermittelt, auch in die USA. Ohne Einwilligung wird nichts geladen. Ihre Wahl können Sie jederzeit über „Cookie-Einstellungen“ unten auf der Seite ändern.",
     privacy: "Datenschutzerklärung",
-    accept: "Akzeptieren",
-    decline: "Ablehnen",
+    statsLabel: "Statistik (Google Analytics)",
+    statsText: "Anonyme Auswertung, welche Seiten besucht werden und wie die Website genutzt wird.",
+    marketingLabel: "Marketing (Google Ads)",
+    marketingText: "Misst, ob ein Besuch über eine unserer Google-Anzeigen zu einer Bewerbung führt. Keine personalisierte Werbung.",
+    acceptAll: "Alle akzeptieren",
+    declineAll: "Alle ablehnen",
+    save: "Auswahl speichern",
     settings: "Cookie-Einstellungen",
   },
 

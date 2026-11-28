@@ -35,11 +35,16 @@ export const en: Dictionary = {
   },
 
   consent: {
-    title: "Cookies for statistics?",
-    body: "With your consent we use Google Analytics to understand how our website is used. This sets cookies and sends data to Google, including to the USA. Without consent nothing is loaded. You can change your choice at any time via “Cookie settings” at the bottom of the page.",
+    title: "Cookies and privacy",
+    body: "With your consent we use Google services to understand how our website is used and which ads lead to applications. This sets cookies and sends data to Google, including to the USA. Without consent nothing is loaded. You can change your choice at any time via “Cookie settings” at the bottom of the page.",
     privacy: "Privacy Policy",
-    accept: "Accept",
-    decline: "Decline",
+    statsLabel: "Statistics (Google Analytics)",
+    statsText: "Anonymous analysis of which pages are visited and how the website is used.",
+    marketingLabel: "Marketing (Google Ads)",
+    marketingText: "Measures whether a visit from one of our Google ads leads to an application. No personalised advertising.",
+    acceptAll: "Accept all",
+    declineAll: "Decline all",
+    save: "Save selection",
     settings: "Cookie settings",
   },
 

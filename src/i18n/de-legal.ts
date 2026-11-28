@@ -57,7 +57,7 @@ export const deLegal = {
                 "Netlify, Inc. (USA) – Hosting dieser Website",
                 "One.com Group AB (Schweden) – Domainregistrierung und Nameserver (DNS)",
                 "Google Ireland Limited (Irland) – E-Mail für unsere @sbp-management.com-Adressen (Google Workspace)",
-                "Google Ireland Limited (Irland) – Webanalyse mit Google Analytics, nur mit Ihrer Einwilligung (siehe Abschnitt 4)",
+                "Google Ireland Limited (Irland) – Webanalyse mit Google Analytics und Conversion-Messung mit Google Ads, jeweils nur mit Ihrer Einwilligung (siehe Abschnitt 4)",
                 "Plus Five Five, Inc., handelnd als Resend (USA) – Zustellung der über das Kontaktformular gesendeten Nachrichten (siehe Abschnitt 4)",
               ],
             },
@@ -113,7 +113,7 @@ export const deLegal = {
             { p: "datenschutz@sbp-management.com" },
             { h: "Datenübermittlung in Drittstaaten" },
             {
-              p: "Wir nutzen Dienste von Unternehmen mit Sitz in den USA bzw. mit dortiger Muttergesellschaft: unseren Hoster Netlify und unseren E-Mail-Anbieter Google (siehe Abschnitt 2), mit Ihrer Einwilligung Google Analytics (siehe Abschnitt 4) sowie den E-Mail-Zustelldienst Resend (siehe Abschnitt 4). Daten können daher in die USA übermittelt werden. Übermittlungen an Netlify und Google erfolgen auf Grundlage des EU-US Data Privacy Framework (Angemessenheitsbeschluss der Europäischen Kommission, Art. 45 DSGVO) und der EU-Standardvertragsklauseln (Art. 46 DSGVO). Gleiches gilt für Resend; Resend ist ebenfalls nach dem EU-US Data Privacy Framework zertifiziert und hat den EU-Standardvertragsklauseln zugestimmt.",
+              p: "Wir nutzen Dienste von Unternehmen mit Sitz in den USA bzw. mit dortiger Muttergesellschaft: unseren Hoster Netlify und unseren E-Mail-Anbieter Google (siehe Abschnitt 2), mit Ihrer Einwilligung Google Analytics und Google Ads (siehe Abschnitt 4) sowie den E-Mail-Zustelldienst Resend (siehe Abschnitt 4). Daten können daher in die USA übermittelt werden. Übermittlungen an Netlify und Google erfolgen auf Grundlage des EU-US Data Privacy Framework (Angemessenheitsbeschluss der Europäischen Kommission, Art. 45 DSGVO) und der EU-Standardvertragsklauseln (Art. 46 DSGVO). Gleiches gilt für Resend; Resend ist ebenfalls nach dem EU-US Data Privacy Framework zertifiziert und hat den EU-Standardvertragsklauseln zugestimmt.",
             },
             { h: "Widerruf Ihrer Einwilligung zur Datenverarbeitung" },
             {
@@ -160,7 +160,7 @@ export const deLegal = {
           blocks: [
             { h: "Cookies" },
             {
-              p: "Diese Website setzt Cookies nur mit Ihrer Einwilligung, und zwar ausschließlich für die Webanalyse mit Google Analytics (siehe unten). Ohne Einwilligung werden keine Cookies gesetzt. Ihre Entscheidung im Cookie-Banner speichern wir im lokalen Speicher Ihres Browsers (localStorage), damit der Banner nicht bei jedem Seitenaufruf erneut erscheint; dies ist technisch erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Unser Hosting-Anbieter Netlify setzt auf dieser Website keine Cookies.",
+              p: "Diese Website setzt Cookies nur mit Ihrer Einwilligung, und zwar ausschließlich für die Webanalyse mit Google Analytics und die Erfolgsmessung unserer Anzeigen mit Google Ads (siehe unten). Ohne Einwilligung werden keine Cookies gesetzt. Ihre Entscheidung im Cookie-Banner speichern wir im lokalen Speicher Ihres Browsers (localStorage), damit der Banner nicht bei jedem Seitenaufruf erneut erscheint; dies ist technisch erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Unser Hosting-Anbieter Netlify setzt auf dieser Website keine Cookies.",
             },
             {
               p: "Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren.",
@@ -174,6 +174,16 @@ export const deLegal = {
             },
             {
               p: "Wir haben mit Google einen Vertrag über Auftragsverarbeitung (Art. 28 DSGVO) geschlossen. Daten können auch durch die Google LLC in den USA verarbeitet werden; die Google LLC ist nach dem EU-US Data Privacy Framework zertifiziert, ergänzend gelten die EU-Standardvertragsklauseln. Die erhobenen Daten werden nach 14 Monaten gelöscht. Details: https://business.safety.google/adsprocessorterms/ und https://policies.google.com/privacy",
+            },
+            { h: "Google Ads Conversion-Tracking" },
+            {
+              p: "Wir schalten Anzeigen über Google Ads, einen Dienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland (Google), z. B. für unsere Stellenangebote. Sofern Sie in die Kategorie „Marketing“ eingewilligt haben, nutzen wir das Conversion-Tracking von Google Ads: Wenn Sie über eine unserer Anzeigen auf diese Website gelangen, wird ein Cookie (_gcl_au, _gcl_aw, Gültigkeit 90 Tage) gesetzt. Senden Sie anschließend eine Bewerbung über unsere Seite „Schnellbewerbung“, erfährt Google, dass diese Aktion auf eine Anzeige zurückgeht. Wir erhalten nur zusammengefasste Zahlen (z. B. wie viele Bewerbungen eine Anzeige gebracht hat), keine Angaben, mit denen wir Sie identifizieren können. Inhalte Ihres Formulars werden nicht an Google übermittelt.",
+            },
+            {
+              p: "Remarketing und personalisierte Werbung nutzen wir nicht. Google kann die Daten mit einem bestehenden Google-Konto verknüpfen, wenn Sie dort angemeldet sind; dies liegt in der Verantwortung von Google.",
+            },
+            {
+              p: "Google Ads wird erst geladen, nachdem Sie im Cookie-Banner „Marketing“ ausgewählt oder „Alle akzeptieren“ geklickt haben. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG), die Sie jederzeit über „Cookie-Einstellungen“ unten auf der Seite mit Wirkung für die Zukunft widerrufen können. Für die Conversion-Messung sind wir und Google gemeinsam bzw. jeweils eigenständig verantwortlich nach den Google Ads Controller-Controller Data Protection Terms. Daten können auch durch die Google LLC in den USA verarbeitet werden; die Google LLC ist nach dem EU-US Data Privacy Framework zertifiziert, ergänzend gelten die EU-Standardvertragsklauseln. Details: https://business.safety.google/adscontrollerterms/ und https://policies.google.com/technologies/ads",
             },
             { h: "Schriftarten" },
             {

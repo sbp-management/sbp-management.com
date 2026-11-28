@@ -57,7 +57,7 @@ export const enLegal = {
                 "Netlify, Inc. (USA) – hosting of this website",
                 "One.com Group AB (Sweden) – domain registration and name servers (DNS)",
                 "Google Ireland Limited (Ireland) – email for our @sbp-management.com addresses (Google Workspace)",
-                "Google Ireland Limited (Ireland) – web analytics with Google Analytics, only with your consent (see section 4)",
+                "Google Ireland Limited (Ireland) – web analytics with Google Analytics and conversion measurement with Google Ads, each only with your consent (see section 4)",
                 "Plus Five Five, Inc. trading as Resend (USA) – delivery of messages sent with the contact form (see section 4)",
               ],
             },
@@ -113,7 +113,7 @@ export const enLegal = {
             { p: "datenschutz@sbp-management.com" },
             { h: "Data transfers to third countries" },
             {
-              p: "We use services of companies based in the USA or with parent companies there: our host Netlify and our email provider Google (see section 2), with your consent Google Analytics (see section 4), and the email delivery service Resend (see section 4). Data may therefore be transferred to the USA. Transfers to Netlify and Google are based on the EU–US Data Privacy Framework (adequacy decision of the European Commission, Art. 45 GDPR) and the EU standard contractual clauses (Art. 46 GDPR). The same applies to Resend, which is also certified under the EU–US Data Privacy Framework and has agreed to the EU standard contractual clauses.",
+              p: "We use services of companies based in the USA or with parent companies there: our host Netlify and our email provider Google (see section 2), with your consent Google Analytics and Google Ads (see section 4), and the email delivery service Resend (see section 4). Data may therefore be transferred to the USA. Transfers to Netlify and Google are based on the EU–US Data Privacy Framework (adequacy decision of the European Commission, Art. 45 GDPR) and the EU standard contractual clauses (Art. 46 GDPR). The same applies to Resend, which is also certified under the EU–US Data Privacy Framework and has agreed to the EU standard contractual clauses.",
             },
             { h: "Withdrawal of your consent to data processing" },
             {
@@ -160,7 +160,7 @@ export const enLegal = {
           blocks: [
             { h: "Cookies" },
             {
-              p: "This website sets cookies only with your consent, and only for web analytics with Google Analytics (see below). Without consent no cookies are set. We store your choice in the cookie banner in your browser's local storage (localStorage) so that the banner does not reappear on every page; this is technically necessary (Section 25 (2) no. 2 TDDDG). Our hosting provider Netlify does not set any cookies on this website.",
+              p: "This website sets cookies only with your consent, and only for web analytics with Google Analytics and for measuring the success of our ads with Google Ads (see below). Without consent no cookies are set. We store your choice in the cookie banner in your browser's local storage (localStorage) so that the banner does not reappear on every page; this is technically necessary (Section 25 (2) no. 2 TDDDG). Our hosting provider Netlify does not set any cookies on this website.",
             },
             {
               p: "You can set your browser to inform you about the setting of cookies, to allow cookies only in individual cases, to exclude the acceptance of cookies for certain cases or in general, and to activate the automatic deletion of cookies when closing the browser.",
@@ -174,6 +174,16 @@ export const enLegal = {
             },
             {
               p: "We have concluded a data processing agreement (Art. 28 GDPR) with Google. Data may also be processed by Google LLC in the USA; Google LLC is certified under the EU-US Data Privacy Framework, and the EU Standard Contractual Clauses apply in addition. The collected data is deleted after 14 months. Details: https://business.safety.google/adsprocessorterms/ and https://policies.google.com/privacy",
+            },
+            { h: "Google Ads conversion tracking" },
+            {
+              p: "We run ads via Google Ads, a service of Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland (Google), for example for our job openings. If you have consented to the “Marketing” category, we use Google Ads conversion tracking: when you reach this website through one of our ads, cookies (_gcl_au, _gcl_aw, valid for 90 days) are set. If you then send an application through our \"Schnellbewerbung\" (quick application) page, Google learns that this action came from an ad. We only receive aggregated figures (e.g. how many applications an ad brought), no information that identifies you. The content of your form is not sent to Google.",
+            },
+            {
+              p: "We do not use remarketing or personalised advertising. Google may link the data to an existing Google account if you are signed in; this is Google's responsibility.",
+            },
+            {
+              p: "Google Ads is only loaded after you select “Marketing” or click “Accept all” in the cookie banner. The legal basis is your consent (Art. 6 (1) (a) GDPR, Section 25 (1) TDDDG), which you can withdraw at any time with effect for the future via “Cookie settings” at the bottom of the page. For conversion measurement, we and Google are each responsible as controllers under the Google Ads Controller-Controller Data Protection Terms. Data may also be processed by Google LLC in the USA; Google LLC is certified under the EU-US Data Privacy Framework, and the EU Standard Contractual Clauses apply in addition. Details: https://business.safety.google/adscontrollerterms/ and https://policies.google.com/technologies/ads",
             },
             { h: "Fonts" },
             {
