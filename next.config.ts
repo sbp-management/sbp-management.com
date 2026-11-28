@@ -30,6 +30,8 @@ const GOOGLE_HOSTS = [
   "https://*.googletagmanager.com",
   "https://www.googleadservices.com",
   "https://*.doubleclick.net",
+  // The Google tag's measurement endpoint for Ads (pagead2.googlesyndication.com/ccm/collect).
+  "https://pagead2.googlesyndication.com",
   ...GOOGLE_TLDS.map((tld) => `https://www.google.${tld}`),
 ].join(" ");
 

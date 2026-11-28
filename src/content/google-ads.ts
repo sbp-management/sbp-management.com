@@ -6,8 +6,8 @@
  * marketing switch. Only a sent Schnellbewerbung counts as a conversion, and only with marketing consent.
  */
 export const googleAds = {
-  id: "",
+  id: "AW-18538056626",
   labels: {
-    schnellbewerbung: "",
+    schnellbewerbung: "yi1nCOWqicEdELKX0YdF",
   },
 };
