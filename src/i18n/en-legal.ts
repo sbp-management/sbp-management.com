@@ -202,6 +202,16 @@ export const enLegal = {
             {
               p: "The data you enter in the contact form remains with us until you ask us to delete it, withdraw your consent to storage, or the purpose for storing the data no longer applies (e.g. after your inquiry has been processed). Mandatory statutory provisions – in particular retention periods – remain unaffected.",
             },
+            { h: "Quick application" },
+            {
+              p: "If you apply through our \"Schnellbewerbung\" (quick application) page, we process your details (position, profession, recognition status, German skills, availability, name, email address, phone number, message) and the information about which ad brought you to us. For this, the ad's identifier from the link is stored in your browser only for the duration of your visit (sessionStorage); no cookies are set for it. The purpose is to place you in suitable positions and to contact you by phone, WhatsApp or email. The legal basis is your consent (Art. 6(1)(a) GDPR), which you give in the form.",
+            },
+            {
+              p: "Your details are sent to us by email (delivered via Resend, see above) and stored in our Google Workspace account (see section 2). If we contact you via WhatsApp, WhatsApp Ireland Limited (Meta) processes data under its own terms; a transfer to the USA is possible.",
+            },
+            {
+              p: "You can withdraw your consent at any time with effect for the future, for example by email to info@sbp-management.com. We then delete your details, or at the latest once the purpose no longer applies, unless statutory retention obligations apply.",
+            },
             { h: "Inquiries by email, telephone, or fax" },
             {
               p: "If you contact us by email, telephone, or fax, your inquiry, including all resulting personal data (name, inquiry), will be stored and processed by us for the purpose of handling your request. We do not pass on this data without your consent.",

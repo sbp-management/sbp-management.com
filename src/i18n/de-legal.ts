@@ -202,6 +202,16 @@ export const deLegal = {
             {
               p: "Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.",
             },
+            { h: "Schnellbewerbung" },
+            {
+              p: "Wenn Sie sich über unsere Seite „Schnellbewerbung“ bewerben, verarbeiten wir Ihre Angaben (Stelle, Beruf, Stand der Anerkennung, Deutschkenntnisse, Verfügbarkeit, Name, E-Mail-Adresse, Telefonnummer, Nachricht) sowie die Information, über welche Anzeige Sie zu uns gekommen sind. Die Kennung der Anzeige aus dem Link wird dazu nur für die Dauer Ihres Besuchs im Browser zwischengespeichert (sessionStorage); Cookies werden dafür nicht gesetzt. Zweck ist, Ihnen passende Stellen zu vermitteln und Sie per Telefon, WhatsApp oder E-Mail zu kontaktieren. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie im Formular erteilen.",
+            },
+            {
+              p: "Die Angaben werden per E-Mail an uns übermittelt (Zustellung über Resend, siehe oben) und in unserem Google-Workspace-Konto gespeichert (siehe Abschnitt 2). Wenn wir Sie über WhatsApp kontaktieren, verarbeitet WhatsApp Ireland Limited (Meta) dabei Daten nach eigenen Bedingungen; eine Übermittlung in die USA ist dabei möglich.",
+            },
+            {
+              p: "Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, z. B. per E-Mail an info@sbp-management.com. Wir löschen Ihre Angaben dann, spätestens aber, wenn der Zweck entfällt, soweit keine gesetzlichen Aufbewahrungspflichten bestehen.",
+            },
             { h: "Anfrage per E-Mail, Telefon oder Telefax" },
             {
               p: "Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.",

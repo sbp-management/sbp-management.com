@@ -201,6 +201,16 @@ export const srLegal = {
             {
               p: "Podaci koje unesete u kontakt formular ostaju kod nas dok ne zatražite njihovo brisanje, ne opozovete pristanak za čuvanje ili dok ne prestane svrha čuvanja podataka (npr. nakon što je vaš upit obrađen). Obavezne zakonske odredbe – posebno rokovi čuvanja – ostaju nepromenjene.",
             },
+            { h: "Brza prijava" },
+            {
+              p: "Ako se prijavite putem naše stranice „Schnellbewerbung“ (brza prijava), obrađujemo vaše podatke (oglas, zanimanje, status priznavanja diplome, znanje nemačkog jezika, dostupnost, ime, adresa e-pošte, broj telefona, poruka), kao i informaciju preko kog oglasa ste došli do nas. U tu svrhu se oznaka oglasa iz linka čuva u vašem pregledaču samo tokom posete (sessionStorage); kolačići se za to ne koriste. Svrha je da vam ponudimo odgovarajuće poslove i da vas kontaktiramo telefonom, putem WhatsApp-a ili e-poštom. Pravni osnov je vaša saglasnost (čl. 6 st. 1 tač. a GDPR), koju dajete u formularu.",
+            },
+            {
+              p: "Podaci nam se šalju e-poštom (dostava putem Resend-a, videti gore) i čuvaju se na našem Google Workspace nalogu (videti odeljak 2). Ako vas kontaktiramo putem WhatsApp-a, WhatsApp Ireland Limited (Meta) obrađuje podatke prema sopstvenim uslovima; pri tome je moguć prenos podataka u SAD.",
+            },
+            {
+              p: "Saglasnost možete u svakom trenutku opozvati sa dejstvom za ubuduće, na primer e-poštom na info@sbp-management.com. Tada brišemo vaše podatke, a najkasnije kada svrha prestane, osim ako postoje zakonske obaveze čuvanja.",
+            },
             { h: "Upiti putem e-pošte, telefona ili faksa" },
             {
               p: "Ako nas kontaktirate e-poštom, telefonom ili faksom, vaš upit, uključujući sve podatke o ličnosti koji iz njega proizlaze (ime, upit), čuvamo i obrađujemo u svrhu obrade vašeg zahteva. Ove podatke ne prosleđujemo bez vašeg pristanka.",
